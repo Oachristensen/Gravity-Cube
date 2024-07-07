@@ -49,7 +49,6 @@ static int index_from_cords(int x, int y) {
 
 static void configure_led_strip(void)
 {
-    ESP_LOGI(TAG, "Example configured to blink addressable LED!");
     /* LED strip initialization with the GPIO and pixels number*/
     led_strip_config_t strip_config = {
         .led_model = LED_MODEL_WS2812,

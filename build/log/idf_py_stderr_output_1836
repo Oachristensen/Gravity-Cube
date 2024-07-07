@@ -1,0 +1,318 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM9 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375976: panic_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/panic.c:466
+0x4037ae65: esp_system_abort at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40381bdd: __assert_func at C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib/assert.c:81
+0x4200863e: populate_matrix at F:/Code/Esp32s3/ws2812b_lib/main/main.c:103 (discriminator 1)
+0x42008655: app_main at F:/Code/Esp32s3/ws2812b_lib/main/main.c:115
+0x4201eb7f: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758ec: esp_restart_noos at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Users\chrst\esp\v5.2.2\esp-idf\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt
