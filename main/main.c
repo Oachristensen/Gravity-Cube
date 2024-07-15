@@ -104,7 +104,7 @@ void app_main(void)
         configure_led_strip();
         configure_pixels(pixel_array);
         populate_matrix(pixel_array);
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 30; i++) {
             vTaskDelay(200 / portTICK_PERIOD_MS);
             run_sim(pixel_array);
             led_strip_clear(led_strip);

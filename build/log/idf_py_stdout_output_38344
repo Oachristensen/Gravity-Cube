@@ -1,0 +1,2834 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379582
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul 10 2024 19:41:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c8a8h ( 51368) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001c8d0 vaddr=3fc93d00 size=02a0ch ( 10764) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001f2e4 vaddr=40374000 size=00d34h (  3380) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1fcd4h (130260) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=0003fcfc vaddr=40374d34 size=0eeech ( 61164) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ws2812b_lib[0m
+[0;32mI (198) cpu_start: App version:      1dc8dee-dirty[0m
+[0;32mI (203) cpu_start: Compile time:     Jul 10 2024 19:41:09[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  df4e2cdb2...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (219) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (224) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (229) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FC96FF0 len 00052720 (329 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (253) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (322) main: 0[0m
+[0;32mI (322) main: 0[0m
+[0;32mI (322) main: 0[0m
+[0;32mI (322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (332) main: 0[0m
+[0;32mI (342) main: 0[0m
+[0;32mI (342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (352) main: 0[0m
+[0;32mI (352) main: 0[0m
+[0;32mI (352) main: 0[0m
+[0;32mI (352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (362) main: 0[0m
+[0;32mI (362) main: 0[0m
+[0;32mI (372) main: 0[0m
+[0;32mI (372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (382) main: 0[0m
+[0;32mI (382) main: 0[0m
+[0;32mI (382) main: 0[0m
+[0;32mI (382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (392) main: 0[0m
+[0;32mI (392) main: 0[0m
+[0;32mI (402) main: 0[0m
+[0;32mI (402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (412) main: 0[0m
+[0;32mI (412) main: 0[0m
+[0;32mI (412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (422) main: 0[0m
+[0;32mI (422) main: 0[0m
+[0;32mI (432) main: 0[0m
+[0;32mI (432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (442) main: 0[0m
+[0;32mI (442) main: 0[0m
+[0;32mI (442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (452) main: 0[0m
+[0;32mI (452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (462) main: 0[0m
+[0;32mI (462) main: 0[0m
+[0;32mI (462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (472) main: 0[0m
+[0;32mI (482) main: 0[0m
+[0;32mI (482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (492) main: 0[0m
+[0;32mI (492) main: 0[0m
+[0;32mI (492) main: 0[0m
+[0;32mI (492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (502) main: 0[0m
+[0;32mI (502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (512) main: 0[0m
+[0;32mI (512) main: 0[0m
+[0;32mI (522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (532) main: 0[0m
+[0;32mI (532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (542) main: 0[0m
+[0;32mI (542) main: 0[0m
+[0;32mI (542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (552) main: 0[0m
+[0;32mI (552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (562) main: 0[0m
+[0;32mI (562) main: 0[0m
+[0;32mI (562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (572) main: 0[0m
+[0;32mI (572) main: 0[0m
+[0;32mI (582) main: 0[0m
+[0;32mI (582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (592) main: 0[0m
+[0;32mI (592) main: 0[0m
+[0;32mI (592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (602) main: 0[0m
+[0;32mI (602) main: 0[0m
+[0;32mI (612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (612) main: 0[0m
+[0;32mI (622) main: 0[0m
+[0;32mI (622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (632) main: 0[0m
+[0;32mI (632) main: 0[0m
+[0;32mI (632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (642) main: 0[0m
+[0;32mI (642) main: 0[0m
+[0;32mI (642) main: 0[0m
+[0;32mI (652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (662) main: 0[0m
+[0;32mI (662) main: 0[0m
+[0;32mI (662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (672) main: 0[0m
+[0;32mI (672) main: 0[0m
+[0;32mI (672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (682) main: 0[0m
+[0;32mI (682) main: 0[0m
+[0;32mI (692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (692) main: 0[0m
+[0;32mI (702) main: 0[0m
+[0;32mI (702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (712) main: 0[0m
+[0;32mI (712) main: 0[0m
+[0;32mI (712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (722) main: 0[0m
+[0;32mI (722) main: 0[0m
+[0;32mI (722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (732) main: 0[0m
+[0;32mI (742) main: 0[0m
+[0;32mI (742) main: 0[0m
+[0;32mI (742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (752) main: 0[0m
+[0;32mI (752) main: 0[0m
+[0;32mI (752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (762) main: 0[0m
+[0;32mI (762) main: 0[0m
+[0;32mI (772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (772) main: 0[0m
+[0;32mI (782) main: 0[0m
+[0;32mI (782) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (792) main: 0[0m
+[0;32mI (792) main: 0[0m
+[0;32mI (792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (802) main: 0[0m
+[0;32mI (802) main: 0[0m
+[0;32mI (812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (812) main: 0[0m
+[0;32mI (822) main: 0[0m
+[0;32mI (822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (832) main: 0[0m
+[0;32mI (832) main: 0[0m
+[0;32mI (832) main: 0[0m
+[0;32mI (832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (842) main: 0[0m
+[0;32mI (842) main: 0[0m
+[0;32mI (852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (862) main: 0[0m
+[0;32mI (862) main: 0[0m
+[0;32mI (862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (872) main: 0[0m
+[0;32mI (872) main: 0[0m
+[0;32mI (872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (882) main: 0[0m
+[0;32mI (882) main: 0[0m
+[0;32mI (892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (892) main: 0[0m
+[0;32mI (902) main: 0[0m
+[0;32mI (902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (912) main: 0[0m
+[0;32mI (912) main: 0[0m
+[0;32mI (912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (922) main: 0[0m
+[0;32mI (922) main: 7[0m
+[0;32mI (932) main: 15[0m
+[0;32mI (932) main: 23[0m
+[0;32mI (932) main: 31[0m
+[0;32mI (932) main: 39[0m
+[0;32mI (942) main: 47[0m
+[0;32mI (942) main: 55[0m
+[0;32mI (1942) main: 0[0m
+[0;32mI (1942) main: 0[0m
+[0;32mI (1942) main: 0[0m
+[0;32mI (1942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (1942) main: 0[0m
+[0;32mI (1942) main: 0[0m
+[0;32mI (1942) main: 0[0m
+[0;32mI (1952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (1962) main: 0[0m
+[0;32mI (1962) main: 0[0m
+[0;32mI (1962) main: 0[0m
+[0;32mI (1962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (1972) main: 0[0m
+[0;32mI (1972) main: 0[0m
+[0;32mI (1982) main: 0[0m
+[0;32mI (1982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (1992) main: 0[0m
+[0;32mI (1992) main: 0[0m
+[0;32mI (1992) main: 0[0m
+[0;32mI (1992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2002) main: 0[0m
+[0;32mI (2012) main: 0[0m
+[0;32mI (2012) main: 0[0m
+[0;32mI (2012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2022) main: 0[0m
+[0;32mI (2022) main: 0[0m
+[0;32mI (2022) main: 0[0m
+[0;32mI (2032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2032) main: 0[0m
+[0;32mI (2042) main: 0[0m
+[0;32mI (2042) main: 0[0m
+[0;32mI (2042) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2052) main: 0[0m
+[0;32mI (2052) main: 0[0m
+[0;32mI (2062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2062) main: 0[0m
+[0;32mI (2072) main: 0[0m
+[0;32mI (2072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2082) main: 0[0m
+[0;32mI (2082) main: 0[0m
+[0;32mI (2082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2092) main: 0[0m
+[0;32mI (2092) main: 0[0m
+[0;32mI (2102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2102) main: 0[0m
+[0;32mI (2112) main: 0[0m
+[0;32mI (2112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2122) main: 0[0m
+[0;32mI (2122) main: 0[0m
+[0;32mI (2122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2132) main: 0[0m
+[0;32mI (2132) main: 0[0m
+[0;32mI (2142) main: 0[0m
+[0;32mI (2142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2152) main: 0[0m
+[0;32mI (2152) main: 0[0m
+[0;32mI (2152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2162) main: 0[0m
+[0;32mI (2162) main: 0[0m
+[0;32mI (2162) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2172) main: 0[0m
+[0;32mI (2172) main: 0[0m
+[0;32mI (2182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2192) main: 0[0m
+[0;32mI (2192) main: 0[0m
+[0;32mI (2192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2202) main: 0[0m
+[0;32mI (2202) main: 0[0m
+[0;32mI (2202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2212) main: 0[0m
+[0;32mI (2212) main: 0[0m
+[0;32mI (2222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2232) main: 0[0m
+[0;32mI (2232) main: 0[0m
+[0;32mI (2232) main: 0[0m
+[0;32mI (2232) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2242) main: 0[0m
+[0;32mI (2242) main: 0[0m
+[0;32mI (2252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2252) main: 0[0m
+[0;32mI (2262) main: 0[0m
+[0;32mI (2262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2272) main: 0[0m
+[0;32mI (2272) main: 0[0m
+[0;32mI (2272) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2282) main: 0[0m
+[0;32mI (2282) main: 0[0m
+[0;32mI (2292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2292) main: 0[0m
+[0;32mI (2302) main: 0[0m
+[0;32mI (2302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2312) main: 0[0m
+[0;32mI (2312) main: 0[0m
+[0;32mI (2312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2322) main: 0[0m
+[0;32mI (2322) main: 0[0m
+[0;32mI (2332) main: 0[0m
+[0;32mI (2332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2342) main: 0[0m
+[0;32mI (2342) main: 0[0m
+[0;32mI (2342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2352) main: 0[0m
+[0;32mI (2352) main: 0[0m
+[0;32mI (2362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2362) main: 0[0m
+[0;32mI (2372) main: 0[0m
+[0;32mI (2372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2382) main: 0[0m
+[0;32mI (2382) main: 0[0m
+[0;32mI (2382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2392) main: 0[0m
+[0;32mI (2392) main: 0[0m
+[0;32mI (2392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2402) main: 0[0m
+[0;32mI (2412) main: 0[0m
+[0;32mI (2412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2422) main: 0[0m
+[0;32mI (2422) main: 0[0m
+[0;32mI (2422) main: 0[0m
+[0;32mI (2422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2432) main: 0[0m
+[0;32mI (2432) main: 0[0m
+[0;32mI (2442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2452) main: 0[0m
+[0;32mI (2452) main: 0[0m
+[0;32mI (2452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2462) main: 0[0m
+[0;32mI (2462) main: 0[0m
+[0;32mI (2462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2472) main: 0[0m
+[0;32mI (2472) main: 0[0m
+[0;32mI (2482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2492) main: 0[0m
+[0;32mI (2492) main: 0[0m
+[0;32mI (2492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2502) main: 0[0m
+[0;32mI (2502) main: 0[0m
+[0;32mI (2502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2512) main: 0[0m
+[0;32mI (2512) main: 0[0m
+[0;32mI (2522) main: 0[0m
+[0;32mI (2522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2532) main: 0[0m
+[0;32mI (2532) main: 0[0m
+[0;32mI (2532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2542) main: 0[0m
+[0;32mI (2542) main: 0[0m
+[0;32mI (2552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2552) main: 0[0m
+[0;32mI (2562) main: 0[0m
+[0;32mI (2562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2572) main: 0[0m
+[0;32mI (2572) main: 0[0m
+[0;32mI (2572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2582) main: 0[0m
+[0;32mI (2582) main: 0[0m
+[0;32mI (2592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2592) main: 0[0m
+[0;32mI (2602) main: 0[0m
+[0;32mI (2602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (2612) main: 0[0m
+[0;32mI (2612) main: 7[0m
+[0;32mI (2612) main: 15[0m
+[0;32mI (2622) main: 23[0m
+[0;32mI (2622) main: 31[0m
+[0;32mI (2622) main: 39[0m
+[0;32mI (2622) main: 47[0m
+[0;32mI (2632) main: 55[0m
+[0;32mI (3632) main: 0[0m
+[0;32mI (3632) main: 0[0m
+[0;32mI (3632) main: 0[0m
+[0;32mI (3632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3632) main: 0[0m
+[0;32mI (3632) main: 0[0m
+[0;32mI (3632) main: 0[0m
+[0;32mI (3642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3652) main: 0[0m
+[0;32mI (3652) main: 0[0m
+[0;32mI (3652) main: 0[0m
+[0;32mI (3652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3662) main: 0[0m
+[0;32mI (3662) main: 0[0m
+[0;32mI (3672) main: 0[0m
+[0;32mI (3672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3682) main: 0[0m
+[0;32mI (3682) main: 0[0m
+[0;32mI (3682) main: 0[0m
+[0;32mI (3682) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3692) main: 0[0m
+[0;32mI (3702) main: 0[0m
+[0;32mI (3702) main: 0[0m
+[0;32mI (3702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3712) main: 0[0m
+[0;32mI (3712) main: 0[0m
+[0;32mI (3712) main: 0[0m
+[0;32mI (3722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3722) main: 0[0m
+[0;32mI (3732) main: 0[0m
+[0;32mI (3732) main: 0[0m
+[0;32mI (3732) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3742) main: 0[0m
+[0;32mI (3742) main: 0[0m
+[0;32mI (3752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3752) main: 0[0m
+[0;32mI (3762) main: 0[0m
+[0;32mI (3762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3772) main: 0[0m
+[0;32mI (3772) main: 0[0m
+[0;32mI (3772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3782) main: 0[0m
+[0;32mI (3782) main: 0[0m
+[0;32mI (3792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3792) main: 0[0m
+[0;32mI (3802) main: 0[0m
+[0;32mI (3802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3812) main: 0[0m
+[0;32mI (3812) main: 0[0m
+[0;32mI (3812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3822) main: 0[0m
+[0;32mI (3822) main: 0[0m
+[0;32mI (3832) main: 0[0m
+[0;32mI (3832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3842) main: 0[0m
+[0;32mI (3842) main: 0[0m
+[0;32mI (3842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3852) main: 0[0m
+[0;32mI (3852) main: 0[0m
+[0;32mI (3852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3862) main: 0[0m
+[0;32mI (3862) main: 0[0m
+[0;32mI (3872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3882) main: 0[0m
+[0;32mI (3882) main: 0[0m
+[0;32mI (3882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3892) main: 0[0m
+[0;32mI (3892) main: 0[0m
+[0;32mI (3892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3902) main: 0[0m
+[0;32mI (3902) main: 0[0m
+[0;32mI (3912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3922) main: 0[0m
+[0;32mI (3922) main: 0[0m
+[0;32mI (3922) main: 0[0m
+[0;32mI (3922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3932) main: 0[0m
+[0;32mI (3932) main: 0[0m
+[0;32mI (3942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3942) main: 0[0m
+[0;32mI (3952) main: 0[0m
+[0;32mI (3952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3962) main: 0[0m
+[0;32mI (3962) main: 0[0m
+[0;32mI (3962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3972) main: 0[0m
+[0;32mI (3972) main: 0[0m
+[0;32mI (3982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (3982) main: 0[0m
+[0;32mI (3992) main: 0[0m
+[0;32mI (3992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4002) main: 0[0m
+[0;32mI (4002) main: 0[0m
+[0;32mI (4002) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4012) main: 0[0m
+[0;32mI (4012) main: 0[0m
+[0;32mI (4022) main: 0[0m
+[0;32mI (4022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4032) main: 0[0m
+[0;32mI (4032) main: 0[0m
+[0;32mI (4032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4042) main: 0[0m
+[0;32mI (4042) main: 0[0m
+[0;32mI (4052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4052) main: 0[0m
+[0;32mI (4062) main: 0[0m
+[0;32mI (4062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4072) main: 0[0m
+[0;32mI (4072) main: 0[0m
+[0;32mI (4072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4082) main: 0[0m
+[0;32mI (4082) main: 0[0m
+[0;32mI (4082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4092) main: 0[0m
+[0;32mI (4102) main: 0[0m
+[0;32mI (4102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4112) main: 0[0m
+[0;32mI (4112) main: 0[0m
+[0;32mI (4112) main: 0[0m
+[0;32mI (4112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4122) main: 0[0m
+[0;32mI (4122) main: 0[0m
+[0;32mI (4132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4142) main: 0[0m
+[0;32mI (4142) main: 0[0m
+[0;32mI (4142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4152) main: 0[0m
+[0;32mI (4152) main: 0[0m
+[0;32mI (4152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4162) main: 0[0m
+[0;32mI (4162) main: 0[0m
+[0;32mI (4172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4182) main: 0[0m
+[0;32mI (4182) main: 0[0m
+[0;32mI (4182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4192) main: 0[0m
+[0;32mI (4192) main: 0[0m
+[0;32mI (4192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4202) main: 0[0m
+[0;32mI (4202) main: 0[0m
+[0;32mI (4212) main: 0[0m
+[0;32mI (4212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4222) main: 0[0m
+[0;32mI (4222) main: 0[0m
+[0;32mI (4222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4232) main: 0[0m
+[0;32mI (4232) main: 0[0m
+[0;32mI (4242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4242) main: 0[0m
+[0;32mI (4252) main: 0[0m
+[0;32mI (4252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4262) main: 0[0m
+[0;32mI (4262) main: 0[0m
+[0;32mI (4262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4272) main: 0[0m
+[0;32mI (4272) main: 0[0m
+[0;32mI (4282) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4282) main: 0[0m
+[0;32mI (4292) main: 0[0m
+[0;32mI (4292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (4302) main: 0[0m
+[0;32mI (4302) main: 7[0m
+[0;32mI (4302) main: 15[0m
+[0;32mI (4312) main: 23[0m
+[0;32mI (4312) main: 31[0m
+[0;32mI (4312) main: 39[0m
+[0;32mI (4312) main: 47[0m
+[0;32mI (4322) main: 55[0m
+[0;32mI (5322) main: 0[0m
+[0;32mI (5322) main: 0[0m
+[0;32mI (5322) main: 0[0m
+[0;32mI (5322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5322) main: 0[0m
+[0;32mI (5322) main: 0[0m
+[0;32mI (5322) main: 0[0m
+[0;32mI (5332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5342) main: 0[0m
+[0;32mI (5342) main: 0[0m
+[0;32mI (5342) main: 0[0m
+[0;32mI (5342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5352) main: 0[0m
+[0;32mI (5352) main: 0[0m
+[0;32mI (5362) main: 0[0m
+[0;32mI (5362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5372) main: 0[0m
+[0;32mI (5372) main: 0[0m
+[0;32mI (5372) main: 0[0m
+[0;32mI (5372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5382) main: 0[0m
+[0;32mI (5392) main: 0[0m
+[0;32mI (5392) main: 0[0m
+[0;32mI (5392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5402) main: 0[0m
+[0;32mI (5402) main: 0[0m
+[0;32mI (5402) main: 0[0m
+[0;32mI (5412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5412) main: 0[0m
+[0;32mI (5422) main: 0[0m
+[0;32mI (5422) main: 0[0m
+[0;32mI (5422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5432) main: 0[0m
+[0;32mI (5432) main: 0[0m
+[0;32mI (5442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5442) main: 0[0m
+[0;32mI (5452) main: 0[0m
+[0;32mI (5452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5462) main: 0[0m
+[0;32mI (5462) main: 0[0m
+[0;32mI (5462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5472) main: 0[0m
+[0;32mI (5472) main: 0[0m
+[0;32mI (5482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5482) main: 0[0m
+[0;32mI (5492) main: 0[0m
+[0;32mI (5492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5502) main: 0[0m
+[0;32mI (5502) main: 0[0m
+[0;32mI (5502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5512) main: 0[0m
+[0;32mI (5512) main: 0[0m
+[0;32mI (5522) main: 0[0m
+[0;32mI (5522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5532) main: 0[0m
+[0;32mI (5532) main: 0[0m
+[0;32mI (5532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5542) main: 0[0m
+[0;32mI (5542) main: 0[0m
+[0;32mI (5542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5552) main: 0[0m
+[0;32mI (5552) main: 0[0m
+[0;32mI (5562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5572) main: 0[0m
+[0;32mI (5572) main: 0[0m
+[0;32mI (5572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5582) main: 0[0m
+[0;32mI (5582) main: 0[0m
+[0;32mI (5582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5592) main: 0[0m
+[0;32mI (5592) main: 0[0m
+[0;32mI (5602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5612) main: 0[0m
+[0;32mI (5612) main: 0[0m
+[0;32mI (5612) main: 0[0m
+[0;32mI (5612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5622) main: 0[0m
+[0;32mI (5622) main: 0[0m
+[0;32mI (5632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5632) main: 0[0m
+[0;32mI (5642) main: 0[0m
+[0;32mI (5642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5652) main: 0[0m
+[0;32mI (5652) main: 0[0m
+[0;32mI (5652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5662) main: 0[0m
+[0;32mI (5662) main: 0[0m
+[0;32mI (5672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5672) main: 0[0m
+[0;32mI (5682) main: 0[0m
+[0;32mI (5682) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5692) main: 0[0m
+[0;32mI (5692) main: 0[0m
+[0;32mI (5692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5702) main: 0[0m
+[0;32mI (5702) main: 0[0m
+[0;32mI (5712) main: 0[0m
+[0;32mI (5712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5722) main: 0[0m
+[0;32mI (5722) main: 0[0m
+[0;32mI (5722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5732) main: 0[0m
+[0;32mI (5732) main: 0[0m
+[0;32mI (5742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5742) main: 0[0m
+[0;32mI (5752) main: 0[0m
+[0;32mI (5752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5762) main: 0[0m
+[0;32mI (5762) main: 0[0m
+[0;32mI (5762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5772) main: 0[0m
+[0;32mI (5772) main: 0[0m
+[0;32mI (5772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5782) main: 0[0m
+[0;32mI (5792) main: 0[0m
+[0;32mI (5792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5802) main: 0[0m
+[0;32mI (5802) main: 0[0m
+[0;32mI (5802) main: 0[0m
+[0;32mI (5802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5812) main: 0[0m
+[0;32mI (5812) main: 0[0m
+[0;32mI (5822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5832) main: 0[0m
+[0;32mI (5832) main: 0[0m
+[0;32mI (5832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5842) main: 0[0m
+[0;32mI (5842) main: 0[0m
+[0;32mI (5842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5852) main: 0[0m
+[0;32mI (5852) main: 0[0m
+[0;32mI (5862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5872) main: 0[0m
+[0;32mI (5872) main: 0[0m
+[0;32mI (5872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5882) main: 0[0m
+[0;32mI (5882) main: 0[0m
+[0;32mI (5882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5892) main: 0[0m
+[0;32mI (5892) main: 0[0m
+[0;32mI (5902) main: 0[0m
+[0;32mI (5902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5912) main: 0[0m
+[0;32mI (5912) main: 0[0m
+[0;32mI (5912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5922) main: 0[0m
+[0;32mI (5922) main: 0[0m
+[0;32mI (5932) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5932) main: 0[0m
+[0;32mI (5942) main: 0[0m
+[0;32mI (5942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5952) main: 0[0m
+[0;32mI (5952) main: 0[0m
+[0;32mI (5952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5962) main: 0[0m
+[0;32mI (5962) main: 0[0m
+[0;32mI (5972) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5972) main: 0[0m
+[0;32mI (5982) main: 0[0m
+[0;32mI (5982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (5992) main: 0[0m
+[0;32mI (5992) main: 7[0m
+[0;32mI (5992) main: 15[0m
+[0;32mI (6002) main: 23[0m
+[0;32mI (6002) main: 31[0m
+[0;32mI (6002) main: 39[0m
+[0;32mI (6002) main: 47[0m
+[0;32mI (6012) main: 55[0m
+[0;32mI (7012) main: 0[0m
+[0;32mI (7012) main: 0[0m
+[0;32mI (7012) main: 0[0m
+[0;32mI (7012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7012) main: 0[0m
+[0;32mI (7012) main: 0[0m
+[0;32mI (7012) main: 0[0m
+[0;32mI (7022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7032) main: 0[0m
+[0;32mI (7032) main: 0[0m
+[0;32mI (7032) main: 0[0m
+[0;32mI (7032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7042) main: 0[0m
+[0;32mI (7042) main: 0[0m
+[0;32mI (7052) main: 0[0m
+[0;32mI (7052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7062) main: 0[0m
+[0;32mI (7062) main: 0[0m
+[0;32mI (7062) main: 0[0m
+[0;32mI (7062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7072) main: 0[0m
+[0;32mI (7082) main: 0[0m
+[0;32mI (7082) main: 0[0m
+[0;32mI (7082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7092) main: 0[0m
+[0;32mI (7092) main: 0[0m
+[0;32mI (7092) main: 0[0m
+[0;32mI (7102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7102) main: 0[0m
+[0;32mI (7112) main: 0[0m
+[0;32mI (7112) main: 0[0m
+[0;32mI (7112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7122) main: 0[0m
+[0;32mI (7122) main: 0[0m
+[0;32mI (7132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7132) main: 0[0m
+[0;32mI (7142) main: 0[0m
+[0;32mI (7142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7152) main: 0[0m
+[0;32mI (7152) main: 0[0m
+[0;32mI (7152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7162) main: 0[0m
+[0;32mI (7162) main: 0[0m
+[0;32mI (7172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7172) main: 0[0m
+[0;32mI (7182) main: 0[0m
+[0;32mI (7182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7192) main: 0[0m
+[0;32mI (7192) main: 0[0m
+[0;32mI (7192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7202) main: 0[0m
+[0;32mI (7202) main: 0[0m
+[0;32mI (7212) main: 0[0m
+[0;32mI (7212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7222) main: 0[0m
+[0;32mI (7222) main: 0[0m
+[0;32mI (7222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7232) main: 0[0m
+[0;32mI (7232) main: 0[0m
+[0;32mI (7232) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7242) main: 0[0m
+[0;32mI (7242) main: 0[0m
+[0;32mI (7252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7262) main: 0[0m
+[0;32mI (7262) main: 0[0m
+[0;32mI (7262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7272) main: 0[0m
+[0;32mI (7272) main: 0[0m
+[0;32mI (7272) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7282) main: 0[0m
+[0;32mI (7282) main: 0[0m
+[0;32mI (7292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7302) main: 0[0m
+[0;32mI (7302) main: 0[0m
+[0;32mI (7302) main: 0[0m
+[0;32mI (7302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7312) main: 0[0m
+[0;32mI (7312) main: 0[0m
+[0;32mI (7322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7322) main: 0[0m
+[0;32mI (7332) main: 0[0m
+[0;32mI (7332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7342) main: 0[0m
+[0;32mI (7342) main: 0[0m
+[0;32mI (7342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7352) main: 0[0m
+[0;32mI (7352) main: 0[0m
+[0;32mI (7362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7362) main: 0[0m
+[0;32mI (7372) main: 0[0m
+[0;32mI (7372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7382) main: 0[0m
+[0;32mI (7382) main: 0[0m
+[0;32mI (7382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7392) main: 0[0m
+[0;32mI (7392) main: 0[0m
+[0;32mI (7402) main: 0[0m
+[0;32mI (7402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7412) main: 0[0m
+[0;32mI (7412) main: 0[0m
+[0;32mI (7412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7422) main: 0[0m
+[0;32mI (7422) main: 0[0m
+[0;32mI (7432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7432) main: 0[0m
+[0;32mI (7442) main: 0[0m
+[0;32mI (7442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7452) main: 0[0m
+[0;32mI (7452) main: 0[0m
+[0;32mI (7452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7462) main: 0[0m
+[0;32mI (7462) main: 0[0m
+[0;32mI (7462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7472) main: 0[0m
+[0;32mI (7482) main: 0[0m
+[0;32mI (7482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7492) main: 0[0m
+[0;32mI (7492) main: 0[0m
+[0;32mI (7492) main: 0[0m
+[0;32mI (7492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7502) main: 0[0m
+[0;32mI (7502) main: 0[0m
+[0;32mI (7512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7522) main: 0[0m
+[0;32mI (7522) main: 0[0m
+[0;32mI (7522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7532) main: 0[0m
+[0;32mI (7532) main: 0[0m
+[0;32mI (7532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7542) main: 0[0m
+[0;32mI (7542) main: 0[0m
+[0;32mI (7552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7562) main: 0[0m
+[0;32mI (7562) main: 0[0m
+[0;32mI (7562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7572) main: 0[0m
+[0;32mI (7572) main: 0[0m
+[0;32mI (7572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7582) main: 0[0m
+[0;32mI (7582) main: 0[0m
+[0;32mI (7592) main: 0[0m
+[0;32mI (7592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7602) main: 0[0m
+[0;32mI (7602) main: 0[0m
+[0;32mI (7602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7612) main: 0[0m
+[0;32mI (7612) main: 0[0m
+[0;32mI (7622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7622) main: 0[0m
+[0;32mI (7632) main: 0[0m
+[0;32mI (7632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7642) main: 0[0m
+[0;32mI (7642) main: 0[0m
+[0;32mI (7642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7652) main: 0[0m
+[0;32mI (7652) main: 0[0m
+[0;32mI (7662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7662) main: 0[0m
+[0;32mI (7672) main: 0[0m
+[0;32mI (7672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (7682) main: 0[0m
+[0;32mI (7682) main: 7[0m
+[0;32mI (7682) main: 15[0m
+[0;32mI (7692) main: 23[0m
+[0;32mI (7692) main: 31[0m
+[0;32mI (7692) main: 39[0m
+[0;32mI (7692) main: 47[0m
+[0;32mI (7702) main: 55[0m
+[0;32mI (8702) main: 0[0m
+[0;32mI (8702) main: 0[0m
+[0;32mI (8702) main: 0[0m
+[0;32mI (8702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8702) main: 0[0m
+[0;32mI (8702) main: 0[0m
+[0;32mI (8702) main: 0[0m
+[0;32mI (8712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8722) main: 0[0m
+[0;32mI (8722) main: 0[0m
+[0;32mI (8722) main: 0[0m
+[0;32mI (8722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8732) main: 0[0m
+[0;32mI (8732) main: 0[0m
+[0;32mI (8742) main: 0[0m
+[0;32mI (8742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8752) main: 0[0m
+[0;32mI (8752) main: 0[0m
+[0;32mI (8752) main: 0[0m
+[0;32mI (8752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8762) main: 0[0m
+[0;32mI (8772) main: 0[0m
+[0;32mI (8772) main: 0[0m
+[0;32mI (8772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8782) main: 0[0m
+[0;32mI (8782) main: 0[0m
+[0;32mI (8782) main: 0[0m
+[0;32mI (8792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8792) main: 0[0m
+[0;32mI (8802) main: 0[0m
+[0;32mI (8802) main: 0[0m
+[0;32mI (8802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8812) main: 0[0m
+[0;32mI (8812) main: 0[0m
+[0;32mI (8822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8822) main: 0[0m
+[0;32mI (8832) main: 0[0m
+[0;32mI (8832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8842) main: 0[0m
+[0;32mI (8842) main: 0[0m
+[0;32mI (8842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8852) main: 0[0m
+[0;32mI (8852) main: 0[0m
+[0;32mI (8862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8862) main: 0[0m
+[0;32mI (8872) main: 0[0m
+[0;32mI (8872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8882) main: 0[0m
+[0;32mI (8882) main: 0[0m
+[0;32mI (8882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8892) main: 0[0m
+[0;32mI (8892) main: 0[0m
+[0;32mI (8902) main: 0[0m
+[0;32mI (8902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8912) main: 0[0m
+[0;32mI (8912) main: 0[0m
+[0;32mI (8912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8922) main: 0[0m
+[0;32mI (8922) main: 0[0m
+[0;32mI (8922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8932) main: 0[0m
+[0;32mI (8932) main: 0[0m
+[0;32mI (8942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8952) main: 0[0m
+[0;32mI (8952) main: 0[0m
+[0;32mI (8952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8962) main: 0[0m
+[0;32mI (8962) main: 0[0m
+[0;32mI (8962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8972) main: 0[0m
+[0;32mI (8972) main: 0[0m
+[0;32mI (8982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (8992) main: 0[0m
+[0;32mI (8992) main: 0[0m
+[0;32mI (8992) main: 0[0m
+[0;32mI (8992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9002) main: 0[0m
+[0;32mI (9002) main: 0[0m
+[0;32mI (9012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9012) main: 0[0m
+[0;32mI (9022) main: 0[0m
+[0;32mI (9022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9032) main: 0[0m
+[0;32mI (9032) main: 0[0m
+[0;32mI (9032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9042) main: 0[0m
+[0;32mI (9042) main: 0[0m
+[0;32mI (9052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9052) main: 0[0m
+[0;32mI (9062) main: 0[0m
+[0;32mI (9062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9072) main: 0[0m
+[0;32mI (9072) main: 0[0m
+[0;32mI (9072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9082) main: 0[0m
+[0;32mI (9082) main: 0[0m
+[0;32mI (9092) main: 0[0m
+[0;32mI (9092) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9102) main: 0[0m
+[0;32mI (9102) main: 0[0m
+[0;32mI (9102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9112) main: 0[0m
+[0;32mI (9112) main: 0[0m
+[0;32mI (9122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9122) main: 0[0m
+[0;32mI (9132) main: 0[0m
+[0;32mI (9132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9142) main: 0[0m
+[0;32mI (9142) main: 0[0m
+[0;32mI (9142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9152) main: 0[0m
+[0;32mI (9152) main: 0[0m
+[0;32mI (9152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9162) main: 0[0m
+[0;32mI (9172) main: 0[0m
+[0;32mI (9172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9182) main: 0[0m
+[0;32mI (9182) main: 0[0m
+[0;32mI (9182) main: 0[0m
+[0;32mI (9182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9192) main: 0[0m
+[0;32mI (9192) main: 0[0m
+[0;32mI (9202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9212) main: 0[0m
+[0;32mI (9212) main: 0[0m
+[0;32mI (9212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9222) main: 0[0m
+[0;32mI (9222) main: 0[0m
+[0;32mI (9222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9232) main: 0[0m
+[0;32mI (9232) main: 0[0m
+[0;32mI (9242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9252) main: 0[0m
+[0;32mI (9252) main: 0[0m
+[0;32mI (9252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9262) main: 0[0m
+[0;32mI (9262) main: 0[0m
+[0;32mI (9262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9272) main: 0[0m
+[0;32mI (9272) main: 0[0m
+[0;32mI (9282) main: 0[0m
+[0;32mI (9282) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9292) main: 0[0m
+[0;32mI (9292) main: 0[0m
+[0;32mI (9292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9302) main: 0[0m
+[0;32mI (9302) main: 0[0m
+[0;32mI (9312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9312) main: 0[0m
+[0;32mI (9322) main: 0[0m
+[0;32mI (9322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9332) main: 0[0m
+[0;32mI (9332) main: 0[0m
+[0;32mI (9332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9342) main: 0[0m
+[0;32mI (9342) main: 0[0m
+[0;32mI (9352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9352) main: 0[0m
+[0;32mI (9362) main: 0[0m
+[0;32mI (9362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (9372) main: 0[0m
+[0;32mI (9372) main: 7[0m
+[0;32mI (9372) main: 15[0m
+[0;32mI (9382) main: 23[0m
+[0;32mI (9382) main: 31[0m
+[0;32mI (9382) main: 39[0m
+[0;32mI (9382) main: 47[0m
+[0;32mI (9392) main: 55[0m
+[0;32mI (10392) main: 0[0m
+[0;32mI (10392) main: 0[0m
+[0;32mI (10392) main: 0[0m
+[0;32mI (10392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10392) main: 0[0m
+[0;32mI (10392) main: 0[0m
+[0;32mI (10402) main: 0[0m
+[0;32mI (10402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10412) main: 0[0m
+[0;32mI (10412) main: 0[0m
+[0;32mI (10412) main: 0[0m
+[0;32mI (10412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10422) main: 0[0m
+[0;32mI (10432) main: 0[0m
+[0;32mI (10432) main: 0[0m
+[0;32mI (10432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10442) main: 0[0m
+[0;32mI (10442) main: 0[0m
+[0;32mI (10442) main: 0[0m
+[0;32mI (10452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10452) main: 0[0m
+[0;32mI (10462) main: 0[0m
+[0;32mI (10462) main: 0[0m
+[0;32mI (10462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10472) main: 0[0m
+[0;32mI (10472) main: 0[0m
+[0;32mI (10482) main: 0[0m
+[0;32mI (10482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10492) main: 0[0m
+[0;32mI (10492) main: 0[0m
+[0;32mI (10492) main: 0[0m
+[0;32mI (10492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10502) main: 0[0m
+[0;32mI (10512) main: 0[0m
+[0;32mI (10512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10522) main: 0[0m
+[0;32mI (10522) main: 0[0m
+[0;32mI (10522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10532) main: 0[0m
+[0;32mI (10532) main: 0[0m
+[0;32mI (10542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10542) main: 0[0m
+[0;32mI (10552) main: 0[0m
+[0;32mI (10552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10562) main: 0[0m
+[0;32mI (10562) main: 0[0m
+[0;32mI (10562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10572) main: 0[0m
+[0;32mI (10572) main: 0[0m
+[0;32mI (10582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10582) main: 0[0m
+[0;32mI (10592) main: 0[0m
+[0;32mI (10592) main: 0[0m
+[0;32mI (10592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10602) main: 0[0m
+[0;32mI (10602) main: 0[0m
+[0;32mI (10612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10612) main: 0[0m
+[0;32mI (10622) main: 0[0m
+[0;32mI (10622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10632) main: 0[0m
+[0;32mI (10632) main: 0[0m
+[0;32mI (10632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10642) main: 0[0m
+[0;32mI (10642) main: 0[0m
+[0;32mI (10652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10652) main: 0[0m
+[0;32mI (10662) main: 0[0m
+[0;32mI (10662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10672) main: 0[0m
+[0;32mI (10672) main: 0[0m
+[0;32mI (10672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10682) main: 0[0m
+[0;32mI (10682) main: 0[0m
+[0;32mI (10692) main: 0[0m
+[0;32mI (10692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10702) main: 0[0m
+[0;32mI (10702) main: 0[0m
+[0;32mI (10702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10712) main: 0[0m
+[0;32mI (10712) main: 0[0m
+[0;32mI (10722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10732) main: 0[0m
+[0;32mI (10732) main: 0[0m
+[0;32mI (10732) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10742) main: 0[0m
+[0;32mI (10742) main: 0[0m
+[0;32mI (10742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10752) main: 0[0m
+[0;32mI (10752) main: 0[0m
+[0;32mI (10762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10772) main: 0[0m
+[0;32mI (10772) main: 0[0m
+[0;32mI (10772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10782) main: 0[0m
+[0;32mI (10782) main: 0[0m
+[0;32mI (10782) main: 0[0m
+[0;32mI (10792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10802) main: 0[0m
+[0;32mI (10802) main: 0[0m
+[0;32mI (10802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10812) main: 0[0m
+[0;32mI (10812) main: 0[0m
+[0;32mI (10812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10822) main: 0[0m
+[0;32mI (10822) main: 0[0m
+[0;32mI (10832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10842) main: 0[0m
+[0;32mI (10842) main: 0[0m
+[0;32mI (10842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10852) main: 0[0m
+[0;32mI (10852) main: 0[0m
+[0;32mI (10852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10862) main: 0[0m
+[0;32mI (10872) main: 0[0m
+[0;32mI (10872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10882) main: 0[0m
+[0;32mI (10882) main: 0[0m
+[0;32mI (10882) main: 0[0m
+[0;32mI (10882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10892) main: 0[0m
+[0;32mI (10902) main: 0[0m
+[0;32mI (10902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10912) main: 0[0m
+[0;32mI (10912) main: 0[0m
+[0;32mI (10912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10922) main: 0[0m
+[0;32mI (10922) main: 0[0m
+[0;32mI (10922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10932) main: 0[0m
+[0;32mI (10942) main: 0[0m
+[0;32mI (10942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10952) main: 0[0m
+[0;32mI (10952) main: 0[0m
+[0;32mI (10952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10962) main: 0[0m
+[0;32mI (10962) main: 0[0m
+[0;32mI (10972) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10972) main: 0[0m
+[0;32mI (10982) main: 0[0m
+[0;32mI (10982) main: 0[0m
+[0;32mI (10982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (10992) main: 0[0m
+[0;32mI (10992) main: 0[0m
+[0;32mI (11002) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (11002) main: 0[0m
+[0;32mI (11012) main: 0[0m
+[0;32mI (11012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (11022) main: 0[0m
+[0;32mI (11022) main: 0[0m
+[0;32mI (11022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (11032) main: 0[0m
+[0;32mI (11032) main: 0[0m
+[0;32mI (11042) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (11042) main: 0[0m
+[0;32mI (11052) main: 0[0m
+[0;32mI (11052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (11062) main: 0[0m
+[0;32mI (11062) main: 0[0m
+[0;32mI (11062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (11072) main: 0[0m
+[0;32mI (11082) main: 7[0m
+[0;32mI (11082) main: 15[0m
+[0;32mI (11082) main: 23[0m
+[0;32mI (11082) main: 31[0m
+[0;32mI (11082) main: 39[0m
+[0;32mI (11092) main: 47[0m
+[0;32mI (11092) main: 55[0m
+[0;32mI (12092) main: 0[0m
+[0;32mI (12092) main: 0[0m
+[0;32mI (12092) main: 0[0m
+[0;32mI (12092) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12092) main: 0[0m
+[0;32mI (12092) main: 0[0m
+[0;32mI (12102) main: 0[0m
+[0;32mI (12102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12112) main: 0[0m
+[0;32mI (12112) main: 0[0m
+[0;32mI (12112) main: 0[0m
+[0;32mI (12112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12122) main: 0[0m
+[0;32mI (12132) main: 0[0m
+[0;32mI (12132) main: 0[0m
+[0;32mI (12132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12142) main: 0[0m
+[0;32mI (12142) main: 0[0m
+[0;32mI (12142) main: 0[0m
+[0;32mI (12152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12152) main: 0[0m
+[0;32mI (12162) main: 0[0m
+[0;32mI (12162) main: 0[0m
+[0;32mI (12162) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12172) main: 0[0m
+[0;32mI (12172) main: 0[0m
+[0;32mI (12182) main: 0[0m
+[0;32mI (12182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12192) main: 0[0m
+[0;32mI (12192) main: 0[0m
+[0;32mI (12192) main: 0[0m
+[0;32mI (12192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12202) main: 0[0m
+[0;32mI (12212) main: 0[0m
+[0;32mI (12212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12222) main: 0[0m
+[0;32mI (12222) main: 0[0m
+[0;32mI (12222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12232) main: 0[0m
+[0;32mI (12232) main: 0[0m
+[0;32mI (12242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12242) main: 0[0m
+[0;32mI (12252) main: 0[0m
+[0;32mI (12252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12262) main: 0[0m
+[0;32mI (12262) main: 0[0m
+[0;32mI (12262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12272) main: 0[0m
+[0;32mI (12272) main: 0[0m
+[0;32mI (12282) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12282) main: 0[0m
+[0;32mI (12292) main: 0[0m
+[0;32mI (12292) main: 0[0m
+[0;32mI (12292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12302) main: 0[0m
+[0;32mI (12302) main: 0[0m
+[0;32mI (12312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12312) main: 0[0m
+[0;32mI (12322) main: 0[0m
+[0;32mI (12322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12332) main: 0[0m
+[0;32mI (12332) main: 0[0m
+[0;32mI (12332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12342) main: 0[0m
+[0;32mI (12342) main: 0[0m
+[0;32mI (12352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12352) main: 0[0m
+[0;32mI (12362) main: 0[0m
+[0;32mI (12362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12372) main: 0[0m
+[0;32mI (12372) main: 0[0m
+[0;32mI (12372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12382) main: 0[0m
+[0;32mI (12382) main: 0[0m
+[0;32mI (12392) main: 0[0m
+[0;32mI (12392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12402) main: 0[0m
+[0;32mI (12402) main: 0[0m
+[0;32mI (12402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12412) main: 0[0m
+[0;32mI (12412) main: 0[0m
+[0;32mI (12422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12432) main: 0[0m
+[0;32mI (12432) main: 0[0m
+[0;32mI (12432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12442) main: 0[0m
+[0;32mI (12442) main: 0[0m
+[0;32mI (12442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12452) main: 0[0m
+[0;32mI (12452) main: 0[0m
+[0;32mI (12462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12472) main: 0[0m
+[0;32mI (12472) main: 0[0m
+[0;32mI (12472) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12482) main: 0[0m
+[0;32mI (12482) main: 0[0m
+[0;32mI (12482) main: 0[0m
+[0;32mI (12492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12502) main: 0[0m
+[0;32mI (12502) main: 0[0m
+[0;32mI (12502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12512) main: 0[0m
+[0;32mI (12512) main: 0[0m
+[0;32mI (12512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12522) main: 0[0m
+[0;32mI (12522) main: 0[0m
+[0;32mI (12532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12542) main: 0[0m
+[0;32mI (12542) main: 0[0m
+[0;32mI (12542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12552) main: 0[0m
+[0;32mI (12552) main: 0[0m
+[0;32mI (12552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12562) main: 0[0m
+[0;32mI (12572) main: 0[0m
+[0;32mI (12572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12582) main: 0[0m
+[0;32mI (12582) main: 0[0m
+[0;32mI (12582) main: 0[0m
+[0;32mI (12582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12592) main: 0[0m
+[0;32mI (12602) main: 0[0m
+[0;32mI (12602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12612) main: 0[0m
+[0;32mI (12612) main: 0[0m
+[0;32mI (12612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12622) main: 0[0m
+[0;32mI (12622) main: 0[0m
+[0;32mI (12622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12632) main: 0[0m
+[0;32mI (12642) main: 0[0m
+[0;32mI (12642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12652) main: 0[0m
+[0;32mI (12652) main: 0[0m
+[0;32mI (12652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12662) main: 0[0m
+[0;32mI (12662) main: 0[0m
+[0;32mI (12672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12672) main: 0[0m
+[0;32mI (12682) main: 0[0m
+[0;32mI (12682) main: 0[0m
+[0;32mI (12682) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12692) main: 0[0m
+[0;32mI (12692) main: 0[0m
+[0;32mI (12702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12702) main: 0[0m
+[0;32mI (12712) main: 0[0m
+[0;32mI (12712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12722) main: 0[0m
+[0;32mI (12722) main: 0[0m
+[0;32mI (12722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12732) main: 0[0m
+[0;32mI (12732) main: 0[0m
+[0;32mI (12742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12742) main: 0[0m
+[0;32mI (12752) main: 0[0m
+[0;32mI (12752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12762) main: 0[0m
+[0;32mI (12762) main: 0[0m
+[0;32mI (12762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (12772) main: 0[0m
+[0;32mI (12782) main: 7[0m
+[0;32mI (12782) main: 15[0m
+[0;32mI (12782) main: 23[0m
+[0;32mI (12782) main: 31[0m
+[0;32mI (12782) main: 39[0m
+[0;32mI (12792) main: 47[0m
+[0;32mI (12792) main: 55[0m
+[0;32mI (13792) main: 0[0m
+[0;32mI (13792) main: 0[0m
+[0;32mI (13792) main: 0[0m
+[0;32mI (13792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13792) main: 0[0m
+[0;32mI (13792) main: 0[0m
+[0;32mI (13802) main: 0[0m
+[0;32mI (13802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13812) main: 0[0m
+[0;32mI (13812) main: 0[0m
+[0;32mI (13812) main: 0[0m
+[0;32mI (13812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13822) main: 0[0m
+[0;32mI (13832) main: 0[0m
+[0;32mI (13832) main: 0[0m
+[0;32mI (13832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13842) main: 0[0m
+[0;32mI (13842) main: 0[0m
+[0;32mI (13842) main: 0[0m
+[0;32mI (13852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13852) main: 0[0m
+[0;32mI (13862) main: 0[0m
+[0;32mI (13862) main: 0[0m
+[0;32mI (13862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13872) main: 0[0m
+[0;32mI (13872) main: 0[0m
+[0;32mI (13882) main: 0[0m
+[0;32mI (13882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13892) main: 0[0m
+[0;32mI (13892) main: 0[0m
+[0;32mI (13892) main: 0[0m
+[0;32mI (13892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13902) main: 0[0m
+[0;32mI (13912) main: 0[0m
+[0;32mI (13912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13922) main: 0[0m
+[0;32mI (13922) main: 0[0m
+[0;32mI (13922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13932) main: 0[0m
+[0;32mI (13932) main: 0[0m
+[0;32mI (13942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13942) main: 0[0m
+[0;32mI (13952) main: 0[0m
+[0;32mI (13952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13962) main: 0[0m
+[0;32mI (13962) main: 0[0m
+[0;32mI (13962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13972) main: 0[0m
+[0;32mI (13972) main: 0[0m
+[0;32mI (13982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (13982) main: 0[0m
+[0;32mI (13992) main: 0[0m
+[0;32mI (13992) main: 0[0m
+[0;32mI (13992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14002) main: 0[0m
+[0;32mI (14002) main: 0[0m
+[0;32mI (14012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14012) main: 0[0m
+[0;32mI (14022) main: 0[0m
+[0;32mI (14022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14032) main: 0[0m
+[0;32mI (14032) main: 0[0m
+[0;32mI (14032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14042) main: 0[0m
+[0;32mI (14042) main: 0[0m
+[0;32mI (14052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14052) main: 0[0m
+[0;32mI (14062) main: 0[0m
+[0;32mI (14062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14072) main: 0[0m
+[0;32mI (14072) main: 0[0m
+[0;32mI (14072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14082) main: 0[0m
+[0;32mI (14082) main: 0[0m
+[0;32mI (14092) main: 0[0m
+[0;32mI (14092) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14102) main: 0[0m
+[0;32mI (14102) main: 0[0m
+[0;32mI (14102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14112) main: 0[0m
+[0;32mI (14112) main: 0[0m
+[0;32mI (14122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14132) main: 0[0m
+[0;32mI (14132) main: 0[0m
+[0;32mI (14132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14142) main: 0[0m
+[0;32mI (14142) main: 0[0m
+[0;32mI (14142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14152) main: 0[0m
+[0;32mI (14152) main: 0[0m
+[0;32mI (14162) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14172) main: 0[0m
+[0;32mI (14172) main: 0[0m
+[0;32mI (14172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14182) main: 0[0m
+[0;32mI (14182) main: 0[0m
+[0;32mI (14182) main: 0[0m
+[0;32mI (14192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14202) main: 0[0m
+[0;32mI (14202) main: 0[0m
+[0;32mI (14202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14212) main: 0[0m
+[0;32mI (14212) main: 0[0m
+[0;32mI (14212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14222) main: 0[0m
+[0;32mI (14222) main: 0[0m
+[0;32mI (14232) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14242) main: 0[0m
+[0;32mI (14242) main: 0[0m
+[0;32mI (14242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14252) main: 0[0m
+[0;32mI (14252) main: 0[0m
+[0;32mI (14252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14262) main: 0[0m
+[0;32mI (14272) main: 0[0m
+[0;32mI (14272) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14282) main: 0[0m
+[0;32mI (14282) main: 0[0m
+[0;32mI (14282) main: 0[0m
+[0;32mI (14282) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14292) main: 0[0m
+[0;32mI (14302) main: 0[0m
+[0;32mI (14302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14312) main: 0[0m
+[0;32mI (14312) main: 0[0m
+[0;32mI (14312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14322) main: 0[0m
+[0;32mI (14322) main: 0[0m
+[0;32mI (14322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14332) main: 0[0m
+[0;32mI (14342) main: 0[0m
+[0;32mI (14342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14352) main: 0[0m
+[0;32mI (14352) main: 0[0m
+[0;32mI (14352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14362) main: 0[0m
+[0;32mI (14362) main: 0[0m
+[0;32mI (14372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14372) main: 0[0m
+[0;32mI (14382) main: 0[0m
+[0;32mI (14382) main: 0[0m
+[0;32mI (14382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14392) main: 0[0m
+[0;32mI (14392) main: 0[0m
+[0;32mI (14402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14402) main: 0[0m
+[0;32mI (14412) main: 0[0m
+[0;32mI (14412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14422) main: 0[0m
+[0;32mI (14422) main: 0[0m
+[0;32mI (14422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14432) main: 0[0m
+[0;32mI (14432) main: 0[0m
+[0;32mI (14442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14442) main: 0[0m
+[0;32mI (14452) main: 0[0m
+[0;32mI (14452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14462) main: 0[0m
+[0;32mI (14462) main: 0[0m
+[0;32mI (14462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (14472) main: 0[0m
+[0;32mI (14482) main: 7[0m
+[0;32mI (14482) main: 15[0m
+[0;32mI (14482) main: 23[0m
+[0;32mI (14482) main: 31[0m
+[0;32mI (14482) main: 39[0m
+[0;32mI (14492) main: 47[0m
+[0;32mI (14492) main: 55[0m
+[0;32mI (15492) main: 0[0m
+[0;32mI (15492) main: 0[0m
+[0;32mI (15492) main: 0[0m
+[0;32mI (15492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15492) main: 0[0m
+[0;32mI (15492) main: 0[0m
+[0;32mI (15502) main: 0[0m
+[0;32mI (15502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15512) main: 0[0m
+[0;32mI (15512) main: 0[0m
+[0;32mI (15512) main: 0[0m
+[0;32mI (15512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15522) main: 0[0m
+[0;32mI (15532) main: 0[0m
+[0;32mI (15532) main: 0[0m
+[0;32mI (15532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15542) main: 0[0m
+[0;32mI (15542) main: 0[0m
+[0;32mI (15542) main: 0[0m
+[0;32mI (15552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15552) main: 0[0m
+[0;32mI (15562) main: 0[0m
+[0;32mI (15562) main: 0[0m
+[0;32mI (15562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15572) main: 0[0m
+[0;32mI (15572) main: 0[0m
+[0;32mI (15582) main: 0[0m
+[0;32mI (15582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15592) main: 0[0m
+[0;32mI (15592) main: 0[0m
+[0;32mI (15592) main: 0[0m
+[0;32mI (15592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15602) main: 0[0m
+[0;32mI (15612) main: 0[0m
+[0;32mI (15612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15622) main: 0[0m
+[0;32mI (15622) main: 0[0m
+[0;32mI (15622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15632) main: 0[0m
+[0;32mI (15632) main: 0[0m
+[0;32mI (15642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15642) main: 0[0m
+[0;32mI (15652) main: 0[0m
+[0;32mI (15652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15662) main: 0[0m
+[0;32mI (15662) main: 0[0m
+[0;32mI (15662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15672) main: 0[0m
+[0;32mI (15672) main: 0[0m
+[0;32mI (15682) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15682) main: 0[0m
+[0;32mI (15692) main: 0[0m
+[0;32mI (15692) main: 0[0m
+[0;32mI (15692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15702) main: 0[0m
+[0;32mI (15702) main: 0[0m
+[0;32mI (15712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15712) main: 0[0m
+[0;32mI (15722) main: 0[0m
+[0;32mI (15722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15732) main: 0[0m
+[0;32mI (15732) main: 0[0m
+[0;32mI (15732) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15742) main: 0[0m
+[0;32mI (15742) main: 0[0m
+[0;32mI (15752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15752) main: 0[0m
+[0;32mI (15762) main: 0[0m
+[0;32mI (15762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15772) main: 0[0m
+[0;32mI (15772) main: 0[0m
+[0;32mI (15772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15782) main: 0[0m
+[0;32mI (15782) main: 0[0m
+[0;32mI (15792) main: 0[0m
+[0;32mI (15792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15802) main: 0[0m
+[0;32mI (15802) main: 0[0m
+[0;32mI (15802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15812) main: 0[0m
+[0;32mI (15812) main: 0[0m
+[0;32mI (15822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15832) main: 0[0m
+[0;32mI (15832) main: 0[0m
+[0;32mI (15832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15842) main: 0[0m
+[0;32mI (15842) main: 0[0m
+[0;32mI (15842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15852) main: 0[0m
+[0;32mI (15852) main: 0[0m
+[0;32mI (15862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15872) main: 0[0m
+[0;32mI (15872) main: 0[0m
+[0;32mI (15872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15882) main: 0[0m
+[0;32mI (15882) main: 0[0m
+[0;32mI (15882) main: 0[0m
+[0;32mI (15892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15902) main: 0[0m
+[0;32mI (15902) main: 0[0m
+[0;32mI (15902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15912) main: 0[0m
+[0;32mI (15912) main: 0[0m
+[0;32mI (15912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15922) main: 0[0m
+[0;32mI (15922) main: 0[0m
+[0;32mI (15932) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15942) main: 0[0m
+[0;32mI (15942) main: 0[0m
+[0;32mI (15942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15952) main: 0[0m
+[0;32mI (15952) main: 0[0m
+[0;32mI (15952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15962) main: 0[0m
+[0;32mI (15972) main: 0[0m
+[0;32mI (15972) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15982) main: 0[0m
+[0;32mI (15982) main: 0[0m
+[0;32mI (15982) main: 0[0m
+[0;32mI (15982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (15992) main: 0[0m
+[0;32mI (16002) main: 0[0m
+[0;32mI (16002) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16012) main: 0[0m
+[0;32mI (16012) main: 0[0m
+[0;32mI (16012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16022) main: 0[0m
+[0;32mI (16022) main: 0[0m
+[0;32mI (16022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16032) main: 0[0m
+[0;32mI (16042) main: 0[0m
+[0;32mI (16042) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16052) main: 0[0m
+[0;32mI (16052) main: 0[0m
+[0;32mI (16052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16062) main: 0[0m
+[0;32mI (16062) main: 0[0m
+[0;32mI (16072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16072) main: 0[0m
+[0;32mI (16082) main: 0[0m
+[0;32mI (16082) main: 0[0m
+[0;32mI (16082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16092) main: 0[0m
+[0;32mI (16092) main: 0[0m
+[0;32mI (16102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16102) main: 0[0m
+[0;32mI (16112) main: 0[0m
+[0;32mI (16112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16122) main: 0[0m
+[0;32mI (16122) main: 0[0m
+[0;32mI (16122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16132) main: 0[0m
+[0;32mI (16132) main: 0[0m
+[0;32mI (16142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16142) main: 0[0m
+[0;32mI (16152) main: 0[0m
+[0;32mI (16152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16162) main: 0[0m
+[0;32mI (16162) main: 0[0m
+[0;32mI (16162) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (16172) main: 0[0m
+[0;32mI (16182) main: 7[0m
+[0;32mI (16182) main: 15[0m
+[0;32mI (16182) main: 23[0m
+[0;32mI (16182) main: 31[0m
+[0;32mI (16182) main: 39[0m
+[0;32mI (16192) main: 47[0m
+[0;32mI (16192) main: 55[0m
+[0;32mI (17192) main: 0[0m
+[0;32mI (17192) main: 0[0m
+[0;32mI (17192) main: 0[0m
+[0;32mI (17192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17192) main: 0[0m
+[0;32mI (17192) main: 0[0m
+[0;32mI (17202) main: 0[0m
+[0;32mI (17202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17212) main: 0[0m
+[0;32mI (17212) main: 0[0m
+[0;32mI (17212) main: 0[0m
+[0;32mI (17212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17222) main: 0[0m
+[0;32mI (17232) main: 0[0m
+[0;32mI (17232) main: 0[0m
+[0;32mI (17232) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17242) main: 0[0m
+[0;32mI (17242) main: 0[0m
+[0;32mI (17242) main: 0[0m
+[0;32mI (17252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17252) main: 0[0m
+[0;32mI (17262) main: 0[0m
+[0;32mI (17262) main: 0[0m
+[0;32mI (17262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17272) main: 0[0m
+[0;32mI (17272) main: 0[0m
+[0;32mI (17282) main: 0[0m
+[0;32mI (17282) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17292) main: 0[0m
+[0;32mI (17292) main: 0[0m
+[0;32mI (17292) main: 0[0m
+[0;32mI (17292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17302) main: 0[0m
+[0;32mI (17312) main: 0[0m
+[0;32mI (17312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17322) main: 0[0m
+[0;32mI (17322) main: 0[0m
+[0;32mI (17322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17332) main: 0[0m
+[0;32mI (17332) main: 0[0m
+[0;32mI (17342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17342) main: 0[0m
+[0;32mI (17352) main: 0[0m
+[0;32mI (17352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17362) main: 0[0m
+[0;32mI (17362) main: 0[0m
+[0;32mI (17362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17372) main: 0[0m
+[0;32mI (17372) main: 0[0m
+[0;32mI (17382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17382) main: 0[0m
+[0;32mI (17392) main: 0[0m
+[0;32mI (17392) main: 0[0m
+[0;32mI (17392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17402) main: 0[0m
+[0;32mI (17402) main: 0[0m
+[0;32mI (17412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17412) main: 0[0m
+[0;32mI (17422) main: 0[0m
+[0;32mI (17422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17432) main: 0[0m
+[0;32mI (17432) main: 0[0m
+[0;32mI (17432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17442) main: 0[0m
+[0;32mI (17442) main: 0[0m
+[0;32mI (17452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17452) main: 0[0m
+[0;32mI (17462) main: 0[0m
+[0;32mI (17462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17472) main: 0[0m
+[0;32mI (17472) main: 0[0m
+[0;32mI (17472) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17482) main: 0[0m
+[0;32mI (17482) main: 0[0m
+[0;32mI (17492) main: 0[0m
+[0;32mI (17492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17502) main: 0[0m
+[0;32mI (17502) main: 0[0m
+[0;32mI (17502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17512) main: 0[0m
+[0;32mI (17512) main: 0[0m
+[0;32mI (17522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17532) main: 0[0m
+[0;32mI (17532) main: 0[0m
+[0;32mI (17532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17542) main: 0[0m
+[0;32mI (17542) main: 0[0m
+[0;32mI (17542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17552) main: 0[0m
+[0;32mI (17552) main: 0[0m
+[0;32mI (17562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17572) main: 0[0m
+[0;32mI (17572) main: 0[0m
+[0;32mI (17572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17582) main: 0[0m
+[0;32mI (17582) main: 0[0m
+[0;32mI (17582) main: 0[0m
+[0;32mI (17592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17602) main: 0[0m
+[0;32mI (17602) main: 0[0m
+[0;32mI (17602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17612) main: 0[0m
+[0;32mI (17612) main: 0[0m
+[0;32mI (17612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17622) main: 0[0m
+[0;32mI (17622) main: 0[0m
+[0;32mI (17632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17642) main: 0[0m
+[0;32mI (17642) main: 0[0m
+[0;32mI (17642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17652) main: 0[0m
+[0;32mI (17652) main: 0[0m
+[0;32mI (17652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17662) main: 0[0m
+[0;32mI (17672) main: 0[0m
+[0;32mI (17672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17682) main: 0[0m
+[0;32mI (17682) main: 0[0m
+[0;32mI (17682) main: 0[0m
+[0;32mI (17682) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17692) main: 0[0m
+[0;32mI (17702) main: 0[0m
+[0;32mI (17702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17712) main: 0[0m
+[0;32mI (17712) main: 0[0m
+[0;32mI (17712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17722) main: 0[0m
+[0;32mI (17722) main: 0[0m
+[0;32mI (17722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17732) main: 0[0m
+[0;32mI (17742) main: 0[0m
+[0;32mI (17742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17752) main: 0[0m
+[0;32mI (17752) main: 0[0m
+[0;32mI (17752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17762) main: 0[0m
+[0;32mI (17762) main: 0[0m
+[0;32mI (17772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17772) main: 0[0m
+[0;32mI (17782) main: 0[0m
+[0;32mI (17782) main: 0[0m
+[0;32mI (17782) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17792) main: 0[0m
+[0;32mI (17792) main: 0[0m
+[0;32mI (17802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17802) main: 0[0m
+[0;32mI (17812) main: 0[0m
+[0;32mI (17812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17822) main: 0[0m
+[0;32mI (17822) main: 0[0m
+[0;32mI (17822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17832) main: 0[0m
+[0;32mI (17832) main: 0[0m
+[0;32mI (17842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17842) main: 0[0m
+[0;32mI (17852) main: 0[0m
+[0;32mI (17852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17862) main: 0[0m
+[0;32mI (17862) main: 0[0m
+[0;32mI (17862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (17872) main: 0[0m
+[0;32mI (17882) main: 7[0m
+[0;32mI (17882) main: 15[0m
+[0;32mI (17882) main: 23[0m
+[0;32mI (17882) main: 31[0m
+[0;32mI (17882) main: 39[0m
+[0;32mI (17892) main: 47[0m
+[0;32mI (17892) main: 55[0m
+[0;32mI (18892) main: 0[0m
+[0;32mI (18892) main: 0[0m
+[0;32mI (18892) main: 0[0m
+[0;32mI (18892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18892) main: 0[0m
+[0;32mI (18892) main: 0[0m
+[0;32mI (18902) main: 0[0m
+[0;32mI (18902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18912) main: 0[0m
+[0;32mI (18912) main: 0[0m
+[0;32mI (18912) main: 0[0m
+[0;32mI (18912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18922) main: 0[0m
+[0;32mI (18932) main: 0[0m
+[0;32mI (18932) main: 0[0m
+[0;32mI (18932) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18942) main: 0[0m
+[0;32mI (18942) main: 0[0m
+[0;32mI (18942) main: 0[0m
+[0;32mI (18952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18952) main: 0[0m
+[0;32mI (18962) main: 0[0m
+[0;32mI (18962) main: 0[0m
+[0;32mI (18962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18972) main: 0[0m
+[0;32mI (18972) main: 0[0m
+[0;32mI (18982) main: 0[0m
+[0;32mI (18982) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (18992) main: 0[0m
+[0;32mI (18992) main: 0[0m
+[0;32mI (18992) main: 0[0m
+[0;32mI (18992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19002) main: 0[0m
+[0;32mI (19012) main: 0[0m
+[0;32mI (19012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19022) main: 0[0m
+[0;32mI (19022) main: 0[0m
+[0;32mI (19022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19032) main: 0[0m
+[0;32mI (19032) main: 0[0m
+[0;32mI (19042) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19042) main: 0[0m
+[0;32mI (19052) main: 0[0m
+[0;32mI (19052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19062) main: 0[0m
+[0;32mI (19062) main: 0[0m
+[0;32mI (19062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19072) main: 0[0m
+[0;32mI (19072) main: 0[0m
+[0;32mI (19082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19082) main: 0[0m
+[0;32mI (19092) main: 0[0m
+[0;32mI (19092) main: 0[0m
+[0;32mI (19092) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19102) main: 0[0m
+[0;32mI (19102) main: 0[0m
+[0;32mI (19112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19112) main: 0[0m
+[0;32mI (19122) main: 0[0m
+[0;32mI (19122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19132) main: 0[0m
+[0;32mI (19132) main: 0[0m
+[0;32mI (19132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19142) main: 0[0m
+[0;32mI (19142) main: 0[0m
+[0;32mI (19152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19152) main: 0[0m
+[0;32mI (19162) main: 0[0m
+[0;32mI (19162) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19172) main: 0[0m
+[0;32mI (19172) main: 0[0m
+[0;32mI (19172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19182) main: 0[0m
+[0;32mI (19182) main: 0[0m
+[0;32mI (19192) main: 0[0m
+[0;32mI (19192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19202) main: 0[0m
+[0;32mI (19202) main: 0[0m
+[0;32mI (19202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19212) main: 0[0m
+[0;32mI (19212) main: 0[0m
+[0;32mI (19222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19232) main: 0[0m
+[0;32mI (19232) main: 0[0m
+[0;32mI (19232) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19242) main: 0[0m
+[0;32mI (19242) main: 0[0m
+[0;32mI (19242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19252) main: 0[0m
+[0;32mI (19252) main: 0[0m
+[0;32mI (19262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19272) main: 0[0m
+[0;32mI (19272) main: 0[0m
+[0;32mI (19272) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19282) main: 0[0m
+[0;32mI (19282) main: 0[0m
+[0;32mI (19282) main: 0[0m
+[0;32mI (19292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19302) main: 0[0m
+[0;32mI (19302) main: 0[0m
+[0;32mI (19302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19312) main: 0[0m
+[0;32mI (19312) main: 0[0m
+[0;32mI (19312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19322) main: 0[0m
+[0;32mI (19322) main: 0[0m
+[0;32mI (19332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19342) main: 0[0m
+[0;32mI (19342) main: 0[0m
+[0;32mI (19342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19352) main: 0[0m
+[0;32mI (19352) main: 0[0m
+[0;32mI (19352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19362) main: 0[0m
+[0;32mI (19372) main: 0[0m
+[0;32mI (19372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19382) main: 0[0m
+[0;32mI (19382) main: 0[0m
+[0;32mI (19382) main: 0[0m
+[0;32mI (19382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19392) main: 0[0m
+[0;32mI (19402) main: 0[0m
+[0;32mI (19402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19412) main: 0[0m
+[0;32mI (19412) main: 0[0m
+[0;32mI (19412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19422) main: 0[0m
+[0;32mI (19422) main: 0[0m
+[0;32mI (19422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19432) main: 0[0m
+[0;32mI (19442) main: 0[0m
+[0;32mI (19442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19452) main: 0[0m
+[0;32mI (19452) main: 0[0m
+[0;32mI (19452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19462) main: 0[0m
+[0;32mI (19462) main: 0[0m
+[0;32mI (19472) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19472) main: 0[0m
+[0;32mI (19482) main: 0[0m
+[0;32mI (19482) main: 0[0m
+[0;32mI (19482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19492) main: 0[0m
+[0;32mI (19492) main: 0[0m
+[0;32mI (19502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19502) main: 0[0m
+[0;32mI (19512) main: 0[0m
+[0;32mI (19512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19522) main: 0[0m
+[0;32mI (19522) main: 0[0m
+[0;32mI (19522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19532) main: 0[0m
+[0;32mI (19532) main: 0[0m
+[0;32mI (19542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19542) main: 0[0m
+[0;32mI (19552) main: 0[0m
+[0;32mI (19552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19562) main: 0[0m
+[0;32mI (19562) main: 0[0m
+[0;32mI (19562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (19572) main: 0[0m
+[0;32mI (19582) main: 7[0m
+[0;32mI (19582) main: 15[0m
+[0;32mI (19582) main: 23[0m
+[0;32mI (19582) main: 31[0m
+[0;32mI (19582) main: 39[0m
+[0;32mI (19592) main: 47[0m
+[0;32mI (19592) main: 55[0m
+[0;32mI (20592) main: 0[0m
+[0;32mI (20592) main: 0[0m
+[0;32mI (20592) main: 0[0m
+[0;32mI (20592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20592) main: 0[0m
+[0;32mI (20592) main: 0[0m
+[0;32mI (20602) main: 0[0m
+[0;32mI (20602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20612) main: 0[0m
+[0;32mI (20612) main: 0[0m
+[0;32mI (20612) main: 0[0m
+[0;32mI (20612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20622) main: 0[0m
+[0;32mI (20632) main: 0[0m
+[0;32mI (20632) main: 0[0m
+[0;32mI (20632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20642) main: 0[0m
+[0;32mI (20642) main: 0[0m
+[0;32mI (20642) main: 0[0m
+[0;32mI (20652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20652) main: 0[0m
+[0;32mI (20662) main: 0[0m
+[0;32mI (20662) main: 0[0m
+[0;32mI (20662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20672) main: 0[0m
+[0;32mI (20672) main: 0[0m
+[0;32mI (20682) main: 0[0m
+[0;32mI (20682) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20692) main: 0[0m
+[0;32mI (20692) main: 0[0m
+[0;32mI (20692) main: 0[0m
+[0;32mI (20692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20702) main: 0[0m
+[0;32mI (20712) main: 0[0m
+[0;32mI (20712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20722) main: 0[0m
+[0;32mI (20722) main: 0[0m
+[0;32mI (20722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20732) main: 0[0m
+[0;32mI (20732) main: 0[0m
+[0;32mI (20742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20742) main: 0[0m
+[0;32mI (20752) main: 0[0m
+[0;32mI (20752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20762) main: 0[0m
+[0;32mI (20762) main: 0[0m
+[0;32mI (20762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20772) main: 0[0m
+[0;32mI (20772) main: 0[0m
+[0;32mI (20782) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20782) main: 0[0m
+[0;32mI (20792) main: 0[0m
+[0;32mI (20792) main: 0[0m
+[0;32mI (20792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20802) main: 0[0m
+[0;32mI (20802) main: 0[0m
+[0;32mI (20812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20812) main: 0[0m
+[0;32mI (20822) main: 0[0m
+[0;32mI (20822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20832) main: 0[0m
+[0;32mI (20832) main: 0[0m
+[0;32mI (20832) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20842) main: 0[0m
+[0;32mI (20842) main: 0[0m
+[0;32mI (20852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20852) main: 0[0m
+[0;32mI (20862) main: 0[0m
+[0;32mI (20862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20872) main: 0[0m
+[0;32mI (20872) main: 0[0m
+[0;32mI (20872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20882) main: 0[0m
+[0;32mI (20882) main: 0[0m
+[0;32mI (20892) main: 0[0m
+[0;32mI (20892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20902) main: 0[0m
+[0;32mI (20902) main: 0[0m
+[0;32mI (20902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20912) main: 0[0m
+[0;32mI (20912) main: 0[0m
+[0;32mI (20922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20932) main: 0[0m
+[0;32mI (20932) main: 0[0m
+[0;32mI (20932) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20942) main: 0[0m
+[0;32mI (20942) main: 0[0m
+[0;32mI (20942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20952) main: 0[0m
+[0;32mI (20952) main: 0[0m
+[0;32mI (20962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20972) main: 0[0m
+[0;32mI (20972) main: 0[0m
+[0;32mI (20972) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (20982) main: 0[0m
+[0;32mI (20982) main: 0[0m
+[0;32mI (20982) main: 0[0m
+[0;32mI (20992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21002) main: 0[0m
+[0;32mI (21002) main: 0[0m
+[0;32mI (21002) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21012) main: 0[0m
+[0;32mI (21012) main: 0[0m
+[0;32mI (21012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21022) main: 0[0m
+[0;32mI (21022) main: 0[0m
+[0;32mI (21032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21042) main: 0[0m
+[0;32mI (21042) main: 0[0m
+[0;32mI (21042) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21052) main: 0[0m
+[0;32mI (21052) main: 0[0m
+[0;32mI (21052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21062) main: 0[0m
+[0;32mI (21072) main: 0[0m
+[0;32mI (21072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21082) main: 0[0m
+[0;32mI (21082) main: 0[0m
+[0;32mI (21082) main: 0[0m
+[0;32mI (21082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21092) main: 0[0m
+[0;32mI (21102) main: 0[0m
+[0;32mI (21102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21112) main: 0[0m
+[0;32mI (21112) main: 0[0m
+[0;32mI (21112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21122) main: 0[0m
+[0;32mI (21122) main: 0[0m
+[0;32mI (21122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21132) main: 0[0m
+[0;32mI (21142) main: 0[0m
+[0;32mI (21142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21152) main: 0[0m
+[0;32mI (21152) main: 0[0m
+[0;32mI (21152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21162) main: 0[0m
+[0;32mI (21162) main: 0[0m
+[0;32mI (21172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21172) main: 0[0m
+[0;32mI (21182) main: 0[0m
+[0;32mI (21182) main: 0[0m
+[0;32mI (21182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21192) main: 0[0m
+[0;32mI (21192) main: 0[0m
+[0;32mI (21202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21202) main: 0[0m
+[0;32mI (21212) main: 0[0m
+[0;32mI (21212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21222) main: 0[0m
+[0;32mI (21222) main: 0[0m
+[0;32mI (21222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21232) main: 0[0m
+[0;32mI (21232) main: 0[0m
+[0;32mI (21242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21242) main: 0[0m
+[0;32mI (21252) main: 0[0m
+[0;32mI (21252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21262) main: 0[0m
+[0;32mI (21262) main: 0[0m
+[0;32mI (21262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (21272) main: 0[0m
+[0;32mI (21282) main: 7[0m
+[0;32mI (21282) main: 15[0m
+[0;32mI (21282) main: 23[0m
+[0;32mI (21282) main: 31[0m
+[0;32mI (21282) main: 39[0m
+[0;32mI (21292) main: 47[0m
+[0;32mI (21292) main: 55[0m
+[0;32mI (22292) main: 0[0m
+[0;32mI (22292) main: 0[0m
+[0;32mI (22292) main: 0[0m
+[0;32mI (22292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22292) main: 0[0m
+[0;32mI (22292) main: 0[0m
+[0;32mI (22302) main: 0[0m
+[0;32mI (22302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22312) main: 0[0m
+[0;32mI (22312) main: 0[0m
+[0;32mI (22312) main: 0[0m
+[0;32mI (22312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22322) main: 0[0m
+[0;32mI (22332) main: 0[0m
+[0;32mI (22332) main: 0[0m
+[0;32mI (22332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22342) main: 0[0m
+[0;32mI (22342) main: 0[0m
+[0;32mI (22342) main: 0[0m
+[0;32mI (22352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22352) main: 0[0m
+[0;32mI (22362) main: 0[0m
+[0;32mI (22362) main: 0[0m
+[0;32mI (22362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22372) main: 0[0m
+[0;32mI (22372) main: 0[0m
+[0;32mI (22382) main: 0[0m
+[0;32mI (22382) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22392) main: 0[0m
+[0;32mI (22392) main: 0[0m
+[0;32mI (22392) main: 0[0m
+[0;32mI (22392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22402) main: 0[0m
+[0;32mI (22412) main: 0[0m
+[0;32mI (22412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22422) main: 0[0m
+[0;32mI (22422) main: 0[0m
+[0;32mI (22422) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22432) main: 0[0m
+[0;32mI (22432) main: 0[0m
+[0;32mI (22442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22442) main: 0[0m
+[0;32mI (22452) main: 0[0m
+[0;32mI (22452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22462) main: 0[0m
+[0;32mI (22462) main: 0[0m
+[0;32mI (22462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22472) main: 0[0m
+[0;32mI (22472) main: 0[0m
+[0;32mI (22482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22482) main: 0[0m
+[0;32mI (22492) main: 0[0m
+[0;32mI (22492) main: 0[0m
+[0;32mI (22492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22502) main: 0[0m
+[0;32mI (22502) main: 0[0m
+[0;32mI (22512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22512) main: 0[0m
+[0;32mI (22522) main: 0[0m
+[0;32mI (22522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22532) main: 0[0m
+[0;32mI (22532) main: 0[0m
+[0;32mI (22532) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22542) main: 0[0m
+[0;32mI (22542) main: 0[0m
+[0;32mI (22552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22552) main: 0[0m
+[0;32mI (22562) main: 0[0m
+[0;32mI (22562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22572) main: 0[0m
+[0;32mI (22572) main: 0[0m
+[0;32mI (22572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22582) main: 0[0m
+[0;32mI (22582) main: 0[0m
+[0;32mI (22592) main: 0[0m
+[0;32mI (22592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22602) main: 0[0m
+[0;32mI (22602) main: 0[0m
+[0;32mI (22602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22612) main: 0[0m
+[0;32mI (22612) main: 0[0m
+[0;32mI (22622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22632) main: 0[0m
+[0;32mI (22632) main: 0[0m
+[0;32mI (22632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22642) main: 0[0m
+[0;32mI (22642) main: 0[0m
+[0;32mI (22642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22652) main: 0[0m
+[0;32mI (22652) main: 0[0m
+[0;32mI (22662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22672) main: 0[0m
+[0;32mI (22672) main: 0[0m
+[0;32mI (22672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22682) main: 0[0m
+[0;32mI (22682) main: 0[0m
+[0;32mI (22682) main: 0[0m
+[0;32mI (22692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22702) main: 0[0m
+[0;32mI (22702) main: 0[0m
+[0;32mI (22702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22712) main: 0[0m
+[0;32mI (22712) main: 0[0m
+[0;32mI (22712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22722) main: 0[0m
+[0;32mI (22722) main: 0[0m
+[0;32mI (22732) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22742) main: 0[0m
+[0;32mI (22742) main: 0[0m
+[0;32mI (22742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22752) main: 0[0m
+[0;32mI (22752) main: 0[0m
+[0;32mI (22752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22762) main: 0[0m
+[0;32mI (22772) main: 0[0m
+[0;32mI (22772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22782) main: 0[0m
+[0;32mI (22782) main: 0[0m
+[0;32mI (22782) main: 0[0m
+[0;32mI (22782) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22792) main: 0[0m
+[0;32mI (22802) main: 0[0m
+[0;32mI (22802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22812) main: 0[0m
+[0;32mI (22812) main: 0[0m
+[0;32mI (22812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22822) main: 0[0m
+[0;32mI (22822) main: 0[0m
+[0;32mI (22822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22832) main: 0[0m
+[0;32mI (22842) main: 0[0m
+[0;32mI (22842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22852) main: 0[0m
+[0;32mI (22852) main: 0[0m
+[0;32mI (22852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22862) main: 0[0m
+[0;32mI (22862) main: 0[0m
+[0;32mI (22872) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22872) main: 0[0m
+[0;32mI (22882) main: 0[0m
+[0;32mI (22882) main: 0[0m
+[0;32mI (22882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22892) main: 0[0m
+[0;32mI (22892) main: 0[0m
+[0;32mI (22902) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22902) main: 0[0m
+[0;32mI (22912) main: 0[0m
+[0;32mI (22912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22922) main: 0[0m
+[0;32mI (22922) main: 0[0m
+[0;32mI (22922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22932) main: 0[0m
+[0;32mI (22932) main: 0[0m
+[0;32mI (22942) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22942) main: 0[0m
+[0;32mI (22952) main: 0[0m
+[0;32mI (22952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22962) main: 0[0m
+[0;32mI (22962) main: 0[0m
+[0;32mI (22962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (22972) main: 0[0m
+[0;32mI (22982) main: 7[0m
+[0;32mI (22982) main: 15[0m
+[0;32mI (22982) main: 23[0m
+[0;32mI (22982) main: 31[0m
+[0;32mI (22982) main: 39[0m
+[0;32mI (22992) main: 47[0m
+[0;32mI (22992) main: 55[0m
+[0;32mI (23992) main: 0[0m
+[0;32mI (23992) main: 0[0m
+[0;32mI (23992) main: 0[0m
+[0;32mI (23992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (23992) main: 0[0m
+[0;32mI (23992) main: 0[0m
+[0;32mI (24002) main: 0[0m
+[0;32mI (24002) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24012) main: 0[0m
+[0;32mI (24012) main: 0[0m
+[0;32mI (24012) main: 0[0m
+[0;32mI (24012) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24022) main: 0[0m
+[0;32mI (24032) main: 0[0m
+[0;32mI (24032) main: 0[0m
+[0;32mI (24032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24042) main: 0[0m
+[0;32mI (24042) main: 0[0m
+[0;32mI (24042) main: 0[0m
+[0;32mI (24052) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24052) main: 0[0m
+[0;32mI (24062) main: 0[0m
+[0;32mI (24062) main: 0[0m
+[0;32mI (24062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24072) main: 0[0m
+[0;32mI (24072) main: 0[0m
+[0;32mI (24082) main: 0[0m
+[0;32mI (24082) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24092) main: 0[0m
+[0;32mI (24092) main: 0[0m
+[0;32mI (24092) main: 0[0m
+[0;32mI (24092) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24102) main: 0[0m
+[0;32mI (24112) main: 0[0m
+[0;32mI (24112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24122) main: 0[0m
+[0;32mI (24122) main: 0[0m
+[0;32mI (24122) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24132) main: 0[0m
+[0;32mI (24132) main: 0[0m
+[0;32mI (24142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24142) main: 0[0m
+[0;32mI (24152) main: 0[0m
+[0;32mI (24152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24162) main: 0[0m
+[0;32mI (24162) main: 0[0m
+[0;32mI (24162) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24172) main: 0[0m
+[0;32mI (24172) main: 0[0m
+[0;32mI (24182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24182) main: 0[0m
+[0;32mI (24192) main: 0[0m
+[0;32mI (24192) main: 0[0m
+[0;32mI (24192) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24202) main: 0[0m
+[0;32mI (24202) main: 0[0m
+[0;32mI (24212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24212) main: 0[0m
+[0;32mI (24222) main: 0[0m
+[0;32mI (24222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24232) main: 0[0m
+[0;32mI (24232) main: 0[0m
+[0;32mI (24232) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24242) main: 0[0m
+[0;32mI (24242) main: 0[0m
+[0;32mI (24252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24252) main: 0[0m
+[0;32mI (24262) main: 0[0m
+[0;32mI (24262) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24272) main: 0[0m
+[0;32mI (24272) main: 0[0m
+[0;32mI (24272) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24282) main: 0[0m
+[0;32mI (24282) main: 0[0m
+[0;32mI (24292) main: 0[0m
+[0;32mI (24292) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24302) main: 0[0m
+[0;32mI (24302) main: 0[0m
+[0;32mI (24302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24312) main: 0[0m
+[0;32mI (24312) main: 0[0m
+[0;32mI (24322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24332) main: 0[0m
+[0;32mI (24332) main: 0[0m
+[0;32mI (24332) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24342) main: 0[0m
+[0;32mI (24342) main: 0[0m
+[0;32mI (24342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24352) main: 0[0m
+[0;32mI (24352) main: 0[0m
+[0;32mI (24362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24372) main: 0[0m
+[0;32mI (24372) main: 0[0m
+[0;32mI (24372) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24382) main: 0[0m
+[0;32mI (24382) main: 0[0m
+[0;32mI (24382) main: 0[0m
+[0;32mI (24392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24402) main: 0[0m
+[0;32mI (24402) main: 0[0m
+[0;32mI (24402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24412) main: 0[0m
+[0;32mI (24412) main: 0[0m
+[0;32mI (24412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24422) main: 0[0m
+[0;32mI (24422) main: 0[0m
+[0;32mI (24432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24442) main: 0[0m
+[0;32mI (24442) main: 0[0m
+[0;32mI (24442) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24452) main: 0[0m
+[0;32mI (24452) main: 0[0m
+[0;32mI (24452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24462) main: 0[0m
+[0;32mI (24472) main: 0[0m
+[0;32mI (24472) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24482) main: 0[0m
+[0;32mI (24482) main: 0[0m
+[0;32mI (24482) main: 0[0m
+[0;32mI (24482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24492) main: 0[0m
+[0;32mI (24502) main: 0[0m
+[0;32mI (24502) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24512) main: 0[0m
+[0;32mI (24512) main: 0[0m
+[0;32mI (24512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24522) main: 0[0m
+[0;32mI (24522) main: 0[0m
+[0;32mI (24522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24532) main: 0[0m
+[0;32mI (24542) main: 0[0m
+[0;32mI (24542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24552) main: 0[0m
+[0;32mI (24552) main: 0[0m
+[0;32mI (24552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24562) main: 0[0m
+[0;32mI (24562) main: 0[0m
+[0;32mI (24572) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24572) main: 0[0m
+[0;32mI (24582) main: 0[0m
+[0;32mI (24582) main: 0[0m
+[0;32mI (24582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24592) main: 0[0m
+[0;32mI (24592) main: 0[0m
+[0;32mI (24602) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24602) main: 0[0m
+[0;32mI (24612) main: 0[0m
+[0;32mI (24612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24622) main: 0[0m
+[0;32mI (24622) main: 0[0m
+[0;32mI (24622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24632) main: 0[0m
+[0;32mI (24632) main: 0[0m
+[0;32mI (24642) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24642) main: 0[0m
+[0;32mI (24652) main: 0[0m
+[0;32mI (24652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24662) main: 0[0m
+[0;32mI (24662) main: 0[0m
+[0;32mI (24662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (24672) main: 0[0m
+[0;32mI (24682) main: 7[0m
+[0;32mI (24682) main: 15[0m
+[0;32mI (24682) main: 23[0m
+[0;32mI (24682) main: 31[0m
+[0;32mI (24682) main: 39[0m
+[0;32mI (24692) main: 47[0m
+[0;32mI (24692) main: 55[0m
+[0;32mI (25692) main: 0[0m
+[0;32mI (25692) main: 0[0m
+[0;32mI (25692) main: 0[0m
+[0;32mI (25692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25692) main: 0[0m
+[0;32mI (25692) main: 0[0m
+[0;32mI (25702) main: 0[0m
+[0;32mI (25702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25712) main: 0[0m
+[0;32mI (25712) main: 0[0m
+[0;32mI (25712) main: 0[0m
+[0;32mI (25712) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25722) main: 0[0m
+[0;32mI (25732) main: 0[0m
+[0;32mI (25732) main: 0[0m
+[0;32mI (25732) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25742) main: 0[0m
+[0;32mI (25742) main: 0[0m
+[0;32mI (25742) main: 0[0m
+[0;32mI (25752) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25752) main: 0[0m
+[0;32mI (25762) main: 0[0m
+[0;32mI (25762) main: 0[0m
+[0;32mI (25762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25772) main: 0[0m
+[0;32mI (25772) main: 0[0m
+[0;32mI (25782) main: 0[0m
+[0;32mI (25782) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25792) main: 0[0m
+[0;32mI (25792) main: 0[0m
+[0;32mI (25792) main: 0[0m
+[0;32mI (25792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25802) main: 0[0m
+[0;32mI (25812) main: 0[0m
+[0;32mI (25812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25822) main: 0[0m
+[0;32mI (25822) main: 0[0m
+[0;32mI (25822) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25832) main: 0[0m
+[0;32mI (25832) main: 0[0m
+[0;32mI (25842) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25842) main: 0[0m
+[0;32mI (25852) main: 0[0m
+[0;32mI (25852) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25862) main: 0[0m
+[0;32mI (25862) main: 0[0m
+[0;32mI (25862) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25872) main: 0[0m
+[0;32mI (25872) main: 0[0m
+[0;32mI (25882) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25882) main: 0[0m
+[0;32mI (25892) main: 0[0m
+[0;32mI (25892) main: 0[0m
+[0;32mI (25892) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25902) main: 0[0m
+[0;32mI (25902) main: 0[0m
+[0;32mI (25912) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25912) main: 0[0m
+[0;32mI (25922) main: 0[0m
+[0;32mI (25922) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25932) main: 0[0m
+[0;32mI (25932) main: 0[0m
+[0;32mI (25932) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25942) main: 0[0m
+[0;32mI (25942) main: 0[0m
+[0;32mI (25952) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25952) main: 0[0m
+[0;32mI (25962) main: 0[0m
+[0;32mI (25962) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25972) main: 0[0m
+[0;32mI (25972) main: 0[0m
+[0;32mI (25972) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (25982) main: 0[0m
+[0;32mI (25982) main: 0[0m
+[0;32mI (25992) main: 0[0m
+[0;32mI (25992) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26002) main: 0[0m
+[0;32mI (26002) main: 0[0m
+[0;32mI (26002) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26012) main: 0[0m
+[0;32mI (26012) main: 0[0m
+[0;32mI (26022) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26032) main: 0[0m
+[0;32mI (26032) main: 0[0m
+[0;32mI (26032) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26042) main: 0[0m
+[0;32mI (26042) main: 0[0m
+[0;32mI (26042) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26052) main: 0[0m
+[0;32mI (26052) main: 0[0m
+[0;32mI (26062) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26072) main: 0[0m
+[0;32mI (26072) main: 0[0m
+[0;32mI (26072) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26082) main: 0[0m
+[0;32mI (26082) main: 0[0m
+[0;32mI (26082) main: 0[0m
+[0;32mI (26092) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26102) main: 0[0m
+[0;32mI (26102) main: 0[0m
+[0;32mI (26102) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26112) main: 0[0m
+[0;32mI (26112) main: 0[0m
+[0;32mI (26112) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26122) main: 0[0m
+[0;32mI (26122) main: 0[0m
+[0;32mI (26132) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26142) main: 0[0m
+[0;32mI (26142) main: 0[0m
+[0;32mI (26142) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26152) main: 0[0m
+[0;32mI (26152) main: 0[0m
+[0;32mI (26152) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26162) main: 0[0m
+[0;32mI (26172) main: 0[0m
+[0;32mI (26172) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26182) main: 0[0m
+[0;32mI (26182) main: 0[0m
+[0;32mI (26182) main: 0[0m
+[0;32mI (26182) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26192) main: 0[0m
+[0;32mI (26202) main: 0[0m
+[0;32mI (26202) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26212) main: 0[0m
+[0;32mI (26212) main: 0[0m
+[0;32mI (26212) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26222) main: 0[0m
+[0;32mI (26222) main: 0[0m
+[0;32mI (26222) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26232) main: 0[0m
+[0;32mI (26242) main: 0[0m
+[0;32mI (26242) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26252) main: 0[0m
+[0;32mI (26252) main: 0[0m
+[0;32mI (26252) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26262) main: 0[0m
+[0;32mI (26262) main: 0[0m
+[0;32mI (26272) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26272) main: 0[0m
+[0;32mI (26282) main: 0[0m
+[0;32mI (26282) main: 0[0m
+[0;32mI (26282) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26292) main: 0[0m
+[0;32mI (26292) main: 0[0m
+[0;32mI (26302) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26302) main: 0[0m
+[0;32mI (26312) main: 0[0m
+[0;32mI (26312) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26322) main: 0[0m
+[0;32mI (26322) main: 0[0m
+[0;32mI (26322) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26332) main: 0[0m
+[0;32mI (26332) main: 0[0m
+[0;32mI (26342) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26342) main: 0[0m
+[0;32mI (26352) main: 0[0m
+[0;32mI (26352) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26362) main: 0[0m
+[0;32mI (26362) main: 0[0m
+[0;32mI (26362) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (26372) main: 0[0m
+[0;32mI (26382) main: 7[0m
+[0;32mI (26382) main: 15[0m
+[0;32mI (26382) main: 23[0m
+[0;32mI (26382) main: 31[0m
+[0;32mI (26382) main: 39[0m
+[0;32mI (26392) main: 47[0m
+[0;32mI (26392) main: 55[0m
+[0;32mI (27392) main: 0[0m
+[0;32mI (27392) main: 0[0m
+[0;32mI (27392) main: 0[0m
+[0;32mI (27392) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27392) main: 0[0m
+[0;32mI (27392) main: 0[0m
+[0;32mI (27402) main: 0[0m
+[0;32mI (27402) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27412) main: 0[0m
+[0;32mI (27412) main: 0[0m
+[0;32mI (27412) main: 0[0m
+[0;32mI (27412) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27422) main: 0[0m
+[0;32mI (27432) main: 0[0m
+[0;32mI (27432) main: 0[0m
+[0;32mI (27432) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27442) main: 0[0m
+[0;32mI (27442) main: 0[0m
+[0;32mI (27442) main: 0[0m
+[0;32mI (27452) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27452) main: 0[0m
+[0;32mI (27462) main: 0[0m
+[0;32mI (27462) main: 0[0m
+[0;32mI (27462) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27472) main: 0[0m
+[0;32mI (27472) main: 0[0m
+[0;32mI (27482) main: 0[0m
+[0;32mI (27482) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27492) main: 0[0m
+[0;32mI (27492) main: 0[0m
+[0;32mI (27492) main: 0[0m
+[0;32mI (27492) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27502) main: 0[0m
+[0;32mI (27512) main: 0[0m
+[0;32mI (27512) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27522) main: 0[0m
+[0;32mI (27522) main: 0[0m
+[0;32mI (27522) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27532) main: 0[0m
+[0;32mI (27532) main: 0[0m
+[0;32mI (27542) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27542) main: 0[0m
+[0;32mI (27552) main: 0[0m
+[0;32mI (27552) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27562) main: 0[0m
+[0;32mI (27562) main: 0[0m
+[0;32mI (27562) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27572) main: 0[0m
+[0;32mI (27572) main: 0[0m
+[0;32mI (27582) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27582) main: 0[0m
+[0;32mI (27592) main: 0[0m
+[0;32mI (27592) main: 0[0m
+[0;32mI (27592) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27602) main: 0[0m
+[0;32mI (27602) main: 0[0m
+[0;32mI (27612) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27612) main: 0[0m
+[0;32mI (27622) main: 0[0m
+[0;32mI (27622) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27632) main: 0[0m
+[0;32mI (27632) main: 0[0m
+[0;32mI (27632) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27642) main: 0[0m
+[0;32mI (27642) main: 0[0m
+[0;32mI (27652) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27652) main: 0[0m
+[0;32mI (27662) main: 0[0m
+[0;32mI (27662) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27672) main: 0[0m
+[0;32mI (27672) main: 0[0m
+[0;32mI (27672) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27682) main: 0[0m
+[0;32mI (27682) main: 0[0m
+[0;32mI (27692) main: 0[0m
+[0;32mI (27692) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27702) main: 0[0m
+[0;32mI (27702) main: 0[0m
+[0;32mI (27702) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27712) main: 0[0m
+[0;32mI (27712) main: 0[0m
+[0;32mI (27722) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27732) main: 0[0m
+[0;32mI (27732) main: 0[0m
+[0;32mI (27732) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27742) main: 0[0m
+[0;32mI (27742) main: 0[0m
+[0;32mI (27742) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27752) main: 0[0m
+[0;32mI (27752) main: 0[0m
+[0;32mI (27762) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27772) main: 0[0m
+[0;32mI (27772) main: 0[0m
+[0;32mI (27772) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27782) main: 0[0m
+[0;32mI (27782) main: 0[0m
+[0;32mI (27782) main: 0[0m
+[0;32mI (27792) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27802) main: 0[0m
+[0;32mI (27802) main: 0[0m
+[0;32mI (27802) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27812) main: 0[0m
+[0;32mI (27812) main: 0[0m
+[0;32mI (27812) main: if (can_move(pixel_array[i].x -1 ,pixel_array[i].y, pixel_array)) {[0m
+[0;32mI (27822) main: 0[0m
+[0;32mI (27822) main: 0[0m
+[0;32mI (27832) main: if (can_move(pixel_array[i].x -1

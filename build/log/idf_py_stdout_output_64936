@@ -1,0 +1,1282 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379582
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul 10 2024 19:41:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c888h ( 51336) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001c8b0 vaddr=3fc93d00 size=02a0ch ( 10764) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001f2c4 vaddr=40374000 size=00d54h (  3412) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1fcc8h (130248) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=0003fcf0 vaddr=40374d54 size=0eecch ( 61132) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ws2812b_lib[0m
+[0;32mI (198) cpu_start: App version:      1dc8dee-dirty[0m
+[0;32mI (203) cpu_start: Compile time:     Jul 10 2024 19:41:09[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  3c83b57ad...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (219) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (224) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (229) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FC96FF0 len 00052720 (329 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (253) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (2322) main: Moved pixel from 2 to 10[0m
+[0;32mI (2322) main: Moved pixel from 3 to 11[0m
+[0;32mI (2322) main: Moved pixel from 4 to 12[0m
+[0;32mI (2322) main: Moved pixel from 5 to 13[0m
+[0;32mI (2322) main: Moved pixel from 6 to 14[0m
+[0;32mI (2332) main: Moved pixel from 7 to 15[0m
+[0;32mI (2332) main: Moved pixel from 8 to 16[0m
+[0;32mI (2342) main: Moved pixel from 9 to 17[0m
+[0;32mI (2342) main: Moved pixel from 10 to 18[0m
+[0;32mI (2342) main: Moved pixel from 11 to 19[0m
+[0;32mI (2352) main: Moved pixel from 12 to 20[0m
+[0;32mI (2352) main: Moved pixel from 13 to 21[0m
+[0;32mI (2362) main: Moved pixel from 14 to 22[0m
+[0;32mI (2362) main: Moved pixel from 15 to 23[0m
+[0;32mI (2372) main: Moved pixel from 16 to 24[0m
+[0;32mI (2372) main: Moved pixel from 17 to 25[0m
+[0;32mI (2382) main: Moved pixel from 18 to 26[0m
+[0;32mI (2382) main: Moved pixel from 19 to 27[0m
+[0;32mI (2392) main: Moved pixel from 20 to 28[0m
+[0;32mI (2392) main: Moved pixel from 21 to 29[0m
+[0;32mI (2402) main: Moved pixel from 22 to 30[0m
+[0;32mI (2402) main: Moved pixel from 23 to 31[0m
+[0;32mI (2402) main: Moved pixel from 24 to 32[0m
+[0;32mI (2412) main: Moved pixel from 25 to 33[0m
+[0;32mI (2412) main: Moved pixel from 26 to 34[0m
+[0;32mI (2422) main: Moved pixel from 27 to 35[0m
+[0;32mI (2422) main: Moved pixel from 28 to 36[0m
+[0;32mI (2432) main: Moved pixel from 29 to 37[0m
+[0;32mI (2432) main: Moved pixel from 30 to 38[0m
+[0;32mI (2442) main: Moved pixel from 31 to 39[0m
+[0;32mI (2442) main: Moved pixel from 32 to 40[0m
+[0;32mI (2452) main: Moved pixel from 33 to 41[0m
+[0;32mI (2452) main: Moved pixel from 34 to 42[0m
+[0;32mI (2462) main: Moved pixel from 35 to 43[0m
+[0;32mI (2462) main: Moved pixel from 36 to 44[0m
+[0;32mI (2462) main: Moved pixel from 37 to 45[0m
+[0;32mI (2472) main: Moved pixel from 38 to 46[0m
+[0;32mI (2472) main: Moved pixel from 39 to 47[0m
+[0;32mI (2482) main: Moved pixel from 40 to 48[0m
+[0;32mI (2482) main: Moved pixel from 41 to 49[0m
+[0;32mI (2492) main: Moved pixel from 42 to 50[0m
+[0;32mI (2492) main: Moved pixel from 43 to 51[0m
+[0;32mI (2502) main: Moved pixel from 44 to 52[0m
+[0;32mI (2502) main: Moved pixel from 45 to 53[0m
+[0;32mI (2512) main: Moved pixel from 46 to 54[0m
+[0;32mI (2512) main: Moved pixel from 47 to 55[0m
+[0;32mI (2522) main: Moved pixel from 48 to 56[0m
+[0;32mI (2522) main: Moved pixel from 49 to 57[0m
+[0;32mI (2522) main: Moved pixel from 50 to 58[0m
+[0;32mI (2532) main: Moved pixel from 51 to 59[0m
+[0;32mI (2532) main: Moved pixel from 52 to 60[0m
+[0;32mI (2542) main: Moved pixel from 53 to 61[0m
+[0;32mI (2542) main: Moved pixel from 54 to 62[0m
+[0;32mI (2552) main: Moved pixel from 55 to 63[0m
+[0;32mI (2552) main: new_op[0m
+[0;32mI (4562) main: Moved pixel from 0 to 8[0m
+[0;32mI (4562) main: Moved pixel from 1 to 9[0m
+[0;32mI (4562) main: Moved pixel from 8 to 16[0m
+[0;32mI (4562) main: Moved pixel from 9 to 17[0m
+[0;32mI (4562) main: Moved pixel from 16 to 24[0m
+[0;32mI (4572) main: Moved pixel from 17 to 25[0m
+[0;32mI (4572) main: Moved pixel from 24 to 32[0m
+[0;32mI (4582) main: Moved pixel from 25 to 33[0m
+[0;32mI (4582) main: Moved pixel from 32 to 40[0m
+[0;32mI (4582) main: Moved pixel from 33 to 41[0m
+[0;32mI (4592) main: Moved pixel from 40 to 48[0m
+[0;32mI (4592) main: Moved pixel from 41 to 49[0m
+[0;32mI (4602) main: Moved pixel from 49 to 50[0m
+[0;32mI (4602) main: Moved pixel from 50 to 49[0m
+[0;32mI (4612) main: new_op[0m
+[0;32mI (6622) main: Moved pixel from 49 to 50[0m
+[0;32mI (6622) main: Moved pixel from 50 to 49[0m
+[0;32mI (6622) main: new_op[0m
+[0;32mI (8622) main: Moved pixel from 49 to 50[0m
+[0;32mI (8622) main: Moved pixel from 50 to 49[0m
+[0;32mI (8622) main: new_op[0m
+[0;32mI (10622) main: Moved pixel from 49 to 50[0m
+[0;32mI (10622) main: Moved pixel from 50 to 49[0m
+[0;32mI (10622) main: new_op[0m
+[0;32mI (12622) main: Moved pixel from 49 to 50[0m
+[0;32mI (12622) main: Moved pixel from 50 to 49[0m
+[0;32mI (12622) main: new_op[0m
+[0;32mI (14622) main: Moved pixel from 49 to 50[0m
+[0;32mI (14622) main: Moved pixel from 50 to 49[0m
+[0;32mI (14622) main: new_op[0m
+[0;32mI (16622) main: Moved pixel from 49 to 50[0m
+[0;32mI (16622) main: Moved pixel from 50 to 49[0m
+[0;32mI (16622) main: new_op[0m
+[0;32mI (18622) main: Moved pixel from 49 to 50[0m
+[0;32mI (18622) main: Moved pixel from 50 to 49[0m
+[0;32mI (18622) main: new_op[0m
+[0;32mI (20622) main: Moved pixel from 49 to 50[0m
+[0;32mI (20622) main: Moved pixel from 50 to 49[0m
+[0;32mI (20622) main: new_op[0m
+[0;32mI (22622) main: Moved pixel from 49 to 50[0m
+[0;32mI (22622) main: Moved pixel from 50 to 49[0m
+[0;32mI (22622) main: new_op[0m
+[0;32mI (24622) main: Moved pixel from 49 to 50[0m
+[0;32mI (24622) main: Moved pixel from 50 to 49[0m
+[0;32mI (24622) main: new_op[0m
+[0;32mI (26622) main: Moved pixel from 49 to 50[0m
+[0;32mI (26622) main: Moved pixel from 50 to 49[0m
+[0;32mI (26622) main: new_op[0m
+[0;32mI (28622) main: Moved pixel from 49 to 50[0m
+[0;32mI (28622) main: Moved pixel from 50 to 49[0m
+[0;32mI (28622) main: new_op[0m
+[0;32mI (30622) main: Moved pixel from 49 to 50[0m
+[0;32mI (30622) main: Moved pixel from 50 to 49[0m
+[0;32mI (30622) main: new_op[0m
+[0;32mI (32622) main: Moved pixel from 49 to 50[0m
+[0;32mI (32622) main: Moved pixel from 50 to 49[0m
+[0;32mI (32622) main: new_op[0m
+[0;32mI (34622) main: Moved pixel from 49 to 50[0m
+[0;32mI (34622) main: Moved pixel from 50 to 49[0m
+[0;32mI (34622) main: new_op[0m
+[0;32mI (36622) main: Moved pixel from 49 to 50[0m
+[0;32mI (36622) main: Moved pixel from 50 to 49[0m
+[0;32mI (36622) main: new_op[0m
+[0;32mI (38622) main: Moved pixel from 49 to 50[0m
+[0;32mI (38622) main: Moved pixel from 50 to 49[0m
+[0;32mI (38622) main: new_op[0m
+[0;32mI (40622) main: Moved pixel from 49 to 50[0m
+[0;32mI (40622) main: Moved pixel from 50 to 49[0m
+[0;32mI (40622) main: new_op[0m
+[0;32mI (42622) main: Moved pixel from 49 to 50[0m
+[0;32mI (42622) main: Moved pixel from 50 to 49[0m
+[0;32mI (42622) main: new_op[0m
+[0;32mI (44622) main: Moved pixel from 49 to 50[0m
+[0;32mI (44622) main: Moved pixel from 50 to 49[0m
+[0;32mI (44622) main: new_op[0m
+[0;32mI (46622) main: Moved pixel from 49 to 50[0m
+[0;32mI (46622) main: Moved pixel from 50 to 49[0m
+[0;32mI (46622) main: new_op[0m
+[0;32mI (48622) main: Moved pixel from 49 to 50[0m
+[0;32mI (48622) main: Moved pixel from 50 to 49[0m
+[0;32mI (48622) main: new_op[0m
+[0;32mI (50622) main: Moved pixel from 49 to 50[0m
+[0;32mI (50622) main: Moved pixel from 50 to 49[0m
+[0;32mI (50622) main: new_op[0m
+[0;32mI (52622) main: Moved pixel from 49 to 50[0m
+[0;32mI (52622) main: Moved pixel from 50 to 49[0m
+[0;32mI (52622) main: new_op[0m
+[0;32mI (54622) main: Moved pixel from 49 to 50[0m
+[0;32mI (54622) main: Moved pixel from 50 to 49[0m
+[0;32mI (54622) main: new_op[0m
+[0;32mI (56622) main: Moved pixel from 49 to 50[0m
+[0;32mI (56622) main: Moved pixel from 50 to 49[0m
+[0;32mI (56622) main: new_op[0m
+[0;32mI (58622) main: Moved pixel from 49 to 50[0m
+[0;32mI (58622) main: Moved pixel from 50 to 49[0m
+[0;32mI (58622) main: new_op[0m
+[0;32mI (60622) main: Moved pixel from 49 to 50[0m
+[0;32mI (60622) main: Moved pixel from 50 to 49[0m
+[0;32mI (60622) main: new_op[0m
+[0;32mI (62622) main: Moved pixel from 49 to 50[0m
+[0;32mI (62622) main: Moved pixel from 50 to 49[0m
+[0;32mI (62622) main: new_op[0m
+[0;32mI (64622) main: Moved pixel from 49 to 50[0m
+[0;32mI (64622) main: Moved pixel from 50 to 49[0m
+[0;32mI (64622) main: new_op[0m
+[0;32mI (66622) main: Moved pixel from 49 to 50[0m
+[0;32mI (66622) main: Moved pixel from 50 to 49[0m
+[0;32mI (66622) main: new_op[0m
+[0;32mI (68622) main: Moved pixel from 49 to 50[0m
+[0;32mI (68622) main: Moved pixel from 50 to 49[0m
+[0;32mI (68622) main: new_op[0m
+[0;32mI (70622) main: Moved pixel from 49 to 50[0m
+[0;32mI (70622) main: Moved pixel from 50 to 49[0m
+[0;32mI (70622) main: new_op[0m
+[0;32mI (72622) main: Moved pixel from 49 to 50[0m
+[0;32mI (72622) main: Moved pixel from 50 to 49[0m
+[0;32mI (72622) main: new_op[0m
+[0;32mI (74622) main: Moved pixel from 49 to 50[0m
+[0;32mI (74622) main: Moved pixel from 50 to 49[0m
+[0;32mI (74622) main: new_op[0m
+[0;32mI (76622) main: Moved pixel from 49 to 50[0m
+[0;32mI (76622) main: Moved pixel from 50 to 49[0m
+[0;32mI (76622) main: new_op[0m
+[0;32mI (78622) main: Moved pixel from 49 to 50[0m
+[0;32mI (78622) main: Moved pixel from 50 to 49[0m
+[0;32mI (78622) main: new_op[0m
+[0;32mI (80622) main: Moved pixel from 49 to 50[0m
+[0;32mI (80622) main: Moved pixel from 50 to 49[0m
+[0;32mI (80622) main: new_op[0m
+[0;32mI (82622) main: Moved pixel from 49 to 50[0m
+[0;32mI (82622) main: Moved pixel from 50 to 49[0m
+[0;32mI (82622) main: new_op[0m
+[0;32mI (84622) main: Moved pixel from 49 to 50[0m
+[0;32mI (84622) main: Moved pixel from 50 to 49[0m
+[0;32mI (84622) main: new_op[0m
+[0;32mI (86622) main: Moved pixel from 49 to 50[0m
+[0;32mI (86622) main: Moved pixel from 50 to 49[0m
+[0;32mI (86622) main: new_op[0m
+[0;32mI (88622) main: Moved pixel from 49 to 50[0m
+[0;32mI (88622) main: Moved pixel from 50 to 49[0m
+[0;32mI (88622) main: new_op[0m
+[0;32mI (90622) main: Moved pixel from 49 to 50[0m
+[0;32mI (90622) main: Moved pixel from 50 to 49[0m
+[0;32mI (90622) main: new_op[0m
+[0;32mI (92622) main: Moved pixel from 49 to 50[0m
+[0;32mI (92622) main: Moved pixel from 50 to 49[0m
+[0;32mI (92622) main: new_op[0m
+[0;32mI (94622) main: Moved pixel from 49 to 50[0m
+[0;32mI (94622) main: Moved pixel from 50 to 49[0m
+[0;32mI (94622) main: new_op[0m
+[0;32mI (96622) main: Moved pixel from 49 to 50[0m
+[0;32mI (96622) main: Moved pixel from 50 to 49[0m
+[0;32mI (96622) main: new_op[0m
+[0;32mI (98622) main: Moved pixel from 49 to 50[0m
+[0;32mI (98622) main: Moved pixel from 50 to 49[0m
+[0;32mI (98622) main: new_op[0m
+[0;32mI (100622) main: Moved pixel from 49 to 50[0m
+[0;32mI (100622) main: Moved pixel from 50 to 49[0m
+[0;32mI (100622) main: new_op[0m
+[0;32mI (102622) main: Moved pixel from 49 to 50[0m
+[0;32mI (102622) main: Moved pixel from 50 to 49[0m
+[0;32mI (102622) main: new_op[0m
+[0;32mI (104622) main: Moved pixel from 49 to 50[0m
+[0;32mI (104622) main: Moved pixel from 50 to 49[0m
+[0;32mI (104622) main: new_op[0m
+[0;32mI (106622) main: Moved pixel from 49 to 50[0m
+[0;32mI (106622) main: Moved pixel from 50 to 49[0m
+[0;32mI (106622) main: new_op[0m
+[0;32mI (108622) main: Moved pixel from 49 to 50[0m
+[0;32mI (108622) main: Moved pixel from 50 to 49[0m
+[0;32mI (108622) main: new_op[0m
+[0;32mI (110622) main: Moved pixel from 49 to 50[0m
+[0;32mI (110622) main: Moved pixel from 50 to 49[0m
+[0;32mI (110622) main: new_op[0m
+[0;32mI (112622) main: Moved pixel from 49 to 50[0m
+[0;32mI (112622) main: Moved pixel from 50 to 49[0m
+[0;32mI (112622) main: new_op[0m
+[0;32mI (114622) main: Moved pixel from 49 to 50[0m
+[0;32mI (114622) main: Moved pixel from 50 to 49[0m
+[0;32mI (114622) main: new_op[0m
+[0;32mI (116622) main: Moved pixel from 49 to 50[0m
+[0;32mI (116622) main: Moved pixel from 50 to 49[0m
+[0;32mI (116622) main: new_op[0m
+[0;32mI (118622) main: Moved pixel from 49 to 50[0m
+[0;32mI (118622) main: Moved pixel from 50 to 49[0m
+[0;32mI (118622) main: new_op[0m
+[0;32mI (120622) main: Moved pixel from 49 to 50[0m
+[0;32mI (120622) main: Moved pixel from 50 to 49[0m
+[0;32mI (120622) main: new_op[0m
+[0;32mI (122622) main: Moved pixel from 49 to 50[0m
+[0;32mI (122622) main: Moved pixel from 50 to 49[0m
+[0;32mI (122622) main: new_op[0m
+[0;32mI (124622) main: Moved pixel from 49 to 50[0m
+[0;32mI (124622) main: Moved pixel from 50 to 49[0m
+[0;32mI (124622) main: new_op[0m
+[0;32mI (126622) main: Moved pixel from 49 to 50[0m
+[0;32mI (126622) main: Moved pixel from 50 to 49[0m
+[0;32mI (126622) main: new_op[0m
+[0;32mI (128622) main: Moved pixel from 49 to 50[0m
+[0;32mI (128622) main: Moved pixel from 50 to 49[0m
+[0;32mI (128622) main: new_op[0m
+[0;32mI (130622) main: Moved pixel from 49 to 50[0m
+[0;32mI (130622) main: Moved pixel from 50 to 49[0m
+[0;32mI (130622) main: new_op[0m
+[0;32mI (132622) main: Moved pixel from 49 to 50[0m
+[0;32mI (132622) main: Moved pixel from 50 to 49[0m
+[0;32mI (132622) main: new_op[0m
+[0;32mI (134622) main: Moved pixel from 49 to 50[0m
+[0;32mI (134622) main: Moved pixel from 50 to 49[0m
+[0;32mI (134622) main: new_op[0m
+[0;32mI (136622) main: Moved pixel from 49 to 50[0m
+[0;32mI (136622) main: Moved pixel from 50 to 49[0m
+[0;32mI (136622) main: new_op[0m
+[0;32mI (138622) main: Moved pixel from 49 to 50[0m
+[0;32mI (138622) main: Moved pixel from 50 to 49[0m
+[0;32mI (138622) main: new_op[0m
+[0;32mI (140622) main: Moved pixel from 49 to 50[0m
+[0;32mI (140622) main: Moved pixel from 50 to 49[0m
+[0;32mI (140622) main: new_op[0m
+[0;32mI (142622) main: Moved pixel from 49 to 50[0m
+[0;32mI (142622) main: Moved pixel from 50 to 49[0m
+[0;32mI (142622) main: new_op[0m
+[0;32mI (144622) main: Moved pixel from 49 to 50[0m
+[0;32mI (144622) main: Moved pixel from 50 to 49[0m
+[0;32mI (144622) main: new_op[0m
+[0;32mI (146622) main: Moved pixel from 49 to 50[0m
+[0;32mI (146622) main: Moved pixel from 50 to 49[0m
+[0;32mI (146622) main: new_op[0m
+[0;32mI (148622) main: Moved pixel from 49 to 50[0m
+[0;32mI (148622) main: Moved pixel from 50 to 49[0m
+[0;32mI (148622) main: new_op[0m
+[0;32mI (150622) main: Moved pixel from 49 to 50[0m
+[0;32mI (150622) main: Moved pixel from 50 to 49[0m
+[0;32mI (150622) main: new_op[0m
+[0;32mI (152622) main: Moved pixel from 49 to 50[0m
+[0;32mI (152622) main: Moved pixel from 50 to 49[0m
+[0;32mI (152622) main: new_op[0m
+[0;32mI (154622) main: Moved pixel from 49 to 50[0m
+[0;32mI (154622) main: Moved pixel from 50 to 49[0m
+[0;32mI (154622) main: new_op[0m
+[0;32mI (156622) main: Moved pixel from 49 to 50[0m
+[0;32mI (156622) main: Moved pixel from 50 to 49[0m
+[0;32mI (156622) main: new_op[0m
+[0;32mI (158622) main: Moved pixel from 49 to 50[0m
+[0;32mI (158622) main: Moved pixel from 50 to 49[0m
+[0;32mI (158622) main: new_op[0m
+[0;32mI (160622) main: Moved pixel from 49 to 50[0m
+[0;32mI (160622) main: Moved pixel from 50 to 49[0m
+[0;32mI (160622) main: new_op[0m
+[0;32mI (162622) main: Moved pixel from 49 to 50[0m
+[0;32mI (162622) main: Moved pixel from 50 to 49[0m
+[0;32mI (162622) main: new_op[0m
+[0;32mI (164622) main: Moved pixel from 49 to 50[0m
+[0;32mI (164622) main: Moved pixel from 50 to 49[0m
+[0;32mI (164622) main: new_op[0m
+[0;32mI (166622) main: Moved pixel from 49 to 50[0m
+[0;32mI (166622) main: Moved pixel from 50 to 49[0m
+[0;32mI (166622) main: new_op[0m
+[0;32mI (168622) main: Moved pixel from 49 to 50[0m
+[0;32mI (168622) main: Moved pixel from 50 to 49[0m
+[0;32mI (168622) main: new_op[0m
+[0;32mI (170622) main: Moved pixel from 49 to 50[0m
+[0;32mI (170622) main: Moved pixel from 50 to 49[0m
+[0;32mI (170622) main: new_op[0m
+[0;32mI (172622) main: Moved pixel from 49 to 50[0m
+[0;32mI (172622) main: Moved pixel from 50 to 49[0m
+[0;32mI (172622) main: new_op[0m
+[0;32mI (174622) main: Moved pixel from 49 to 50[0m
+[0;32mI (174622) main: Moved pixel from 50 to 49[0m
+[0;32mI (174622) main: new_op[0m
+[0;32mI (176622) main: Moved pixel from 49 to 50[0m
+[0;32mI (176622) main: Moved pixel from 50 to 49[0m
+[0;32mI (176622) main: new_op[0m
+[0;32mI (178622) main: Moved pixel from 49 to 50[0m
+[0;32mI (178622) main: Moved pixel from 50 to 49[0m
+[0;32mI (178622) main: new_op[0m
+[0;32mI (180622) main: Moved pixel from 49 to 50[0m
+[0;32mI (180622) main: Moved pixel from 50 to 49[0m
+[0;32mI (180622) main: new_op[0m
+[0;32mI (182622) main: Moved pixel from 49 to 50[0m
+[0;32mI (182622) main: Moved pixel from 50 to 49[0m
+[0;32mI (182622) main: new_op[0m
+[0;32mI (184622) main: Moved pixel from 49 to 50[0m
+[0;32mI (184622) main: Moved pixel from 50 to 49[0m
+[0;32mI (184622) main: new_op[0m
+[0;32mI (186622) main: Moved pixel from 49 to 50[0m
+[0;32mI (186622) main: Moved pixel from 50 to 49[0m
+[0;32mI (186622) main: new_op[0m
+[0;32mI (188622) main: Moved pixel from 49 to 50[0m
+[0;32mI (188622) main: Moved pixel from 50 to 49[0m
+[0;32mI (188622) main: new_op[0m
+[0;32mI (190622) main: Moved pixel from 49 to 50[0m
+[0;32mI (190622) main: Moved pixel from 50 to 49[0m
+[0;32mI (190622) main: new_op[0m
+[0;32mI (192622) main: Moved pixel from 49 to 50[0m
+[0;32mI (192622) main: Moved pixel from 50 to 49[0m
+[0;32mI (192622) main: new_op[0m
+[0;32mI (194622) main: Moved pixel from 49 to 50[0m
+[0;32mI (194622) main: Moved pixel from 50 to 49[0m
+[0;32mI (194622) main: new_op[0m
+[0;32mI (196622) main: Moved pixel from 49 to 50[0m
+[0;32mI (196622) main: Moved pixel from 50 to 49[0m
+[0;32mI (196622) main: new_op[0m
+[0;32mI (198622) main: Moved pixel from 49 to 50[0m
+[0;32mI (198622) main: Moved pixel from 50 to 49[0m
+[0;32mI (198622) main: new_op[0m
+[0;32mI (200622) main: Moved pixel from 49 to 50[0m
+[0;32mI (200622) main: Moved pixel from 50 to 49[0m
+[0;32mI (200622) main: new_op[0m
+[0;32mI (202622) main: Moved pixel from 49 to 50[0m
+[0;32mI (202622) main: Moved pixel from 50 to 49[0m
+[0;32mI (202622) main: new_op[0m
+[0;32mI (204622) main: Moved pixel from 49 to 50[0m
+[0;32mI (204622) main: Moved pixel from 50 to 49[0m
+[0;32mI (204622) main: new_op[0m
+[0;32mI (206622) main: Moved pixel from 49 to 50[0m
+[0;32mI (206622) main: Moved pixel from 50 to 49[0m
+[0;32mI (206622) main: new_op[0m
+[0;32mI (208622) main: Moved pixel from 49 to 50[0m
+[0;32mI (208622) main: Moved pixel from 50 to 49[0m
+[0;32mI (208622) main: new_op[0m
+[0;32mI (210622) main: Moved pixel from 49 to 50[0m
+[0;32mI (210622) main: Moved pixel from 50 to 49[0m
+[0;32mI (210622) main: new_op[0m
+[0;32mI (212622) main: Moved pixel from 49 to 50[0m
+[0;32mI (212622) main: Moved pixel from 50 to 49[0m
+[0;32mI (212622) main: new_op[0m
+[0;32mI (214622) main: Moved pixel from 49 to 50[0m
+[0;32mI (214622) main: Moved pixel from 50 to 49[0m
+[0;32mI (214622) main: new_op[0m
+[0;32mI (216622) main: Moved pixel from 49 to 50[0m
+[0;32mI (216622) main: Moved pixel from 50 to 49[0m
+[0;32mI (216622) main: new_op[0m
+[0;32mI (218622) main: Moved pixel from 49 to 50[0m
+[0;32mI (218622) main: Moved pixel from 50 to 49[0m
+[0;32mI (218622) main: new_op[0m
+[0;32mI (220622) main: Moved pixel from 49 to 50[0m
+[0;32mI (220622) main: Moved pixel from 50 to 49[0m
+[0;32mI (220622) main: new_op[0m
+[0;32mI (222622) main: Moved pixel from 49 to 50[0m
+[0;32mI (222622) main: Moved pixel from 50 to 49[0m
+[0;32mI (222622) main: new_op[0m
+[0;32mI (224622) main: Moved pixel from 49 to 50[0m
+[0;32mI (224622) main: Moved pixel from 50 to 49[0m
+[0;32mI (224622) main: new_op[0m
+[0;32mI (226622) main: Moved pixel from 49 to 50[0m
+[0;32mI (226622) main: Moved pixel from 50 to 49[0m
+[0;32mI (226622) main: new_op[0m
+[0;32mI (228622) main: Moved pixel from 49 to 50[0m
+[0;32mI (228622) main: Moved pixel from 50 to 49[0m
+[0;32mI (228622) main: new_op[0m
+[0;32mI (230622) main: Moved pixel from 49 to 50[0m
+[0;32mI (230622) main: Moved pixel from 50 to 49[0m
+[0;32mI (230622) main: new_op[0m
+[0;32mI (232622) main: Moved pixel from 49 to 50[0m
+[0;32mI (232622) main: Moved pixel from 50 to 49[0m
+[0;32mI (232622) main: new_op[0m
+[0;32mI (234622) main: Moved pixel from 49 to 50[0m
+[0;32mI (234622) main: Moved pixel from 50 to 49[0m
+[0;32mI (234622) main: new_op[0m
+[0;32mI (236622) main: Moved pixel from 49 to 50[0m
+[0;32mI (236622) main: Moved pixel from 50 to 49[0m
+[0;32mI (236622) main: new_op[0m
+[0;32mI (238622) main: Moved pixel from 49 to 50[0m
+[0;32mI (238622) main: Moved pixel from 50 to 49[0m
+[0;32mI (238622) main: new_op[0m
+[0;32mI (240622) main: Moved pixel from 49 to 50[0m
+[0;32mI (240622) main: Moved pixel from 50 to 49[0m
+[0;32mI (240622) main: new_op[0m
+[0;32mI (242622) main: Moved pixel from 49 to 50[0m
+[0;32mI (242622) main: Moved pixel from 50 to 49[0m
+[0;32mI (242622) main: new_op[0m
+[0;32mI (244622) main: Moved pixel from 49 to 50[0m
+[0;32mI (244622) main: Moved pixel from 50 to 49[0m
+[0;32mI (244622) main: new_op[0m
+[0;32mI (246622) main: Moved pixel from 49 to 50[0m
+[0;32mI (246622) main: Moved pixel from 50 to 49[0m
+[0;32mI (246622) main: new_op[0m
+[0;32mI (248622) main: Moved pixel from 49 to 50[0m
+[0;32mI (248622) main: Moved pixel from 50 to 49[0m
+[0;32mI (248622) main: new_op[0m
+[0;32mI (250622) main: Moved pixel from 49 to 50[0m
+[0;32mI (250622) main: Moved pixel from 50 to 49[0m
+[0;32mI (250622) main: new_op[0m
+[0;32mI (252622) main: Moved pixel from 49 to 50[0m
+[0;32mI (252622) main: Moved pixel from 50 to 49[0m
+[0;32mI (252622) main: new_op[0m
+[0;32mI (254622) main: Moved pixel from 49 to 50[0m
+[0;32mI (254622) main: Moved pixel from 50 to 49[0m
+[0;32mI (254622) main: new_op[0m
+[0;32mI (256622) main: Moved pixel from 49 to 50[0m
+[0;32mI (256622) main: Moved pixel from 50 to 49[0m
+[0;32mI (256622) main: new_op[0m
+[0;32mI (258622) main: Moved pixel from 49 to 50[0m
+[0;32mI (258622) main: Moved pixel from 50 to 49[0m
+[0;32mI (258622) main: new_op[0m
+[0;32mI (260622) main: Moved pixel from 49 to 50[0m
+[0;32mI (260622) main: Moved pixel from 50 to 49[0m
+[0;32mI (260622) main: new_op[0m
+[0;32mI (262622) main: Moved pixel from 49 to 50[0m
+[0;32mI (262622) main: Moved pixel from 50 to 49[0m
+[0;32mI (262622) main: new_op[0m
+[0;32mI (264622) main: Moved pixel from 49 to 50[0m
+[0;32mI (264622) main: Moved pixel from 50 to 49[0m
+[0;32mI (264622) main: new_op[0m
+[0;32mI (266622) main: Moved pixel from 49 to 50[0m
+[0;32mI (266622) main: Moved pixel from 50 to 49[0m
+[0;32mI (266622) main: new_op[0m
+[0;32mI (268622) main: Moved pixel from 49 to 50[0m
+[0;32mI (268622) main: Moved pixel from 50 to 49[0m
+[0;32mI (268622) main: new_op[0m
+[0;32mI (270622) main: Moved pixel from 49 to 50[0m
+[0;32mI (270622) main: Moved pixel from 50 to 49[0m
+[0;32mI (270622) main: new_op[0m
+[0;32mI (272622) main: Moved pixel from 49 to 50[0m
+[0;32mI (272622) main: Moved pixel from 50 to 49[0m
+[0;32mI (272622) main: new_op[0m
+[0;32mI (274622) main: Moved pixel from 49 to 50[0m
+[0;32mI (274622) main: Moved pixel from 50 to 49[0m
+[0;32mI (274622) main: new_op[0m
+[0;32mI (276622) main: Moved pixel from 49 to 50[0m
+[0;32mI (276622) main: Moved pixel from 50 to 49[0m
+[0;32mI (276622) main: new_op[0m
+[0;32mI (278622) main: Moved pixel from 49 to 50[0m
+[0;32mI (278622) main: Moved pixel from 50 to 49[0m
+[0;32mI (278622) main: new_op[0m
+[0;32mI (280622) main: Moved pixel from 49 to 50[0m
+[0;32mI (280622) main: Moved pixel from 50 to 49[0m
+[0;32mI (280622) main: new_op[0m
+[0;32mI (282622) main: Moved pixel from 49 to 50[0m
+[0;32mI (282622) main: Moved pixel from 50 to 49[0m
+[0;32mI (282622) main: new_op[0m
+[0;32mI (284622) main: Moved pixel from 49 to 50[0m
+[0;32mI (284622) main: Moved pixel from 50 to 49[0m
+[0;32mI (284622) main: new_op[0m
+[0;32mI (286622) main: Moved pixel from 49 to 50[0m
+[0;32mI (286622) main: Moved pixel from 50 to 49[0m
+[0;32mI (286622) main: new_op[0m
+[0;32mI (288622) main: Moved pixel from 49 to 50[0m
+[0;32mI (288622) main: Moved pixel from 50 to 49[0m
+[0;32mI (288622) main: new_op[0m
+[0;32mI (290622) main: Moved pixel from 49 to 50[0m
+[0;32mI (290622) main: Moved pixel from 50 to 49[0m
+[0;32mI (290622) main: new_op[0m
+[0;32mI (292622) main: Moved pixel from 49 to 50[0m
+[0;32mI (292622) main: Moved pixel from 50 to 49[0m
+[0;32mI (292622) main: new_op[0m
+[0;32mI (294622) main: Moved pixel from 49 to 50[0m
+[0;32mI (294622) main: Moved pixel from 50 to 49[0m
+[0;32mI (294622) main: new_op[0m
+[0;32mI (296622) main: Moved pixel from 49 to 50[0m
+[0;32mI (296622) main: Moved pixel from 50 to 49[0m
+[0;32mI (296622) main: new_op[0m
+[0;32mI (298622) main: Moved pixel from 49 to 50[0m
+[0;32mI (298622) main: Moved pixel from 50 to 49[0m
+[0;32mI (298622) main: new_op[0m
+[0;32mI (300622) main: Moved pixel from 49 to 50[0m
+[0;32mI (300622) main: Moved pixel from 50 to 49[0m
+[0;32mI (300622) main: new_op[0m
+[0;32mI (302622) main: Moved pixel from 49 to 50[0m
+[0;32mI (302622) main: Moved pixel from 50 to 49[0m
+[0;32mI (302622) main: new_op[0m
+[0;32mI (304622) main: Moved pixel from 49 to 50[0m
+[0;32mI (304622) main: Moved pixel from 50 to 49[0m
+[0;32mI (304622) main: new_op[0m
+[0;32mI (306622) main: Moved pixel from 49 to 50[0m
+[0;32mI (306622) main: Moved pixel from 50 to 49[0m
+[0;32mI (306622) main: new_op[0m
+[0;32mI (308622) main: Moved pixel from 49 to 50[0m
+[0;32mI (308622) main: Moved pixel from 50 to 49[0m
+[0;32mI (308622) main: new_op[0m
+[0;32mI (310622) main: Moved pixel from 49 to 50[0m
+[0;32mI (310622) main: Moved pixel from 50 to 49[0m
+[0;32mI (310622) main: new_op[0m
+[0;32mI (312622) main: Moved pixel from 49 to 50[0m
+[0;32mI (312622) main: Moved pixel from 50 to 49[0m
+[0;32mI (312622) main: new_op[0m
+[0;32mI (314622) main: Moved pixel from 49 to 50[0m
+[0;32mI (314622) main: Moved pixel from 50 to 49[0m
+[0;32mI (314622) main: new_op[0m
+[0;32mI (316622) main: Moved pixel from 49 to 50[0m
+[0;32mI (316622) main: Moved pixel from 50 to 49[0m
+[0;32mI (316622) main: new_op[0m
+[0;32mI (318622) main: Moved pixel from 49 to 50[0m
+[0;32mI (318622) main: Moved pixel from 50 to 49[0m
+[0;32mI (318622) main: new_op[0m
+[0;32mI (320622) main: Moved pixel from 49 to 50[0m
+[0;32mI (320622) main: Moved pixel from 50 to 49[0m
+[0;32mI (320622) main: new_op[0m
+[0;32mI (322622) main: Moved pixel from 49 to 50[0m
+[0;32mI (322622) main: Moved pixel from 50 to 49[0m
+[0;32mI (322622) main: new_op[0m
+[0;32mI (324622) main: Moved pixel from 49 to 50[0m
+[0;32mI (324622) main: Moved pixel from 50 to 49[0m
+[0;32mI (324622) main: new_op[0m
+[0;32mI (326622) main: Moved pixel from 49 to 50[0m
+[0;32mI (326622) main: Moved pixel from 50 to 49[0m
+[0;32mI (326622) main: new_op[0m
+[0;32mI (328622) main: Moved pixel from 49 to 50[0m
+[0;32mI (328622) main: Moved pixel from 50 to 49[0m
+[0;32mI (328622) main: new_op[0m
+[0;32mI (330622) main: Moved pixel from 49 to 50[0m
+[0;32mI (330622) main: Moved pixel from 50 to 49[0m
+[0;32mI (330622) main: new_op[0m
+[0;32mI (332622) main: Moved pixel from 49 to 50[0m
+[0;32mI (332622) main: Moved pixel from 50 to 49[0m
+[0;32mI (332622) main: new_op[0m
+[0;32mI (334622) main: Moved pixel from 49 to 50[0m
+[0;32mI (334622) main: Moved pixel from 50 to 49[0m
+[0;32mI (334622) main: new_op[0m
+[0;32mI (336622) main: Moved pixel from 49 to 50[0m
+[0;32mI (336622) main: Moved pixel from 50 to 49[0m
+[0;32mI (336622) main: new_op[0m
+[0;32mI (338622) main: Moved pixel from 49 to 50[0m
+[0;32mI (338622) main: Moved pixel from 50 to 49[0m
+[0;32mI (338622) main: new_op[0m
+[0;32mI (340622) main: Moved pixel from 49 to 50[0m
+[0;32mI (340622) main: Moved pixel from 50 to 49[0m
+[0;32mI (340622) main: new_op[0m
+[0;32mI (342622) main: Moved pixel from 49 to 50[0m
+[0;32mI (342622) main: Moved pixel from 50 to 49[0m
+[0;32mI (342622) main: new_op[0m
+[0;32mI (344622) main: Moved pixel from 49 to 50[0m
+[0;32mI (344622) main: Moved pixel from 50 to 49[0m
+[0;32mI (344622) main: new_op[0m
+[0;32mI (346622) main: Moved pixel from 49 to 50[0m
+[0;32mI (346622) main: Moved pixel from 50 to 49[0m
+[0;32mI (346622) main: new_op[0m
+[0;32mI (348622) main: Moved pixel from 49 to 50[0m
+[0;32mI (348622) main: Moved pixel from 50 to 49[0m
+[0;32mI (348622) main: new_op[0m
+[0;32mI (350622) main: Moved pixel from 49 to 50[0m
+[0;32mI (350622) main: Moved pixel from 50 to 49[0m
+[0;32mI (350622) main: new_op[0m
+[0;32mI (352622) main: Moved pixel from 49 to 50[0m
+[0;32mI (352622) main: Moved pixel from 50 to 49[0m
+[0;32mI (352622) main: new_op[0m
+[0;32mI (354622) main: Moved pixel from 49 to 50[0m
+[0;32mI (354622) main: Moved pixel from 50 to 49[0m
+[0;32mI (354622) main: new_op[0m
+[0;32mI (356622) main: Moved pixel from 49 to 50[0m
+[0;32mI (356622) main: Moved pixel from 50 to 49[0m
+[0;32mI (356622) main: new_op[0m
+[0;32mI (358622) main: Moved pixel from 49 to 50[0m
+[0;32mI (358622) main: Moved pixel from 50 to 49[0m
+[0;32mI (358622) main: new_op[0m
+[0;32mI (360622) main: Moved pixel from 49 to 50[0m
+[0;32mI (360622) main: Moved pixel from 50 to 49[0m
+[0;32mI (360622) main: new_op[0m
+[0;32mI (362622) main: Moved pixel from 49 to 50[0m
+[0;32mI (362622) main: Moved pixel from 50 to 49[0m
+[0;32mI (362622) main: new_op[0m
+[0;32mI (364622) main: Moved pixel from 49 to 50[0m
+[0;32mI (364622) main: Moved pixel from 50 to 49[0m
+[0;32mI (364622) main: new_op[0m
+[0;32mI (366622) main: Moved pixel from 49 to 50[0m
+[0;32mI (366622) main: Moved pixel from 50 to 49[0m
+[0;32mI (366622) main: new_op[0m
+[0;32mI (368622) main: Moved pixel from 49 to 50[0m
+[0;32mI (368622) main: Moved pixel from 50 to 49[0m
+[0;32mI (368622) main: new_op[0m
+[0;32mI (370622) main: Moved pixel from 49 to 50[0m
+[0;32mI (370622) main: Moved pixel from 50 to 49[0m
+[0;32mI (370622) main: new_op[0m
+[0;32mI (372622) main: Moved pixel from 49 to 50[0m
+[0;32mI (372622) main: Moved pixel from 50 to 49[0m
+[0;32mI (372622) main: new_op[0m
+[0;32mI (374622) main: Moved pixel from 49 to 50[0m
+[0;32mI (374622) main: Moved pixel from 50 to 49[0m
+[0;32mI (374622) main: new_op[0m
+[0;32mI (376622) main: Moved pixel from 49 to 50[0m
+[0;32mI (376622) main: Moved pixel from 50 to 49[0m
+[0;32mI (376622) main: new_op[0m
+[0;32mI (378622) main: Moved pixel from 49 to 50[0m
+[0;32mI (378622) main: Moved pixel from 50 to 49[0m
+[0;32mI (378622) main: new_op[0m
+[0;32mI (380622) main: Moved pixel from 49 to 50[0m
+[0;32mI (380622) main: Moved pixel from 50 to 49[0m
+[0;32mI (380622) main: new_op[0m
+[0;32mI (382622) main: Moved pixel from 49 to 50[0m
+[0;32mI (382622) main: Moved pixel from 50 to 49[0m
+[0;32mI (382622) main: new_op[0m
+[0;32mI (384622) main: Moved pixel from 49 to 50[0m
+[0;32mI (384622) main: Moved pixel from 50 to 49[0m
+[0;32mI (384622) main: new_op[0m
+[0;32mI (386622) main: Moved pixel from 49 to 50[0m
+[0;32mI (386622) main: Moved pixel from 50 to 49[0m
+[0;32mI (386622) main: new_op[0m
+[0;32mI (388622) main: Moved pixel from 49 to 50[0m
+[0;32mI (388622) main: Moved pixel from 50 to 49[0m
+[0;32mI (388622) main: new_op[0m
+[0;32mI (390622) main: Moved pixel from 49 to 50[0m
+[0;32mI (390622) main: Moved pixel from 50 to 49[0m
+[0;32mI (390622) main: new_op[0m
+[0;32mI (392622) main: Moved pixel from 49 to 50[0m
+[0;32mI (392622) main: Moved pixel from 50 to 49[0m
+[0;32mI (392622) main: new_op[0m
+[0;32mI (394622) main: Moved pixel from 49 to 50[0m
+[0;32mI (394622) main: Moved pixel from 50 to 49[0m
+[0;32mI (394622) main: new_op[0m
+[0;32mI (396622) main: Moved pixel from 49 to 50[0m
+[0;32mI (396622) main: Moved pixel from 50 to 49[0m
+[0;32mI (396622) main: new_op[0m
+[0;32mI (398622) main: Moved pixel from 49 to 50[0m
+[0;32mI (398622) main: Moved pixel from 50 to 49[0m
+[0;32mI (398622) main: new_op[0m
+[0;32mI (400622) main: Moved pixel from 49 to 50[0m
+[0;32mI (400622) main: Moved pixel from 50 to 49[0m
+[0;32mI (400622) main: new_op[0m
+[0;32mI (402622) main: Moved pixel from 49 to 50[0m
+[0;32mI (402622) main: Moved pixel from 50 to 49[0m
+[0;32mI (402622) main: new_op[0m
+[0;32mI (404622) main: Moved pixel from 49 to 50[0m
+[0;32mI (404622) main: Moved pixel from 50 to 49[0m
+[0;32mI (404622) main: new_op[0m
+[0;32mI (406622) main: Moved pixel from 49 to 50[0m
+[0;32mI (406622) main: Moved pixel from 50 to 49[0m
+[0;32mI (406622) main: new_op[0m
+[0;32mI (408622) main: Moved pixel from 49 to 50[0m
+[0;32mI (408622) main: Moved pixel from 50 to 49[0m
+[0;32mI (408622) main: new_op[0m
+[0;32mI (410622) main: Moved pixel from 49 to 50[0m
+[0;32mI (410622) main: Moved pixel from 50 to 49[0m
+[0;32mI (410622) main: new_op[0m
+[0;32mI (412622) main: Moved pixel from 49 to 50[0m
+[0;32mI (412622) main: Moved pixel from 50 to 49[0m
+[0;32mI (412622) main: new_op[0m
+[0;32mI (414622) main: Moved pixel from 49 to 50[0m
+[0;32mI (414622) main: Moved pixel from 50 to 49[0m
+[0;32mI (414622) main: new_op[0m
+[0;32mI (416622) main: Moved pixel from 49 to 50[0m
+[0;32mI (416622) main: Moved pixel from 50 to 49[0m
+[0;32mI (416622) main: new_op[0m
+[0;32mI (418622) main: Moved pixel from 49 to 50[0m
+[0;32mI (418622) main: Moved pixel from 50 to 49[0m
+[0;32mI (418622) main: new_op[0m
+[0;32mI (420622) main: Moved pixel from 49 to 50[0m
+[0;32mI (420622) main: Moved pixel from 50 to 49[0m
+[0;32mI (420622) main: new_op[0m
+[0;32mI (422622) main: Moved pixel from 49 to 50[0m
+[0;32mI (422622) main: Moved pixel from 50 to 49[0m
+[0;32mI (422622) main: new_op[0m
+[0;32mI (424622) main: Moved pixel from 49 to 50[0m
+[0;32mI (424622) main: Moved pixel from 50 to 49[0m
+[0;32mI (424622) main: new_op[0m
+[0;32mI (426622) main: Moved pixel from 49 to 50[0m
+[0;32mI (426622) main: Moved pixel from 50 to 49[0m
+[0;32mI (426622) main: new_op[0m
+[0;32mI (428622) main: Moved pixel from 49 to 50[0m
+[0;32mI (428622) main: Moved pixel from 50 to 49[0m
+[0;32mI (428622) main: new_op[0m
+[0;32mI (430622) main: Moved pixel from 49 to 50[0m
+[0;32mI (430622) main: Moved pixel from 50 to 49[0m
+[0;32mI (430622) main: new_op[0m
+[0;32mI (432622) main: Moved pixel from 49 to 50[0m
+[0;32mI (432622) main: Moved pixel from 50 to 49[0m
+[0;32mI (432622) main: new_op[0m
+[0;32mI (434622) main: Moved pixel from 49 to 50[0m
+[0;32mI (434622) main: Moved pixel from 50 to 49[0m
+[0;32mI (434622) main: new_op[0m
+[0;32mI (436622) main: Moved pixel from 49 to 50[0m
+[0;32mI (436622) main: Moved pixel from 50 to 49[0m
+[0;32mI (436622) main: new_op[0m
+[0;32mI (438622) main: Moved pixel from 49 to 50[0m
+[0;32mI (438622) main: Moved pixel from 50 to 49[0m
+[0;32mI (438622) main: new_op[0m
+[0;32mI (440622) main: Moved pixel from 49 to 50[0m
+[0;32mI (440622) main: Moved pixel from 50 to 49[0m
+[0;32mI (440622) main: new_op[0m
+[0;32mI (442622) main: Moved pixel from 49 to 50[0m
+[0;32mI (442622) main: Moved pixel from 50 to 49[0m
+[0;32mI (442622) main: new_op[0m
+[0;32mI (444622) main: Moved pixel from 49 to 50[0m
+[0;32mI (444622) main: Moved pixel from 50 to 49[0m
+[0;32mI (444622) main: new_op[0m
+[0;32mI (446622) main: Moved pixel from 49 to 50[0m
+[0;32mI (446622) main: Moved pixel from 50 to 49[0m
+[0;32mI (446622) main: new_op[0m
+[0;32mI (448622) main: Moved pixel from 49 to 50[0m
+[0;32mI (448622) main: Moved pixel from 50 to 49[0m
+[0;32mI (448622) main: new_op[0m
+[0;32mI (450622) main: Moved pixel from 49 to 50[0m
+[0;32mI (450622) main: Moved pixel from 50 to 49[0m
+[0;32mI (450622) main: new_op[0m
+[0;32mI (452622) main: Moved pixel from 49 to 50[0m
+[0;32mI (452622) main: Moved pixel from 50 to 49[0m
+[0;32mI (452622) main: new_op[0m
+[0;32mI (454622) main: Moved pixel from 49 to 50[0m
+[0;32mI (454622) main: Moved pixel from 50 to 49[0m
+[0;32mI (454622) main: new_op[0m
+[0;32mI (456622) main: Moved pixel from 49 to 50[0m
+[0;32mI (456622) main: Moved pixel from 50 to 49[0m
+[0;32mI (456622) main: new_op[0m
+[0;32mI (458622) main: Moved pixel from 49 to 50[0m
+[0;32mI (458622) main: Moved pixel from 50 to 49[0m
+[0;32mI (458622) main: new_op[0m
+[0;32mI (460622) main: Moved pixel from 49 to 50[0m
+[0;32mI (460622) main: Moved pixel from 50 to 49[0m
+[0;32mI (460622) main: new_op[0m
+[0;32mI (462622) main: Moved pixel from 49 to 50[0m
+[0;32mI (462622) main: Moved pixel from 50 to 49[0m
+[0;32mI (462622) main: new_op[0m
+[0;32mI (464622) main: Moved pixel from 49 to 50[0m
+[0;32mI (464622) main: Moved pixel from 50 to 49[0m
+[0;32mI (464622) main: new_op[0m
+[0;32mI (466622) main: Moved pixel from 49 to 50[0m
+[0;32mI (466622) main: Moved pixel from 50 to 49[0m
+[0;32mI (466622) main: new_op[0m
+[0;32mI (468622) main: Moved pixel from 49 to 50[0m
+[0;32mI (468622) main: Moved pixel from 50 to 49[0m
+[0;32mI (468622) main: new_op[0m
+[0;32mI (470622) main: Moved pixel from 49 to 50[0m
+[0;32mI (470622) main: Moved pixel from 50 to 49[0m
+[0;32mI (470622) main: new_op[0m
+[0;32mI (472622) main: Moved pixel from 49 to 50[0m
+[0;32mI (472622) main: Moved pixel from 50 to 49[0m
+[0;32mI (472622) main: new_op[0m
+[0;32mI (474622) main: Moved pixel from 49 to 50[0m
+[0;32mI (474622) main: Moved pixel from 50 to 49[0m
+[0;32mI (474622) main: new_op[0m
+[0;32mI (476622) main: Moved pixel from 49 to 50[0m
+[0;32mI (476622) main: Moved pixel from 50 to 49[0m
+[0;32mI (476622) main: new_op[0m
+[0;32mI (478622) main: Moved pixel from 49 to 50[0m
+[0;32mI (478622) main: Moved pixel from 50 to 49[0m
+[0;32mI (478622) main: new_op[0m
+[0;32mI (480622) main: Moved pixel from 49 to 50[0m
+[0;32mI (480622) main: Moved pixel from 50 to 49[0m
+[0;32mI (480622) main: new_op[0m
+[0;32mI (482622) main: Moved pixel from 49 to 50[0m
+[0;32mI (482622) main: Moved pixel from 50 to 49[0m
+[0;32mI (482622) main: new_op[0m
+[0;32mI (484622) main: Moved pixel from 49 to 50[0m
+[0;32mI (484622) main: Moved pixel from 50 to 49[0m
+[0;32mI (484622) main: new_op[0m
+[0;32mI (486622) main: Moved pixel from 49 to 50[0m
+[0;32mI (486622) main: Moved pixel from 50 to 49[0m
+[0;32mI (486622) main: new_op[0m
+[0;32mI (488622) main: Moved pixel from 49 to 50[0m
+[0;32mI (488622) main: Moved pixel from 50 to 49[0m
+[0;32mI (488622) main: new_op[0m
+[0;32mI (490622) main: Moved pixel from 49 to 50[0m
+[0;32mI (490622) main: Moved pixel from 50 to 49[0m
+[0;32mI (490622) main: new_op[0m
+[0;32mI (492622) main: Moved pixel from 49 to 50[0m
+[0;32mI (492622) main: Moved pixel from 50 to 49[0m
+[0;32mI (492622) main: new_op[0m
+[0;32mI (494622) main: Moved pixel from 49 to 50[0m
+[0;32mI (494622) main: Moved pixel from 50 to 49[0m
+[0;32mI (494622) main: new_op[0m
+[0;32mI (496622) main: Moved pixel from 49 to 50[0m
+[0;32mI (496622) main: Moved pixel from 50 to 49[0m
+[0;32mI (496622) main: new_op[0m
+[0;32mI (498622) main: Moved pixel from 49 to 50[0m
+[0;32mI (498622) main: Moved pixel from 50 to 49[0m
+[0;32mI (498622) main: new_op[0m
+[0;32mI (500622) main: Moved pixel from 49 to 50[0m
+[0;32mI (500622) main: Moved pixel from 50 to 49[0m
+[0;32mI (500622) main: new_op[0m
+[0;32mI (502622) main: Moved pixel from 49 to 50[0m
+[0;32mI (502622) main: Moved pixel from 50 to 49[0m
+[0;32mI (502622) main: new_op[0m
+[0;32mI (504622) main: Moved pixel from 49 to 50[0m
+[0;32mI (504622) main: Moved pixel from 50 to 49[0m
+[0;32mI (504622) main: new_op[0m
+[0;32mI (506622) main: Moved pixel from 49 to 50[0m
+[0;32mI (506622) main: Moved pixel from 50 to 49[0m
+[0;32mI (506622) main: new_op[0m
+[0;32mI (508622) main: Moved pixel from 49 to 50[0m
+[0;32mI (508622) main: Moved pixel from 50 to 49[0m
+[0;32mI (508622) main: new_op[0m
+[0;32mI (510622) main: Moved pixel from 49 to 50[0m
+[0;32mI (510622) main: Moved pixel from 50 to 49[0m
+[0;32mI (510622) main: new_op[0m
+[0;32mI (512622) main: Moved pixel from 49 to 50[0m
+[0;32mI (512622) main: Moved pixel from 50 to 49[0m
+[0;32mI (512622) main: new_op[0m
+[0;32mI (514622) main: Moved pixel from 49 to 50[0m
+[0;32mI (514622) main: Moved pixel from 50 to 49[0m
+[0;32mI (514622) main: new_op[0m
+[0;32mI (516622) main: Moved pixel from 49 to 50[0m
+[0;32mI (516622) main: Moved pixel from 50 to 49[0m
+[0;32mI (516622) main: new_op[0m
+[0;32mI (518622) main: Moved pixel from 49 to 50[0m
+[0;32mI (518622) main: Moved pixel from 50 to 49[0m
+[0;32mI (518622) main: new_op[0m
+[0;32mI (520622) main: Moved pixel from 49 to 50[0m
+[0;32mI (520622) main: Moved pixel from 50 to 49[0m
+[0;32mI (520622) main: new_op[0m
+[0;32mI (522622) main: Moved pixel from 49 to 50[0m
+[0;32mI (522622) main: Moved pixel from 50 to 49[0m
+[0;32mI (522622) main: new_op[0m
+[0;32mI (524622) main: Moved pixel from 49 to 50[0m
+[0;32mI (524622) main: Moved pixel from 50 to 49[0m
+[0;32mI (524622) main: new_op[0m
+[0;32mI (526622) main: Moved pixel from 49 to 50[0m
+[0;32mI (526622) main: Moved pixel from 50 to 49[0m
+[0;32mI (526622) main: new_op[0m
+[0;32mI (528622) main: Moved pixel from 49 to 50[0m
+[0;32mI (528622) main: Moved pixel from 50 to 49[0m
+[0;32mI (528622) main: new_op[0m
+[0;32mI (530622) main: Moved pixel from 49 to 50[0m
+[0;32mI (530622) main: Moved pixel from 50 to 49[0m
+[0;32mI (530622) main: new_op[0m
+[0;32mI (532622) main: Moved pixel from 49 to 50[0m
+[0;32mI (532622) main: Moved pixel from 50 to 49[0m
+[0;32mI (532622) main: new_op[0m
+[0;32mI (534622) main: Moved pixel from 49 to 50[0m
+[0;32mI (534622) main: Moved pixel from 50 to 49[0m
+[0;32mI (534622) main: new_op[0m
+[0;32mI (536622) main: Moved pixel from 49 to 50[0m
+[0;32mI (536622) main: Moved pixel from 50 to 49[0m
+[0;32mI (536622) main: new_op[0m
+[0;32mI (538622) main: Moved pixel from 49 to 50[0m
+[0;32mI (538622) main: Moved pixel from 50 to 49[0m
+[0;32mI (538622) main: new_op[0m
+[0;32mI (540622) main: Moved pixel from 49 to 50[0m
+[0;32mI (540622) main: Moved pixel from 50 to 49[0m
+[0;32mI (540622) main: new_op[0m
+[0;32mI (542622) main: Moved pixel from 49 to 50[0m
+[0;32mI (542622) main: Moved pixel from 50 to 49[0m
+[0;32mI (542622) main: new_op[0m
+[0;32mI (544622) main: Moved pixel from 49 to 50[0m
+[0;32mI (544622) main: Moved pixel from 50 to 49[0m
+[0;32mI (544622) main: new_op[0m
+[0;32mI (546622) main: Moved pixel from 49 to 50[0m
+[0;32mI (546622) main: Moved pixel from 50 to 49[0m
+[0;32mI (546622) main: new_op[0m
+[0;32mI (548622) main: Moved pixel from 49 to 50[0m
+[0;32mI (548622) main: Moved pixel from 50 to 49[0m
+[0;32mI (548622) main: new_op[0m
+[0;32mI (550622) main: Moved pixel from 49 to 50[0m
+[0;32mI (550622) main: Moved pixel from 50 to 49[0m
+[0;32mI (550622) main: new_op[0m
+[0;32mI (552622) main: Moved pixel from 49 to 50[0m
+[0;32mI (552622) main: Moved pixel from 50 to 49[0m
+[0;32mI (552622) main: new_op[0m
+[0;32mI (554622) main: Moved pixel from 49 to 50[0m
+[0;32mI (554622) main: Moved pixel from 50 to 49[0m
+[0;32mI (554622) main: new_op[0m
+[0;32mI (556622) main: Moved pixel from 49 to 50[0m
+[0;32mI (556622) main: Moved pixel from 50 to 49[0m
+[0;32mI (556622) main: new_op[0m
+[0;32mI (558622) main: Moved pixel from 49 to 50[0m
+[0;32mI (558622) main: Moved pixel from 50 to 49[0m
+[0;32mI (558622) main: new_op[0m
+[0;32mI (560622) main: Moved pixel from 49 to 50[0m
+[0;32mI (560622) main: Moved pixel from 50 to 49[0m
+[0;32mI (560622) main: new_op[0m
+[0;32mI (562622) main: Moved pixel from 49 to 50[0m
+[0;32mI (562622) main: Moved pixel from 50 to 49[0m
+[0;32mI (562622) main: new_op[0m
+[0;32mI (564622) main: Moved pixel from 49 to 50[0m
+[0;32mI (564622) main: Moved pixel from 50 to 49[0m
+[0;32mI (564622) main: new_op[0m
+[0;32mI (566622) main: Moved pixel from 49 to 50[0m
+[0;32mI (566622) main: Moved pixel from 50 to 49[0m
+[0;32mI (566622) main: new_op[0m
+[0;32mI (568622) main: Moved pixel from 49 to 50[0m
+[0;32mI (568622) main: Moved pixel from 50 to 49[0m
+[0;32mI (568622) main: new_op[0m
+[0;32mI (570622) main: Moved pixel from 49 to 50[0m
+[0;32mI (570622) main: Moved pixel from 50 to 49[0m
+[0;32mI (570622) main: new_op[0m
+[0;32mI (572622) main: Moved pixel from 49 to 50[0m
+[0;32mI (572622) main: Moved pixel from 50 to 49[0m
+[0;32mI (572622) main: new_op[0m
+[0;32mI (574622) main: Moved pixel from 49 to 50[0m
+[0;32mI (574622) main: Moved pixel from 50 to 49[0m
+[0;32mI (574622) main: new_op[0m
+[0;32mI (576622) main: Moved pixel from 49 to 50[0m
+[0;32mI (576622) main: Moved pixel from 50 to 49[0m
+[0;32mI (576622) main: new_op[0m
+[0;32mI (578622) main: Moved pixel from 49 to 50[0m
+[0;32mI (578622) main: Moved pixel from 50 to 49[0m
+[0;32mI (578622) main: new_op[0m
+[0;32mI (580622) main: Moved pixel from 49 to 50[0m
+[0;32mI (580622) main: Moved pixel from 50 to 49[0m
+[0;32mI (580622) main: new_op[0m
+[0;32mI (582622) main: Moved pixel from 49 to 50[0m
+[0;32mI (582622) main: Moved pixel from 50 to 49[0m
+[0;32mI (582622) main: new_op[0m
+[0;32mI (584622) main: Moved pixel from 49 to 50[0m
+[0;32mI (584622) main: Moved pixel from 50 to 49[0m
+[0;32mI (584622) main: new_op[0m
+[0;32mI (586622) main: Moved pixel from 49 to 50[0m
+[0;32mI (586622) main: Moved pixel from 50 to 49[0m
+[0;32mI (586622) main: new_op[0m
+[0;32mI (588622) main: Moved pixel from 49 to 50[0m
+[0;32mI (588622) main: Moved pixel from 50 to 49[0m
+[0;32mI (588622) main: new_op[0m
+[0;32mI (590622) main: Moved pixel from 49 to 50[0m
+[0;32mI (590622) main: Moved pixel from 50 to 49[0m
+[0;32mI (590622) main: new_op[0m
+[0;32mI (592622) main: Moved pixel from 49 to 50[0m
+[0;32mI (592622) main: Moved pixel from 50 to 49[0m
+[0;32mI (592622) main: new_op[0m
+[0;32mI (594622) main: Moved pixel from 49 to 50[0m
+[0;32mI (594622) main: Moved pixel from 50 to 49[0m
+[0;32mI (594622) main: new_op[0m
+[0;32mI (596622) main: Moved pixel from 49 to 50[0m
+[0;32mI (596622) main: Moved pixel from 50 to 49[0m
+[0;32mI (596622) main: new_op[0m
+[0;32mI (598622) main: Moved pixel from 49 to 50[0m
+[0;32mI (598622) main: Moved pixel from 50 to 49[0m
+[0;32mI (598622) main: new_op[0m
+[0;32mI (600622) main: Moved pixel from 49 to 50[0m
+[0;32mI (600622) main: Moved pixel from 50 to 49[0m
+[0;32mI (600622) main: new_op[0m
+[0;32mI (602622) main: Moved pixel from 49 to 50[0m
+[0;32mI (602622) main: Moved pixel from 50 to 49[0m
+[0;32mI (602622) main: new_op[0m
+[0;32mI (604622) main: Moved pixel from 49 to 50[0m
+[0;32mI (604622) main: Moved pixel from 50 to 49[0m
+[0;32mI (604622) main: new_op[0m
+[0;32mI (606622) main: Moved pixel from 49 to 50[0m
+[0;32mI (606622) main: Moved pixel from 50 to 49[0m
+[0;32mI (606622) main: new_op[0m
+[0;32mI (608622) main: Moved pixel from 49 to 50[0m
+[0;32mI (608622) main: Moved pixel from 50 to 49[0m
+[0;32mI (608622) main: new_op[0m
+[0;32mI (610622) main: Moved pixel from 49 to 50[0m
+[0;32mI (610622) main: Moved pixel from 50 to 49[0m
+[0;32mI (610622) main: new_op[0m
+[0;32mI (612622) main: Moved pixel from 49 to 50[0m
+[0;32mI (612622) main: Moved pixel from 50 to 49[0m
+[0;32mI (612622) main: new_op[0m
+[0;32mI (614622) main: Moved pixel from 49 to 50[0m
+[0;32mI (614622) main: Moved pixel from 50 to 49[0m
+[0;32mI (614622) main: new_op[0m
+[0;32mI (616622) main: Moved pixel from 49 to 50[0m
+[0;32mI (616622) main: Moved pixel from 50 to 49[0m
+[0;32mI (616622) main: new_op[0m
+[0;32mI (618622) main: Moved pixel from 49 to 50[0m
+[0;32mI (618622) main: Moved pixel from 50 to 49[0m
+[0;32mI (618622) main: new_op[0m
+[0;32mI (620622) main: Moved pixel from 49 to 50[0m
+[0;32mI (620622) main: Moved pixel from 50 to 49[0m
+[0;32mI (620622) main: new_op[0m
+[0;32mI (622622) main: Moved pixel from 49 to 50[0m
+[0;32mI (622622) main: Moved pixel from 50 to 49[0m
+[0;32mI (622622) main: new_op[0m
+[0;32mI (624622) main: Moved pixel from 49 to 50[0m
+[0;32mI (624622) main: Moved pixel from 50 to 49[0m
+[0;32mI (624622) main: new_op[0m
+[0;32mI (626622) main: Moved pixel from 49 to 50[0m
+[0;32mI (626622) main: Moved pixel from 50 to 49[0m
+[0;32mI (626622) main: new_op[0m
+[0;32mI (628622) main: Moved pixel from 49 to 50[0m
+[0;32mI (628622) main: Moved pixel from 50 to 49[0m
+[0;32mI (628622) main: new_op[0m
+[0;32mI (630622) main: Moved pixel from 49 to 50[0m
+[0;32mI (630622) main: Moved pixel from 50 to 49[0m
+[0;32mI (630622) main: new_op[0m
+[0;32mI (632622) main: Moved pixel from 49 to 50[0m
+[0;32mI (632622) main: Moved pixel from 50 to 49[0m
+[0;32mI (632622) main: new_op[0m
+[0;32mI (634622) main: Moved pixel from 49 to 50[0m
+[0;32mI (634622) main: Moved pixel from 50 to 49[0m
+[0;32mI (634622) main: new_op[0m
+[0;32mI (636622) main: Moved pixel from 49 to 50[0m
+[0;32mI (636622) main: Moved pixel from 50 to 49[0m
+[0;32mI (636622) main: new_op[0m
+[0;32mI (638622) main: Moved pixel from 49 to 50[0m
+[0;32mI (638622) main: Moved pixel from 50 to 49[0m
+[0;32mI (638622) main: new_op[0m
+[0;32mI (640622) main: Moved pixel from 49 to 50[0m
+[0;32mI (640622) main: Moved pixel from 50 to 49[0m
+[0;32mI (640622) main: new_op[0m
+[0;32mI (642622) main: Moved pixel from 49 to 50[0m
+[0;32mI (642622) main: Moved pixel from 50 to 49[0m
+[0;32mI (642622) main: new_op[0m
+[0;32mI (644622) main: Moved pixel from 49 to 50[0m
+[0;32mI (644622) main: Moved pixel from 50 to 49[0m
+[0;32mI (644622) main: new_op[0m
+[0;32mI (646622) main: Moved pixel from 49 to 50[0m
+[0;32mI (646622) main: Moved pixel from 50 to 49[0m
+[0;32mI (646622) main: new_op[0m
+[0;32mI (648622) main: Moved pixel from 49 to 50[0m
+[0;32mI (648622) main: Moved pixel from 50 to 49[0m
+[0;32mI (648622) main: new_op[0m
+[0;32mI (650622) main: Moved pixel from 49 to 50[0m
+[0;32mI (650622) main: Moved pixel from 50 to 49[0m
+[0;32mI (650622) main: new_op[0m
+[0;32mI (652622) main: Moved pixel from 49 to 50[0m
+[0;32mI (652622) main: Moved pixel from 50 to 49[0m
+[0;32mI (652622) main: new_op[0m
+[0;32mI (654622) main: Moved pixel from 49 to 50[0m
+[0;32mI (654622) main: Moved pixel from 50 to 49[0m
+[0;32mI (654622) main: new_op[0m
+[0;32mI (656622) main: Moved pixel from 49 to 50[0m
+[0;32mI (656622) main: Moved pixel from 50 to 49[0m
+[0;32mI (656622) main: new_op[0m
+[0;32mI (658622) main: Moved pixel from 49 to 50[0m
+[0;32mI (658622) main: Moved pixel from 50 to 49[0m
+[0;32mI (658622) main: new_op[0m
+[0;32mI (660622) main: Moved pixel from 49 to 50[0m
+[0;32mI (660622) main: Moved pixel from 50 to 49[0m
+[0;32mI (660622) main: new_op[0m
+[0;32mI (662622) main: Moved pixel from 49 to 50[0m
+[0;32mI (662622) main: Moved pixel from 50 to 49[0m
+[0;32mI (662622) main: new_op[0m
+[0;32mI (664622) main: Moved pixel from 49 to 50[0m
+[0;32mI (664622) main: Moved pixel from 50 to 49[0m
+[0;32mI (664622) main: new_op[0m
+[0;32mI (666622) main: Moved pixel from 49 to 50[0m
+[0;32mI (666622) main: Moved pixel from 50 to 49[0m
+[0;32mI (666622) main: new_op[0m
+[0;32mI (668622) main: Moved pixel from 49 to 50[0m
+[0;32mI (668622) main: Moved pixel from 50 to 49[0m
+[0;32mI (668622) main: new_op[0m
+[0;32mI (670622) main: Moved pixel from 49 to 50[0m
+[0;32mI (670622) main: Moved pixel from 50 to 49[0m
+[0;32mI (670622) main: new_op[0m
+[0;32mI (672622) main: Moved pixel from 49 to 50[0m
+[0;32mI (672622) main: Moved pixel from 50 to 49[0m
+[0;32mI (672622) main: new_op[0m
+[0;32mI (674622) main: Moved pixel from 49 to 50[0m
+[0;32mI (674622) main: Moved pixel from 50 to 49[0m
+[0;32mI (674622) main: new_op[0m
+[0;32mI (676622) main: Moved pixel from 49 to 50[0m
+[0;32mI (676622) main: Moved pixel from 50 to 49[0m
+[0;32mI (676622) main: new_op[0m
+[0;32mI (678622) main: Moved pixel from 49 to 50[0m
+[0;32mI (678622) main: Moved pixel from 50 to 49[0m
+[0;32mI (678622) main: new_op[0m
+[0;32mI (680622) main: Moved pixel from 49 to 50[0m
+[0;32mI (680622) main: Moved pixel from 50 to 49[0m
+[0;32mI (680622) main: new_op[0m
+[0;32mI (682622) main: Moved pixel from 49 to 50[0m
+[0;32mI (682622) main: Moved pixel from 50 to 49[0m
+[0;32mI (682622) main: new_op[0m
+[0;32mI (684622) main: Moved pixel from 49 to 50[0m
+[0;32mI (684622) main: Moved pixel from 50 to 49[0m
+[0;32mI (684622) main: new_op[0m
+[0;32mI (686622) main: Moved pixel from 49 to 50[0m
+[0;32mI (686622) main: Moved pixel from 50 to 49[0m
+[0;32mI (686622) main: new_op[0m
+[0;32mI (688622) main: Moved pixel from 49 to 50[0m
+[0;32mI (688622) main: Moved pixel from 50 to 49[0m
+[0;32mI (688622) main: new_op[0m
+[0;32mI (690622) main: Moved pixel from 49 to 50[0m
+[0;32mI (690622) main: Moved pixel from 50 to 49[0m
+[0;32mI (690622) main: new_op[0m
+[0;32mI (692622) main: Moved pixel from 49 to 50[0m
+[0;32mI (692622) main: Moved pixel from 50 to 49[0m
+[0;32mI (692622) main: new_op[0m
+[0;32mI (694622) main: Moved pixel from 49 to 50[0m
+[0;32mI (694622) main: Moved pixel from 50 to 49[0m
+[0;32mI (694622) main: new_op[0m
+[0;32mI (696622) main: Moved pixel from 49 to 50[0m
+[0;32mI (696622) main: Moved pixel from 50 to 49[0m
+[0;32mI (696622) main: new_op[0m
+[0;32mI (698622) main: Moved pixel from 49 to 50[0m
+[0;32mI (698622) main: Moved pixel from 50 to 49[0m
+[0;32mI (698622) main: new_op[0m
+[0;32mI (700622) main: Moved pixel from 49 to 50[0m
+[0;32mI (700622) main: Moved pixel from 50 to 49[0m
+[0;32mI (700622) main: new_op[0m
+[0;32mI (702622) main: Moved pixel from 49 to 50[0m
+[0;32mI (702622) main: Moved pixel from 50 to 49[0m
+[0;32mI (702622) main: new_op[0m
+[0;32mI (704622) main: Moved pixel from 49 to 50[0m
+[0;32mI (704622) main: Moved pixel from 50 to 49[0m
+[0;32mI (704622) main: new_op[0m
+[0;32mI (706622) main: Moved pixel from 49 to 50[0m
+[0;32mI (706622) main: Moved pixel from 50 to 49[0m
+[0;32mI (706622) main: new_op[0m
+[0;32mI (708622) main: Moved pixel from 49 to 50[0m
+[0;32mI (708622) main: Moved pixel from 50 to 49[0m
+[0;32mI (708622) main: new_op[0m
+[0;32mI (710622) main: Moved pixel from 49 to 50[0m
+[0;32mI (710622) main: Moved pixel from 50 to 49[0m
+[0;32mI (710622) main: new_op[0m
+[0;32mI (712622) main: Moved pixel from 49 to 50[0m
+[0;32mI (712622) main: Moved pixel from 50 to 49[0m
+[0;32mI (712622) main: new_op[0m
+[0;32mI (714622) main: Moved pixel from 49 to 50[0m
+[0;32mI (714622) main: Moved pixel from 50 to 49[0m
+[0;32mI (714622) main: new_op[0m
+[0;32mI (716622) main: Moved pixel from 49 to 50[0m
+[0;32mI (716622) main: Moved pixel from 50 to 49[0m
+[0;32mI (716622) main: new_op[0m
+[0;32mI (718622) main: Moved pixel from 49 to 50[0m
+[0;32mI (718622) main: Moved pixel from 50 to 49[0m
+[0;32mI (718622) main: new_op[0m
+[0;32mI (720622) main: Moved pixel from 49 to 50[0m
+[0;32mI (720622) main: Moved pixel from 50 to 49[0m
+[0;32mI (720622) main: new_op[0m
+[0;32mI (722622) main: Moved pixel from 49 to 50[0m
+[0;32mI (722622) main: Moved pixel from 50 to 49[0m
+[0;32mI (722622) main: new_op[0m
+[0;32mI (724622) main: Moved pixel from 49 to 50[0m
+[0;32mI (724622) main: Moved pixel from 50 to 49[0m
+[0;32mI (724622) main: new_op[0m
+[0;32mI (726622) main: Moved pixel from 49 to 50[0m
+[0;32mI (726622) main: Moved pixel from 50 to 49[0m
+[0;32mI (726622) main: new_op[0m
+[0;32mI (728622) main: Moved pixel from 49 to 50[0m
+[0;32mI (728622) main: Moved pixel from 50 to 49[0m
+[0;32mI (728622) main: new_op[0m
+[0;32mI (730622) main: Moved pixel from 49 to 50[0m
+[0;32mI (730622) main: Moved pixel from 50 to 49[0m
+[0;32mI (730622) main: new_op[0m
+[0;32mI (732622) main: Moved pixel from 49 to 50[0m
+[0;32mI (732622) main: Moved pixel from 50 to 49[0m
+[0;32mI (732622) main: new_op[0m
+[0;32mI (734622) main: Moved pixel from 49 to 50[0m
+[0;32mI (734622) main: Moved pixel from 50 to 49[0m
+[0;32mI (734622) main: new_op[0m
+[0;32mI (736622) main: Moved pixel from 49 to 50[0m
+[0;32mI (736622) main: Moved pixel from 50 to 49[0m
+[0;32mI (736622) main: new_op[0m
+[0;32mI (738622) main: Moved pixel from 49 to 50[0m
+[0;32mI (738622) main: Moved pixel from 50 to 49[0m
+[0;32mI (738622) main: new_op[0m
+[0;32mI (740622) main: Moved pixel from 49 to 50[0m
+[0;32mI (740622) main: Moved pixel from 50 to 49[0m
+[0;32mI (740622) main: new_op[0m
+[0;32mI (742622) main: Moved pixel from 49 to 50[0m
+[0;32mI (742622) main: Moved pixel from 50 to 49[0m
+[0;32mI (742622) main: new_op[0m
+[0;32mI (744622) main: Moved pixel from 49 to 50[0m
+[0;32mI (744622) main: Moved pixel from 50 to 49[0m
+[0;32mI (744622) main: new_op[0m
+[0;32mI (746622) main: Moved pixel from 49 to 50[0m
+[0;32mI (746622) main: Moved pixel from 50 to 49[0m
+[0;32mI (746622) main: new_op[0m
+[0;32mI (748622) main: Moved pixel from 49 to 50[0m
+[0;32mI (748622) main: Moved pixel from 50 to 49[0m
+[0;32mI (748622) main: new_op[0m
+[0;32mI (750622) main: Moved pixel from 49 to 50[0m
+[0;32mI (750622) main: Moved pixel from 50 to 49[0m
+[0;32mI (750622) main: new_op[0m
+[0;32mI (752622) main: Moved pixel from 49 to 50[0m
+[0;32mI (752622) main: Moved pixel from 50 to 49[0m
+[0;32mI (752622) main: new_op[0m
+[0;32mI (754622) main: Moved pixel from 49 to 50[0m
+[0;32mI (754622) main: Moved pixel from 50 to 49[0m
+[0;32mI (754622) main: new_op[0m
+[0;32mI (756622) main: Moved pixel from 49 to 50[0m
+[0;32mI (756622) main: Moved pixel from 50 to 49[0m
+[0;32mI (756622) main: new_op[0m
+[0;32mI (758622) main: Moved pixel from 49 to 50[0m
+[0;32mI (758622) main: Moved pixel from 50 to 49[0m
+[0;32mI (758622) main: new_op[0m
+[0;32mI (760622) main: Moved pixel from 49 to 50[0m
+[0;32mI (760622) main: Moved pixel from 50 to 49[0m
+[0;32mI (760622) main: new_op[0m
+[0;32mI (762622) main: Moved pixel from 49 to 50[0m
+[0;32mI (762622) main: Moved pixel from 50 to 49[0m
+[0;32mI (762622) main: new_op[0m
+[0;32mI (764622) main: Moved pixel from 49 to 50[0m
+[0;32mI (764622) main: Moved pixel from 50 to 49[0m
+[0;32mI (764622) main: new_op[0m
+[0;32mI (766622) main: Moved pixel from 49 to 50[0m
+[0;32mI (766622) main: Moved pixel from 50 to 49[0m
+[0;32mI (766622) main: new_op[0m
+[0;32mI (768622) main: Moved pixel from 49 to 50[0m
+[0;32mI (768622) main: Moved pixel from 50 to 49[0m
+[0;32mI (768622) main: new_op[0m
+[0;32mI (770622) main: Moved pixel from 49 to 50[0m
+[0;32mI (770622) main: Moved pixel from 50 to 49[0m
+[0;32mI (770622) main: new_op[0m
+[0;32mI (772622) main: Moved pixel from 49 to 50[0m
+[0;32mI (772622) main: Moved pixel from 50 to 49[0m
+[0;32mI (772622) main: new_op[0m
+[0;32mI (774622) main: Moved pixel from 49 to 50[0m
+[0;32mI (774622) main: Moved pixel from 50 to 49[0m
+[0;32mI (774622) main: new_op[0m

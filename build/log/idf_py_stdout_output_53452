@@ -1,0 +1,497 @@
+[0;32mI (2841) main: 35[0m
+[0;32mI (2841) main: 36[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037bb2f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul 10 2024 19:41:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c8a8h ( 51368) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001c8d0 vaddr=3fc93d00 size=02a0ch ( 10764) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001f2e4 vaddr=40374000 size=00d34h (  3380) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1fcd0h (130256) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=0003fcf8 vaddr=40374d34 size=0eeech ( 61164) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (179) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ws2812b_lib[0m
+[0;32mI (198) cpu_start: App version:      1dc8dee-dirty[0m
+[0;32mI (203) cpu_start: Compile time:     Jul 10 2024 19:41:09[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  a7456b60c...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (219) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (224) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (229) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FC96FF0 len 00052720 (329 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (253) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (322) main: 0[0m
+[0;32mI (322) main: 1[0m
+[0;32mI (322) main: 2[0m
+[0;32mI (322) main: 4[0m
+[0;32mI (332) main: 5[0m
+[0;32mI (332) main: 6[0m
+[0;32mI (332) main: 7[0m
+[0;32mI (332) main: 8[0m
+[0;32mI (342) main: 9[0m
+[0;32mI (342) main: 11[0m
+[0;32mI (342) main: 12[0m
+[0;32mI (342) main: 15[0m
+[0;32mI (352) main: 16[0m
+[0;32mI (352) main: 18[0m
+[0;32mI (352) main: 19[0m
+[0;32mI (352) main: 20[0m
+[0;32mI (362) main: 21[0m
+[0;32mI (362) main: 22[0m
+[0;32mI (362) main: 23[0m
+[0;32mI (362) main: 24[0m
+[0;32mI (372) main: 25[0m
+[0;32mI (372) main: 26[0m
+[0;32mI (372) main: 27[0m
+[0;32mI (372) main: 28[0m
+[0;32mI (382) main: 29[0m
+[0;32mI (382) main: 30[0m
+[0;32mI (382) main: 31[0m
+[0;32mI (382) main: 33[0m
+[0;32mI (392) main: 34[0m
+[0;32mI (392) main: 35[0m
+[0;32mI (392) main: 36[0m
+[0;32mI (392) main: 37[0m
+[0;32mI (402) main: 38[0m
+[0;32mI (402) main: 39[0m
+[0;32mI (402) main: 40[0m
+[0;32mI (402) main: 41[0m
+[0;32mI (412) main: 42[0m
+[0;32mI (412) main: 43[0m
+[0;32mI (412) main: 44[0m
+[0;32mI (412) main: 45[0m
+[0;32mI (422) main: 46[0m
+[0;32mI (422) main: 47[0m
+[0;32mI (422) main: 48[0m
+[0;32mI (422) main: 50[0m
+[0;32mI (432) main: 51[0m
+[0;32mI (432) main: 52[0m
+[0;32mI (432) main: 53[0m
+[0;32mI (432) main: 54[0m
+[0;32mI (442) main: 55[0m
+[0;32mI (442) main: 0[0m
+[0;32mI (442) main: 1[0m
+[0;32mI (442) main: 2[0m
+[0;32mI (452) main: 4[0m
+[0;32mI (452) main: 5[0m
+[0;32mI (452) main: 6[0m
+[0;32mI (452) main: 7[0m
+[0;32mI (462) main: 8[0m
+[0;32mI (462) main: 9[0m
+[0;32mI (462) main: 11[0m
+[0;32mI (462) main: 12[0m
+[0;32mI (472) main: 15[0m
+[0;32mI (472) main: 16[0m
+[0;32mI (472) main: 18[0m
+[0;32mI (472) main: 19[0m
+[0;32mI (482) main: 20[0m
+[0;32mI (482) main: 21[0m
+[0;32mI (482) main: 22[0m
+[0;32mI (482) main: 23[0m
+[0;32mI (492) main: 24[0m
+[0;32mI (492) main: 25[0m
+[0;32mI (492) main: 26[0m
+[0;32mI (492) main: 27[0m
+[0;32mI (502) main: 28[0m
+[0;32mI (502) main: 29[0m
+[0;32mI (502) main: 30[0m
+[0;32mI (502) main: 31[0m
+[0;32mI (512) main: 33[0m
+[0;32mI (512) main: 34[0m
+[0;32mI (512) main: 35[0m
+[0;32mI (512) main: 36[0m
+[0;32mI (522) main: 37[0m
+[0;32mI (522) main: 38[0m
+[0;32mI (522) main: 39[0m
+[0;32mI (522) main: 40[0m
+[0;32mI (532) main: 41[0m
+[0;32mI (532) main: 42[0m
+[0;32mI (532) main: 43[0m
+[0;32mI (532) main: 44[0m
+[0;32mI (542) main: 45[0m
+[0;32mI (542) main: 46[0m
+[0;32mI (542) main: 47[0m
+[0;32mI (542) main: 48[0m
+[0;32mI (552) main: 50[0m
+[0;32mI (552) main: 51[0m
+[0;32mI (552) main: 52[0m
+[0;32mI (552) main: 53[0m
+[0;32mI (562) main: 54[0m
+[0;32mI (562) main: 55[0m
+[0;32mI (1562) main: 0[0m
+[0;32mI (1562) main: 1[0m
+[0;32mI (1562) main: 3[0m
+[0;32mI (1562) main: 4[0m
+[0;32mI (1562) main: 7[0m
+[0;32mI (1562) main: 8[0m
+[0;32mI (1562) main: 10[0m
+[0;32mI (1562) main: 11[0m
+[0;32mI (1572) main: 12[0m
+[0;32mI (1572) main: 13[0m
+[0;32mI (1572) main: 14[0m
+[0;32mI (1572) main: 15[0m
+[0;32mI (1582) main: 16[0m
+[0;32mI (1582) main: 17[0m
+[0;32mI (1582) main: 18[0m
+[0;32mI (1582) main: 19[0m
+[0;32mI (1592) main: 20[0m
+[0;32mI (1592) main: 21[0m
+[0;32mI (1592) main: 22[0m
+[0;32mI (1602) main: 23[0m
+[0;32mI (1602) main: 25[0m
+[0;32mI (1602) main: 26[0m
+[0;32mI (1602) main: 27[0m
+[0;32mI (1612) main: 28[0m
+[0;32mI (1612) main: 29[0m
+[0;32mI (1612) main: 30[0m
+[0;32mI (1612) main: 31[0m
+[0;32mI (1622) main: 32[0m
+[0;32mI (1622) main: 33[0m
+[0;32mI (1622) main: 34[0m
+[0;32mI (1622) main: 35[0m
+[0;32mI (1632) main: 36[0m
+[0;32mI (1632) main: 37[0m
+[0;32mI (1632) main: 38[0m
+[0;32mI (1632) main: 39[0m
+[0;32mI (1642) main: 40[0m
+[0;32mI (1642) main: 42[0m
+[0;32mI (1642) main: 43[0m
+[0;32mI (1642) main: 44[0m
+[0;32mI (1652) main: 45[0m
+[0;32mI (1652) main: 46[0m
+[0;32mI (1652) main: 47[0m
+[0;32mI (1652) main: 0[0m
+[0;32mI (1662) main: 1[0m
+[0;32mI (1662) main: 2[0m
+[0;32mI (1662) main: 3[0m
+[0;32mI (1672) main: 4[0m
+[0;32mI (1672) main: 5[0m
+[0;32mI (1672) main: 6[0m
+[0;32mI (1672) main: 7[0m
+[0;32mI (1682) main: 8[0m
+[0;32mI (1682) main: 10[0m
+[0;32mI (1682) main: 11[0m
+[0;32mI (1682) main: 12[0m
+[0;32mI (1692) main: 13[0m
+[0;32mI (1692) main: 14[0m
+[0;32mI (1692) main: 15[0m
+[0;32mI (1692) main: 16[0m
+[0;32mI (1702) main: 17[0m
+[0;32mI (1702) main: 18[0m
+[0;32mI (1702) main: 19[0m
+[0;32mI (1702) main: 20[0m
+[0;32mI (1712) main: 21[0m
+[0;32mI (1712) main: 22[0m
+[0;32mI (1712) main: 23[0m
+[0;32mI (1712) main: 25[0m
+[0;32mI (1722) main: 26[0m
+[0;32mI (1722) main: 27[0m
+[0;32mI (1722) main: 28[0m
+[0;32mI (1722) main: 29[0m
+[0;32mI (1732) main: 30[0m
+[0;32mI (1732) main: 31[0m
+[0;32mI (1732) main: 32[0m
+[0;32mI (1732) main: 33[0m
+[0;32mI (1742) main: 34[0m
+[0;32mI (1742) main: 35[0m
+[0;32mI (1742) main: 36[0m
+[0;32mI (1752) main: 37[0m
+[0;32mI (1752) main: 38[0m
+[0;32mI (1752) main: 39[0m
+[0;32mI (1752) main: 40[0m
+[0;32mI (1762) main: 42[0m
+[0;32mI (1762) main: 43[0m
+[0;32mI (1762) main: 44[0m
+[0;32mI (1762) main: 45[0m
+[0;32mI (1772) main: 46[0m
+[0;32mI (1772) main: 47[0m
+[0;32mI (2772) main: 0[0m
+[0;32mI (2772) main: 2[0m
+[0;32mI (2772) main: 3[0m
+[0;32mI (2772) main: 4[0m
+[0;32mI (2772) main: 5[0m
+[0;32mI (2772) main: 6[0m
+[0;32mI (2772) main: 7[0m
+[0;32mI (2772) main: 8[0m
+[0;32mI (2782) main: 9[0m
+[0;32mI (2782) main: 10[0m
+[0;32mI (2782) main: 11[0m
+[0;32mI (2782) main: 12[0m
+[0;32mI (2792) main: 13[0m
+[0;32mI (2792) main: 14[0m
+[0;32mI (2792) main: 15[0m
+[0;32mI (2792) main: 17[0m
+[0;32mI (2802) main: 18[0m
+[0;32mI (2802) main: 19[0m
+[0;32mI (2802) main: 20[0m
+[0;32mI (2802) main: 21[0m
+[0;32mI (2812) main: 22[0m
+[0;32mI (2812) main: 23[0m
+[0;32mI (2812) main: 24[0m
+[0;32mI (2822) main: 25[0m
+[0;32mI (2822) main: 26[0m
+[0;32mI (2822) main: 27[0m
+[0;32mI (2822) main: 28[0m
+[0;32mI (2832) main: 29[0m
+[0;32mI (2832) main: 30[0m
+[0;32mI (2832) main: 31[0m
+[0;32mI (2832) main: 32[0m
+[0;32mI (2842) main: 34[0m
+[0;32mI (2842) main: 35[0m
+[0;32mI (2842) main: 36[0m
+[0;32mI (2842) main: 37[0m
+[0;32mI (2852) main: 38[0m
+[0;32mI (2852) main: 39[0m
+[0;32mI (2852) main: 0[0m
+[0;32mI (2852) main: 1[0m
+[0;32mI (2862) main: 2[0m
+[0;32mI (2862) main: 3[0m
+[0;32mI (2862) main: 4[0m
+[0;32mI (2862) main: 5[0m
+[0;32mI (2872) main: 6[0m
+[0;32mI (2872) main: 7[0m
+[0;32mI (2872) main: 8[0m
+[0;32mI (2872) main: 9[0m
+[0;32mI (2882) main: 10[0m
+[0;32mI (2882) main: 11[0m
+[0;32mI (2882) main: 12[0m
+[0;32mI (2882) main: 13[0m
+[0;32mI (2892) main: 14[0m
+[0;32mI (2892) main: 15[0m
+[0;32mI (2892) main: 17[0m
+[0;32mI (2902) main: 18[0m
+[0;32mI (2902) main: 19[0m
+[0;32mI (2902) main: 20[0m
+[0;32mI (2902) main: 21[0m
+[0;32mI (2912) main: 22[0m
+[0;32mI (2912) main: 23[0m
+[0;32mI (2912) main: 24[0m
+[0;32mI (2912) main: 25[0m
+[0;32mI (2922) main: 26[0m
+[0;32mI (2922) main: 27[0m
+[0;32mI (2922) main: 28[0m
+[0;32mI (2922) main: 29[0m
+[0;32mI (2932) main: 30[0m
+[0;32mI (2932) main: 31[0m
+[0;32mI (2932) main: 32[0m
+[0;32mI (2932) main: 34[0m
+[0;32mI (2942) main: 35[0m
+[0;32mI (2942) main: 36[0m
+[0;32mI (2942) main: 37[0m
+[0;32mI (2942) main: 38[0m
+[0;32mI (2952) main: 39[0m
+[0;32mI (3952) main: 0[0m
+[0;32mI (3952) main: 1[0m
+[0;32mI (3952) main: 2[0m
+[0;32mI (3952) main: 3[0m
+[0;32mI (3952) main: 4[0m
+[0;32mI (3952) main: 5[0m
+[0;32mI (3952) main: 6[0m
+[0;32mI (3952) main: 7[0m
+[0;32mI (3962) main: 9[0m
+[0;32mI (3962) main: 10[0m
+[0;32mI (3962) main: 11[0m
+[0;32mI (3962) main: 12[0m
+[0;32mI (3972) main: 13[0m
+[0;32mI (3972) main: 14[0m
+[0;32mI (3972) main: 15[0m
+[0;32mI (3972) main: 16[0m
+[0;32mI (3982) main: 17[0m
+[0;32mI (3982) main: 18[0m
+[0;32mI (3982) main: 19[0m
+[0;32mI (3982) main: 20[0m
+[0;32mI (3992) main: 21[0m
+[0;32mI (3992) main: 22[0m
+[0;32mI (3992) main: 23[0m
+[0;32mI (4002) main: 24[0m
+[0;32mI (4002) main: 26[0m
+[0;32mI (4002) main: 27[0m
+[0;32mI (4002) main: 28[0m
+[0;32mI (4012) main: 29[0m
+[0;32mI (4012) main: 30[0m
+[0;32mI (4012) main: 31[0m
+[0;32mI (4012) main: 0[0m
+[0;32mI (4022) main: 1[0m
+[0;32mI (4022) main: 2[0m
+[0;32mI (4022) main: 3[0m
+[0;32mI (4022) main: 4[0m
+[0;32mI (4032) main: 5[0m
+[0;32mI (4032) main: 6[0m
+[0;32mI (4032) main: 7[0m
+[0;32mI (4032) main: 9[0m
+[0;32mI (4042) main: 10[0m
+[0;32mI (4042) main: 11[0m
+[0;32mI (4042) main: 12[0m
+[0;32mI (4042) main: 13[0m
+[0;32mI (4052) main: 14[0m
+[0;32mI (4052) main: 15[0m
+[0;32mI (4052) main: 16[0m
+[0;32mI (4052) main: 17[0m
+[0;32mI (4062) main: 18[0m
+[0;32mI (4062) main: 19[0m
+[0;32mI (4062) main: 20[0m
+[0;32mI (4062) main: 21[0m
+[0;32mI (4072) main: 22[0m
+[0;32mI (4072) main: 23[0m
+[0;32mI (4072) main: 24[0m
+[0;32mI (4082) main: 26[0m
+[0;32mI (4082) main: 27[0m
+[0;32mI (4082) main: 28[0m
+[0;32mI (4082) main: 29[0m
+[0;32mI (4092) main: 30[0m
+[0;32mI (4092) main: 31[0m
+[0;32mI (5092) main: 1[0m
+[0;32mI (5092) main: 2[0m
+[0;32mI (5092) main: 3[0m
+[0;32mI (5092) main: 4[0m
+[0;32mI (5092) main: 5[0m
+[0;32mI (5092) main: 6[0m
+[0;32mI (5092) main: 7[0m
+[0;32mI (5092) main: 8[0m
+[0;32mI (5102) main: 9[0m
+[0;32mI (5102) main: 10[0m
+[0;32mI (5102) main: 11[0m
+[0;32mI (5102) main: 12[0m
+[0;32mI (5112) main: 13[0m
+[0;32mI (5112) main: 14[0m
+[0;32mI (5112) main: 15[0m
+[0;32mI (5112) main: 16[0m
+[0;32mI (5122) main: 18[0m
+[0;32mI (5122) main: 19[0m
+[0;32mI (5122) main: 20[0m
+[0;32mI (5122) main: 21[0m
+[0;32mI (5132) main: 22[0m
+[0;32mI (5132) main: 23[0m
+[0;32mI (5132) main: 0[0m
+[0;32mI (5142) main: 1[0m
+[0;32mI (5142) main: 2[0m
+[0;32mI (5142) main: 3[0m
+[0;32mI (5142) main: 4[0m
+[0;32mI (5152) main: 5[0m
+[0;32mI (5152) main: 6[0m
+[0;32mI (5152) main: 7[0m
+[0;32mI (5152) main: 8[0m
+[0;32mI (5162) main: 9[0m
+[0;32mI (5162) main: 10[0m
+[0;32mI (5162) main: 11[0m
+[0;32mI (5162) main: 12[0m
+[0;32mI (5172) main: 13[0m
+[0;32mI (5172) main: 14[0m
+[0;32mI (5172) main: 15[0m
+[0;32mI (5172) main: 16[0m
+[0;32mI (5182) main: 18[0m
+[0;32mI (5182) main: 19[0m
+[0;32mI (5182) main: 20[0m
+[0;32mI (5182) main: 21[0m
+[0;32mI (5192) main: 22[0m
+[0;32mI (5192) main: 23[0m
+[0;32mI (6192) main: 0[0m
+[0;32mI (6192) main: 1[0m
+[0;32mI (6192) main: 2[0m
+[0;32mI (6192) main: 3[0m
+[0;32mI (6192) main: 4[0m
+[0;32mI (6192) main: 5[0m
+[0;32mI (6192) main: 6[0m
+[0;32mI (6192) main: 7[0m
+[0;32mI (6202) main: 8[0m
+[0;32mI (6202) main: 10[0m
+[0;32mI (6202) main: 11[0m
+[0;32mI (6202) main: 12[0m
+[0;32mI (6212) main: 13[0m
+[0;32mI (6212) main: 14[0m
+[0;32mI (6212) main: 15[0m
+[0;32mI (6212) main: 0[0m
+[0;32mI (6222) main: 1[0m
+[0;32mI (6222) main: 2[0m
+[0;32mI (6222) main: 3[0m
+[0;32mI (6222) main: 4[0m
+[0;32mI (6232) main: 5[0m
+[0;32mI (6232) main: 6[0m
+[0;32mI (6232) main: 7[0m
+[0;32mI (6232) main: 8[0m
+[0;32mI (6242) main: 10[0m
+[0;32mI (6242) main: 11[0m
+[0;32mI (6242) main: 12[0m
+[0;32mI (6242) main: 13[0m
+[0;32mI (6252) main: 14[0m
+[0;32mI (6252) main: 15[0m
+[0;32mI (7252) main: 0[0m
+[0;32mI (7252) main: 2[0m
+[0;32mI (7252) main: 3[0m
+[0;32mI (7252) main: 4[0m
+[0;32mI (7252) main: 5[0m
+[0;32mI (7252) main: 6[0m
+[0;32mI (7252) main: 7[0m
+[0;32mI (7252) main: 0[0m
+[0;32mI (7262) main: 1[0m
+[0;32mI (7262) main: 2[0m
+[0;32mI (7262) main: 3[0m
+[0;32mI (7262) main: 4[0m
+[0;32mI (7272) main: 5[0m
+[0;32mI (7272) main: 6[0m
+[0;32mI (7272) main: 7[0m
+[0;32mI (8282) main: 0[0m
+[0;32mI (8282) main: 1[0m
+[0;32mI (8282) main: 2[0m
+[0;32mI (8282) main: 3[0m
+[0;32mI (8282) main: 4[0m
+[0;32mI (8282) main: 5[0m
+[0;32mI (8282) main: 6[0m
+[0;32mI (8282) main: 7[0m
+[0;32mI (9292) main: 0[0m
+[0;32mI (9292) main: 1[0m
+[0;32mI (9292) main: 2[0m
+[0;32mI (9292) main: 3[0m
+[0;32mI (9292) main: 4[0m
+[0;32mI (9292) main: 5[0m
+[0;32mI (9292) main: 6[0m
+[0;32mI (9292) main: 7[0m
+[0;32mI (10302) main: 0[0m
+[0;32mI (10302) main: 1[0m
+[0;32mI (10302) main: 2[0m
+[0;32mI (10302) main: 3[0m
+[0;32mI (10302) main: 4[0m
+[0;32mI (10302) main: 5[0m
+[0;32mI (10302) main: 6[0m
+[0;32mI (10302) main: 7[0m
+[0;32mI (11312) main: 0[0m
+[0;32mI (11312) main: 1[0m
+[0;32mI (11312) main: 2[0m
+[0

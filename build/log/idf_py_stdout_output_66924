@@ -1,0 +1,221 @@
+[0;32mI (3012) sim_functions: moved pixel 50 to 49[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200766d
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul 10 2024 19:41:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0c958h ( 51544) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001c980 vaddr=3fc93d00 size=02a0ch ( 10764) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001f394 vaddr=40374000 size=00c84h (  3204) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1fe24h (130596) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=0003fe4c vaddr=40374c84 size=0ef9ch ( 61340) load[0m
+[0;32mI (168) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (168) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ws2812b_lib[0m
+[0;32mI (198) cpu_start: App version:      af74ba3-dirty[0m
+[0;32mI (203) cpu_start: Compile time:     Jul 14 2024 18:37:25[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  bfd1d9b7e...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (224) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (229) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FC96FF0 len 00052720 (329 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (253) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (322) main: selected 2[0m
+[0;32mI (322) main: selected 3[0m
+[0;32mI (322) main: selected 7[0m
+[0;32mI (332) main: selected 10[0m
+[0;32mI (332) main: selected 11[0m
+[0;32mI (332) main: selected 13[0m
+[0;32mI (342) main: selected 15[0m
+[0;32mI (342) main: selected 17[0m
+[0;32mI (342) main: selected 18[0m
+[0;32mI (352) main: selected 21[0m
+[0;32mI (352) main: selected 22[0m
+[0;32mI (352) main: selected 23[0m
+[0;32mI (362) main: selected 24[0m
+[0;32mI (362) main: selected 27[0m
+[0;32mI (362) main: selected 28[0m
+[0;32mI (372) main: selected 32[0m
+[0;32mI (372) main: selected 38[0m
+[0;32mI (372) main: selected 42[0m
+[0;32mI (382) main: selected 43[0m
+[0;32mI (382) main: selected 45[0m
+[0;32mI (382) main: selected 48[0m
+[0;32mI (392) main: selected 49[0m
+[0;32mI (392) main: selected 50[0m
+[0;32mI (392) main: selected 51[0m
+[0;32mI (402) main: selected 52[0m
+[0;32mI (402) main: selected 53[0m
+[0;32mI (402) main: selected 56[0m
+[0;32mI (412) main: selected 57[0m
+[0;32mI (412) main: selected 58[0m
+[0;32mI (412) main: selected 60[0m
+[0;32mI (422) main: selected 62[0m
+[0;32mI (422) main: selected 63[0m
+[0;32mI (622) sim_functions: pixel at 0 skipped[0m
+[0;32mI (622) sim_functions: pixel at 2 passed right check[0m
+[0;32mI (622) sim_functions: moved pixel 2 to 1[0m
+[0;32mI (622) sim_functions: pixel at 3 passed right check[0m
+[0;32mI (622) sim_functions: moved pixel 3 to 4[0m
+[0;32mI (632) sim_functions: pixel at 4 skipped[0m
+[0;32mI (632) sim_functions: moved pixel 7 to 6[0m
+[0;32mI (642) sim_functions: pixel at 10 passed right check[0m
+[0;32mI (642) sim_functions: moved pixel 10 to 9[0m
+[0;32mI (652) sim_functions: pixel at 11 passed y check[0m
+[0;32mI (652) sim_functions: moved pixel 11 to 19[0m
+[0;32mI (662) sim_functions: pixel at 13 passed right check[0m
+[0;32mI (672) sim_functions: moved pixel 13 to 14[0m
+[0;32mI (672) sim_functions: pixel at 14 skipped[0m
+[0;32mI (672) sim_functions: pixel at 17 passed y check[0m
+[0;32mI (682) sim_functions: moved pixel 17 to 25[0m
+[0;32mI (692) sim_functions: pixel at 18 passed y check[0m
+[0;32mI (692) sim_functions: moved pixel 18 to 26[0m
+[0;32mI (702) sim_functions: pixel at 19 skipped[0m
+[0;32mI (702) sim_functions: pixel at 21 passed y check[0m
+[0;32mI (712) sim_functions: moved pixel 21 to 29[0m
+[0;32mI (712) sim_functions: pixel at 22 passed y check[0m
+[0;32mI (722) sim_functions: moved pixel 22 to 30[0m
+[0;32mI (722) sim_functions: pixel at 23 passed y check[0m
+[0;32mI (732) sim_functions: moved pixel 23 to 31[0m
+[0;32mI (732) sim_functions: pixel at 24 passed right check[0m
+[0;32mI (742) sim_functions: pixel at 25 skipped[0m
+[0;32mI (742) sim_functions: pixel at 26 skipped[0m
+[0;32mI (752) sim_functions: pixel at 27 passed y check[0m
+[0;32mI (752) sim_functions: moved pixel 27 to 35[0m
+[0;32mI (762) sim_functions: pixel at 28 passed y check[0m
+[0;32mI (762) sim_functions: moved pixel 28 to 36[0m
+[0;32mI (772) sim_functions: pixel at 29 skipped[0m
+[0;32mI (772) sim_functions: pixel at 30 skipped[0m
+[0;32mI (782) sim_functions: pixel at 31 skipped[0m
+[0;32mI (782) sim_functions: pixel at 32 passed y check[0m
+[0;32mI (792) sim_functions: moved pixel 32 to 40[0m
+[0;32mI (792) sim_functions: pixel at 35 skipped[0m
+[0;32mI (802) sim_functions: pixel at 36 skipped[0m
+[0;32mI (802) sim_functions: pixel at 38 passed y check[0m
+[0;32mI (812) sim_functions: moved pixel 38 to 46[0m
+[0;32mI (812) sim_functions: pixel at 40 skipped[0m
+[0;32mI (822) sim_functions: pixel at 42 passed right check[0m
+[0;32mI (822) sim_functions: moved pixel 42 to 41[0m
+[0;32mI (832) sim_functions: pixel at 43 passed right check[0m
+[0;32mI (832) sim_functions: moved pixel 43 to 44[0m
+[0;32mI (842) sim_functions: pixel at 44 skipped[0m
+[0;32mI (842) sim_functions: pixel at 45 passed right check[0m
+[0;32mI (852) sim_functions: pixel at 46 skipped[0m
+[0;32mI (852) sim_functions: pixel at 48 passed right check[0m
+[0;32mI (862) sim_functions: pixel at 49 passed right check[0m
+[0;32mI (862) sim_functions: pixel at 50 passed right check[0m
+[0;32mI (872) sim_functions: pixel at 51 passed y check[0m
+[0;32mI (872) sim_functions: moved pixel 51 to 59[0m
+[0;32mI (882) sim_functions: pixel at 52 passed right check[0m
+[0;32mI (892) sim_functions: moved pixel 52 to 51[0m
+[0;32mI (892) sim_functions: pixel at 53 passed y check[0m
+[0;32mI (902) sim_functions: moved pixel 53 to 61[0m
+[0;32mI (902) sim_functions: pixel at 56 passed right check[0m
+[0;32mI (912) sim_functions: pixel at 57 passed right check[0m
+[0;32mI (912) sim_functions: pixel at 58 passed right check[0m
+[0;32mI (922) sim_functions: pixel at 59 skipped[0m
+[0;32mI (922) sim_functions: pixel at 60 passed right check[0m
+[0;32mI (932) sim_functions: pixel at 61 skipped[0m
+[0;32mI (932) sim_functions: pixel at 62 passed right check[0m
+[0;32mI (942) sim_functions: new_op[0m
+[0;32mI (1152) sim_functions: pixel at 0 skipped[0m
+[0;32mI (1152) sim_functions: moved pixel 1 to 0[0m
+[0;32mI (1152) sim_functions: pixel at 4 passed y check[0m
+[0;32mI (1152) sim_functions: moved pixel 4 to 12[0m
+[0;32mI (1152) sim_functions: pixel at 6 passed right check[0m
+[0;32mI (1162) sim_functions: moved pixel 6 to 7[0m
+[0;32mI (1162) sim_functions: pixel at 7 skipped[0m
+[0;32mI (1172) sim_functions: pixel at 9 passed y check[0m
+[0;32mI (1172) sim_functions: moved pixel 9 to 17[0m
+[0;32mI (1182) sim_functions: pixel at 12 skipped[0m
+[0;32mI (1182) sim_functions: pixel at 14 passed y check[0m
+[0;32mI (1192) sim_functions: moved pixel 14 to 22[0m
+[0;32mI (1192) sim_functions: pixel at 15 passed y check[0m
+[0;32mI (1202) sim_functions: moved pixel 15 to 23[0m
+[0;32mI (1212) sim_functions: pixel at 17 skipped[0m
+[0;32mI (1212) sim_functions: pixel at 19 passed y check[0m
+[0;32mI (1222) sim_functions: moved pixel 19 to 27[0m
+[0;32mI (1222) sim_functions: pixel at 22 skipped[0m
+[0;32mI (1232) sim_functions: pixel at 23 skipped[0m
+[0;32mI (1232) sim_functions: pixel at 24 passed y check[0m
+[0;32mI (1242) sim_functions: moved pixel 24 to 32[0m
+[0;32mI (1242) sim_functions: pixel at 25 passed y check[0m
+[0;32mI (1252) sim_functions: moved pixel 25 to 33[0m
+[0;32mI (1252) sim_functions: pixel at 26 passed y check[0m
+[0;32mI (1262) sim_functions: moved pixel 26 to 34[0m
+[0;32mI (1262) sim_functions: pixel at 27 skipped[0m
+[0;32mI (1272) sim_functions: pixel at 29 passed y check[0m
+[0;32mI (1272) sim_functions: moved pixel 29 to 37[0m
+[0;32mI (1282) sim_functions: pixel at 30 passed y check[0m
+[0;32mI (1282) sim_functions: moved pixel 30 to 38[0m
+[0;32mI (1292) sim_functions: pixel at 31 passed y check[0m
+[0;32mI (1292) sim_functions: moved pixel 31 to 39[0m
+[0;32mI (1302) sim_functions: pixel at 32 skipped[0m
+[0;32mI (1302) sim_functions: pixel at 33 skipped[0m
+[0;32mI (1312) sim_functions: pixel at 34 skipped[0m
+[0;32mI (1312) sim_functions: pixel at 35 passed y check[0m
+[0;32mI (1322) sim_functions: moved pixel 35 to 43[0m
+[0;32mI (1322) sim_functions: pixel at 36 passed right check[0m
+[0;32mI (1332) sim_functions: moved pixel 36 to 35[0m
+[0;32mI (1332) sim_functions: pixel at 37 skipped[0m
+[0;32mI (1342) sim_functions: pixel at 38 skipped[0m
+[0;32mI (1342) sim_functions: pixel at 39 skipped[0m
+[0;32mI (1352) sim_functions: pixel at 40 passed right check[0m
+[0;32mI (1352) sim_functions: pixel at 41 passed right check[0m
+[0;32mI (1362) sim_functions: moved pixel 41 to 42[0m
+[0;32mI (1362) sim_functions: pixel at 42 skipped[0m
+[0;32mI (1372) sim_functions: pixel at 43 skipped[0m
+[0;32mI (1372) sim_functions: pixel at 44 passed y check[0m
+[0;32mI (1382) sim_functions: moved pixel 44 to 52[0m
+[0;32mI (1382) sim_functions: pixel at 45 passed y check[0m
+[0;32mI (1392) sim_functions: moved pixel 45 to 53[0m
+[0;32mI (1392) sim_functions: pixel at 46 passed y check[0m
+[0;32mI (1402) sim_functions: moved pixel 46 to 54[0m
+[0;32mI (1412) sim_functions: pixel at 48 passed right check[0m
+[0;32mI (1412) sim_functions: pixel at 49 passed right check[0m
+[0;32mI (1422) sim_functions: pixel at 50 passed right check[0m
+[0;32mI (1422) sim_functions: pixel at 51 passed right check[0m
+[0;32mI (1432) sim_functions: pixel at 52 skipped[0m
+[0;32mI (1432) sim_functions: pixel at 53 skipped[0m
+[0;32mI (1442) sim_functions: pixel at 54 skipped[0m
+[0;32mI (1442) sim_functions: pixel at 56 passed right check[0m
+[0;32mI (1452) sim_functions: pixel at 57 passed right check[0m
+[0;32mI (1452) sim_functions: pixel at 58 passed right check[0m
+[0;32mI (1462) sim_functions: pixel at 59 passed right check[0m
+[0;32mI (1472) sim_functions: pixel at 60 passed right check[0m

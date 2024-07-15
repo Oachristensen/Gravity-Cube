@@ -1,0 +1,85 @@
+-- Building ESP-IDF components for target esp32s3
+Processing 2 dependencies:
+[1/2] espressif/led_strip (2.5.4)
+[2/2] idf (5.2.2)
+-- Project sdkconfig file F:/Code/Esp32s3/led_matrix_sim/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "ws2812b_lib" version: 97175c7-dirty
+-- Adding linker script F:/Code/Esp32s3/led_matrix_sim/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script F:/Code/Esp32s3/led_matrix_sim/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script C:/Users/chrst/esp/v5.2.2/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__led_strip esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: C:/Users/chrst/esp/v5.2.2/esp-idf/components/app_trace C:/Users/chrst/esp/v5.2.2/esp-idf/components/app_update C:/Users/chrst/esp/v5.2.2/esp-idf/components/bootloader C:/Users/chrst/esp/v5.2.2/esp-idf/components/bootloader_support C:/Users/chrst/esp/v5.2.2/esp-idf/components/bt C:/Users/chrst/esp/v5.2.2/esp-idf/components/cmock C:/Users/chrst/esp/v5.2.2/esp-idf/components/console C:/Users/chrst/esp/v5.2.2/esp-idf/components/cxx C:/Users/chrst/esp/v5.2.2/esp-idf/components/driver C:/Users/chrst/esp/v5.2.2/esp-idf/components/efuse C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp-tls C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_adc C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_app_format C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_bootloader_format C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_coex C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_common C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_eth C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_event C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_gdbstub C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_hid C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_http_client C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_http_server C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_https_ota C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_https_server C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_hw_support C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_lcd C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_local_ctrl C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_mm C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_netif C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_netif_stack C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_partition C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_phy C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_pm C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_psram C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_ringbuf C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_rom C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_timer C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_wifi C:/Users/chrst/esp/v5.2.2/esp-idf/components/espcoredump F:/Code/Esp32s3/led_matrix_sim/managed_components/espressif__led_strip C:/Users/chrst/esp/v5.2.2/esp-idf/components/esptool_py C:/Users/chrst/esp/v5.2.2/esp-idf/components/fatfs C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos C:/Users/chrst/esp/v5.2.2/esp-idf/components/hal C:/Users/chrst/esp/v5.2.2/esp-idf/components/heap C:/Users/chrst/esp/v5.2.2/esp-idf/components/http_parser C:/Users/chrst/esp/v5.2.2/esp-idf/components/idf_test C:/Users/chrst/esp/v5.2.2/esp-idf/components/ieee802154 C:/Users/chrst/esp/v5.2.2/esp-idf/components/json C:/Users/chrst/esp/v5.2.2/esp-idf/components/log C:/Users/chrst/esp/v5.2.2/esp-idf/components/lwip F:/Code/Esp32s3/led_matrix_sim/main C:/Users/chrst/esp/v5.2.2/esp-idf/components/mbedtls C:/Users/chrst/esp/v5.2.2/esp-idf/components/mqtt C:/Users/chrst/esp/v5.2.2/esp-idf/components/newlib C:/Users/chrst/esp/v5.2.2/esp-idf/components/nvs_flash C:/Users/chrst/esp/v5.2.2/esp-idf/components/nvs_sec_provider C:/Users/chrst/esp/v5.2.2/esp-idf/components/openthread C:/Users/chrst/esp/v5.2.2/esp-idf/components/partition_table C:/Users/chrst/esp/v5.2.2/esp-idf/components/perfmon C:/Users/chrst/esp/v5.2.2/esp-idf/components/protobuf-c C:/Users/chrst/esp/v5.2.2/esp-idf/components/protocomm C:/Users/chrst/esp/v5.2.2/esp-idf/components/pthread C:/Users/chrst/esp/v5.2.2/esp-idf/components/sdmmc C:/Users/chrst/esp/v5.2.2/esp-idf/components/soc C:/Users/chrst/esp/v5.2.2/esp-idf/components/spi_flash C:/Users/chrst/esp/v5.2.2/esp-idf/components/spiffs C:/Users/chrst/esp/v5.2.2/esp-idf/components/tcp_transport C:/Users/chrst/esp/v5.2.2/esp-idf/components/touch_element C:/Users/chrst/esp/v5.2.2/esp-idf/components/ulp C:/Users/chrst/esp/v5.2.2/esp-idf/components/unity C:/Users/chrst/esp/v5.2.2/esp-idf/components/usb C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs C:/Users/chrst/esp/v5.2.2/esp-idf/components/wear_levelling C:/Users/chrst/esp/v5.2.2/esp-idf/components/wifi_provisioning C:/Users/chrst/esp/v5.2.2/esp-idf/components/wpa_supplicant C:/Users/chrst/esp/v5.2.2/esp-idf/components/xtensa
+-- Configuring done (6.2s)
+-- Generating done (0.5s)
+-- Build files have been written to: F:/Code/Esp32s3/led_matrix_sim/build
+[0/1] Re-running CMake...
+[1/12] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[2/12] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D F:\Code\Esp32s3\led_matrix_sim\build\bootloader\esp-idf\esptool_py && C:\Users\chrst\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Users/chrst/esp/v5.2.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 F:/Code/Esp32s3/led_matrix_sim/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[3/12] No install step for 'bootloader'
+[4/12] Linking C static library esp-idf\esp_app_format\libesp_app_format.a
+[5/12] Completed 'bootloader'
+[6/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from F:/Code/Esp32s3/led_matrix_sim/main/main.c:11:
+F:/Code/Esp32s3/led_matrix_sim/main/sim_functions.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+[7/12] Linking C static library esp-idf\main\libmain.a
+[8/12] Generating ld/sections.ld
+[9/12] Linking CXX executable ws2812b_lib.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated F:/Code/Esp32s3/led_matrix_sim/build/ws2812b_lib.bin
+[11/12] cmd.exe /C "cd /D F:\Code\Esp32s3\led_matrix_sim\build\esp-idf\esptool_py && C:\Users\chrst\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Users/chrst/esp/v5.2.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app F:/Code/Esp32s3/led_matrix_sim/build/partition_table/partition-table.bin F:/Code/Esp32s3/led_matrix_sim/build/ws2812b_lib.bin"
+ws2812b_lib.bin binary size 0x3ee20 bytes. Smallest app partition is 0x100000 bytes. 0xc11e0 bytes (75%) free.
+[11/12] cmd.exe /C "cd /D C:\Users\chrst\esp\v5.2.2\esp-idf\components\esptool_py && "C:\Proesptool.py --chip esp32s3 -p COM9 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 ws2812b_lib.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM9
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 3c:84:27:c8:5d:ac
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0004efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13056...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13056 compressed) at 0x00000000 in 0.4 seconds (effective 410.3 kbit/s)...
+Hash of data verified.
+Compressed 257568 bytes to 136522...
+Writing at 0x00010000... (11 %)
+Writing at 0x0001c6ae... (22 %)
+Writing at 0x00024418... (33 %)
+Writing at 0x0002aeef... (44 %)
+Writing at 0x00030e5e... (55 %)
+Writing at 0x00038989... (66 %)
+Writing at 0x0004035c... (77 %)
+Writing at 0x0004628e... (88 %)
+Writing at 0x0004c8d1... (100 %)
+Wrote 257568 bytes (136522 compressed) at 0x00010000 in 2.2 seconds (effective 950.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 234.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+gram Files\CMake\bin\cmake.exe" -D IDF_PATH=C:/Users/chrst/esp/v5.2.2/esp-idf -D SERIAL_TOOL=C:/Users/chrst/.espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;C:/Users/chrst/esp/v5.2.2/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=F:/Code/Esp32s3/led_matrix_sim/build -P C:/Users/chrst/esp/v5.2.2/esp-idf/components/esptool_py/run_serial_tool.cmake"

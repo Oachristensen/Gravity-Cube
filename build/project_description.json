@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ws2812b_lib",
-    "project_version":    "af74ba3-dirty",
+    "project_version":    "97175c7-dirty",
     "project_path":       "F:/Code/Esp32s3/led_matrix_sim",
     "idf_path":           "C:/Users/chrst/esp/v5.2.2/esp-idf",
     "build_dir":          "F:/Code/Esp32s3/led_matrix_sim/build",

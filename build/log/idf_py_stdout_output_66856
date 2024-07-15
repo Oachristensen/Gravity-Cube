@@ -1,0 +1,62 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D F:\Code\Esp32s3\led_matrix_sim\build\bootloader\esp-idf\esptool_py && C:\Users\chrst\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Users/chrst/esp/v5.2.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 F:/Code/Esp32s3/led_matrix_sim/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from F:/Code/Esp32s3/led_matrix_sim/main/main.c:11:
+F:/Code/Esp32s3/led_matrix_sim/main/sim_functions.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable ws2812b_lib.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated F:/Code/Esp32s3/led_matrix_sim/build/ws2812b_lib.bin
+[9/10] cmd.exe /C "cd /D F:\Code\Esp32s3\led_matrix_sim\build\esp-idf\esptool_py && C:\Users\chrst\.espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Users/chrst/esp/v5.2.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app F:/Code/Esp32s3/led_matrix_sim/build/partition_table/partition-table.bin F:/Code/Esp32s3/led_matrix_sim/build/ws2812b_lib.bin"
+ws2812b_lib.bin binary size 0x3ece0 bytes. Smallest app partition is 0x100000 bytes. 0xc1320 bytes (75%) free.
+[9/10] cmd.exe /C "cd /D C:\Users\chrst\esp\v5.2.2\esp-idf\components\esptool_py && "C:\Program Files\CMake\bin\cmake.exe" -D IDF_PATH=C:/Users/chrst/esp/v5.2.2/esp-idf -D SERIAL_TOOL=C:/Users/chrst/.espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;C:/Users/chrst/esp/v5.2.2/esp-idf/compoesptool.py --chip esp32s3 -p COM9 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 ws2812b_lib.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM9
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 3c:84:27:c8:5d:ac
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0004efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13056...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13056 compressed) at 0x00000000 in 0.4 seconds (effective 411.1 kbit/s)...
+Hash of data verified.
+Compressed 257248 bytes to 136365...
+Writing at 0x00010000... (11 %)
+Writing at 0x0001c6d6... (22 %)
+Writing at 0x00024390... (33 %)
+Writing at 0x0002ae73... (44 %)
+Writing at 0x00030dff... (55 %)
+Writing at 0x00038915... (66 %)
+Writing at 0x000402ed... (77 %)
+Writing at 0x000461fb... (88 %)
+Writing at 0x0004c87c... (100 %)
+Wrote 257248 bytes (136365 compressed) at 0x00010000 in 2.2 seconds (effective 949.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 238.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+nents/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=F:/Code/Esp32s3/led_matrix_sim/build -P C:/Users/chrst/esp/v5.2.2/esp-idf/components/esptool_py/run_serial_tool.cmake"

@@ -1,0 +1,57 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM9 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42007663: uart_ll_get_txfifo_len at C:/Users/chrst/esp/v5.2.2/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_uart.c:165
+[0m
+[0;33m0x4200d447: task_wdt_timeout_handling at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x4200d864: task_wdt_isr at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x403772a5: _xt_lowint1 at C:/Users/chrst/esp/v5.2.2/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42007662: uart_ll_get_txfifo_len at C:/Users/chrst/esp/v5.2.2/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_uart.c:165
+0x42008537: uart_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_uart.c:218
+0x42007061: console_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x42006bd2: esp_vfs_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x420121ae: __swrite at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42011a19: __sflush_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42011a76: _fflush_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x420120b5: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420160c7: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x42015a8a: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x42012225: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201fcf1: esp_log_writev at C:/Users/chrst/esp/v5.2.2/esp-idf/components/log/log.c:212
+0x40381951: esp_log_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/log/log.c:222
+0x42008689: move_pixel at F:/Code/Esp32s3/led_matrix_sim/main/sim_functions.h:41 (discriminator 1)
+0x420086fb: run_sim at F:/Code/Esp32s3/led_matrix_sim/main/sim_functions.h:87
+0x42008830: app_main at F:/Code/Esp32s3/led_matrix_sim/main/main.c:111
+0x4201ed7b: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200d447: task_wdt_timeout_handling at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x4200d864: task_wdt_isr at C:/Users/chrst/esp/v5.2.2/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x403772a5: _xt_lowint1 at C:/Users/chrst/esp/v5.2.2/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4200765d: uart_tx_char at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_uart.c:163
+0x42008537: uart_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_uart.c:218
+0x42007061: console_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x42006bd2: esp_vfs_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x420121ae: __swrite at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42011a19: __sflush_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42011a76: _fflush_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x420120b5: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420160c7: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x42015a8a: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x42012225: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201fcf1: esp_log_writev at C:/Users/chrst/esp/v5.2.2/esp-idf/components/log/log.c:212
+0x40381951: esp_log_write at C:/Users/chrst/esp/v5.2.2/esp-idf/components/log/log.c:222
+0x4200862e: array_contains at F:/Code/Esp32s3/led_matrix_sim/main/sim_functions.h:58 (discriminator 1)
+0x420086a0: run_sim at F:/Code/Esp32s3/led_matrix_sim/main/sim_functions.h:72
+0x42008830: app_main at F:/Code/Esp32s3/led_matrix_sim/main/main.c:111
+0x4201ed7b: main_task at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/app_startup.c:208
+0x4037b90d: vPortTaskWrapper at C:/Users/chrst/esp/v5.2.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m
