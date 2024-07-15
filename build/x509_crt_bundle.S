@@ -1,4 +1,4 @@
-/* * Data converted from F:/Code/Esp32s3/ws2812b_lib/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from F:/Code/Esp32s3/led_matrix_sim/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

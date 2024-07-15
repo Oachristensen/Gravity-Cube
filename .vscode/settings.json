@@ -17,6 +17,24 @@
     "files.associations": {
         "freertos.h": "c",
         "gpio.h": "c",
-        "ets_sys.h": "c"
+        "ets_sys.h": "c",
+        "chrono": "c",
+        "ranges": "c",
+        "variant": "c",
+        "charconv": "c",
+        "optional": "c",
+        "format": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "task.h": "c",
+        "stdint.h": "c",
+        "esp_log.h": "c",
+        "led_strip.h": "c",
+        "rmt_types.h": "c"
     }
 }

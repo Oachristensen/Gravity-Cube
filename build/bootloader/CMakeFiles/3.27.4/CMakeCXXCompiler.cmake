@@ -22,11 +22,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ar.exe")
-set(CMAKE_CXX_COMPILER_AR "C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ld.exe")
+set(CMAKE_AR "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ar.exe")
+set(CMAKE_CXX_COMPILER_AR "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
 set(CMAKE_COMPILER_IS_GNUCXX 1)

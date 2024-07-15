@@ -31,7 +31,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/3.27.4/CompilerIdC/a.out
+        F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/3.27.4/CompilerIdC/a.out
       
   -
     kind: "message-v1"
@@ -54,7 +54,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/3.27.4/CompilerIdCXX/a.out
+        F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/3.27.4/CompilerIdCXX/a.out
       
   -
     kind: "message-v1"
@@ -80,8 +80,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-f7i96h"
-      binary: "F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-f7i96h"
+      source: "F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-c6grlh"
+      binary: "F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-c6grlh"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -91,10 +91,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-f7i96h'
+        Change Dir: 'F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-c6grlh'
         
-        Run Build Command(s): C:/Users/chrst/.espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_eac3b
-        [1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/Espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_d5c2c
+        [1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe
         Target: xtensa-esp-elf
@@ -102,8 +102,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_eac3b.dir/'
-         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_eac3b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\ccwjjjig.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d5c2c.dir/'
+         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d5c2c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\ccJzCTfb.s
         GNU C17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (xtensa-esp-elf)
         	compiled by GNU C version 6.3.0 20170516, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -120,12 +120,12 @@ events:
          C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: a7185c8b5363aeb8f378896e00d5f636
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_eac3b.dir/'
-         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\ccwjjjig.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d5c2c.dir/'
+         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\ccJzCTfb.s
         COMPILER_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.'
-        [2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj -o cmTC_eac3b   && cd ."
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.'
+        [2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj -o cmTC_d5c2c   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe
         COLLECT_LTO_WRAPPER=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe
@@ -136,9 +136,9 @@ events:
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
         COMPILER_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_eac3b' '-dumpdir' 'cmTC_eac3b.'
-         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccHYPLMi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_eac3b C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_eac3b' '-dumpdir' 'cmTC_eac3b.'\x0d
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_d5c2c' '-dumpdir' 'cmTC_d5c2c.'
+         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\cccOVQ2j.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_d5c2c C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_d5c2c' '-dumpdir' 'cmTC_d5c2c.'\x0d
         
       exitCode: 0
   -
@@ -174,10 +174,10 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(xtensa-esp32s3-elf-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-f7i96h']
+        ignore line: [Change Dir: 'F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-c6grlh']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/chrst/.espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_eac3b]
-        ignore line: [[1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/Espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_d5c2c]
+        ignore line: [[1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe]
         ignore line: [Target: xtensa-esp-elf]
@@ -185,8 +185,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_eac3b.dir/']
-        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_eac3b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\ccwjjjig.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d5c2c.dir/']
+        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d5c2c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\ccJzCTfb.s]
         ignore line: [GNU C17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version 6.3.0 20170516  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -203,8 +203,8 @@ events:
         ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: a7185c8b5363aeb8f378896e00d5f636]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_eac3b.dir/']
-        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\ccwjjjig.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d5c2c.dir/']
+        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\ccJzCTfb.s]
         ignore line: [COMPILER_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/]
@@ -213,8 +213,8 @@ events:
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj -o cmTC_eac3b   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj -o cmTC_d5c2c   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe]
@@ -231,13 +231,13 @@ events:
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_eac3b' '-dumpdir' 'cmTC_eac3b.']
-        link line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccHYPLMi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_eac3b C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_d5c2c' '-dumpdir' 'cmTC_d5c2c.']
+        link line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\cccOVQ2j.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_d5c2c C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccHYPLMi.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\cccOVQ2j.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -245,7 +245,7 @@ events:
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_eac3b] ==> ignore
+          arg [cmTC_d5c2c] ==> ignore
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o] ==> obj [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o]
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o] ==> obj [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o]
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o] ==> obj [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o]
@@ -254,7 +254,7 @@ events:
           arg [-LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0] ==> dir [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0]
           arg [-LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc] ==> dir [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc]
           arg [-LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib] ==> dir [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib]
-          arg [CMakeFiles/cmTC_eac3b.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_d5c2c.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -288,8 +288,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-btiik0"
-      binary: "F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-btiik0"
+      source: "F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-hmosfs"
+      binary: "F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-hmosfs"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -299,10 +299,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-btiik0'
+        Change Dir: 'F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-hmosfs'
         
-        Run Build Command(s): C:/Users/chrst/.espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_4a8e1
-        [1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): C:/Espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_5a43d
+        [1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe
         Target: xtensa-esp-elf
@@ -310,8 +310,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4a8e1.dir/'
-         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4a8e1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\cc22V9We.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5a43d.dir/'
+         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5a43d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\ccButhVx.s
         GNU C++17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (xtensa-esp-elf)
         	compiled by GNU C version 6.3.0 20170516, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -334,12 +334,12 @@ events:
          C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: 7accc3f4dea0b1ef90bd5b8fb39b4353
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4a8e1.dir/'
-         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\cc22V9We.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5a43d.dir/'
+         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\ccButhVx.s
         COMPILER_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_4a8e1   && cd ."
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_5a43d   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe
         COLLECT_LTO_WRAPPER=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe
@@ -350,9 +350,9 @@ events:
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
         COMPILER_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/;C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_4a8e1' '-dumpdir' 'cmTC_4a8e1.'
-         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccEQBl6t.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_4a8e1 C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_4a8e1' '-dumpdir' 'cmTC_4a8e1.'\x0d
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_5a43d' '-dumpdir' 'cmTC_5a43d.'
+         C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccHp30bW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_5a43d C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_5a43d' '-dumpdir' 'cmTC_5a43d.'\x0d
         
       exitCode: 0
   -
@@ -394,10 +394,10 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(xtensa-esp32s3-elf-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'F:/Code/Esp32s3/ws2812b_lib/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-btiik0']
+        ignore line: [Change Dir: 'F:/Code/Esp32s3/led_matrix_sim/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-hmosfs']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/chrst/.espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_4a8e1]
-        ignore line: [[1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): C:/Espressif/tools/ninja/1.11.1/ninja.exe -v cmTC_5a43d]
+        ignore line: [[1/2] C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe]
         ignore line: [Target: xtensa-esp-elf]
@@ -405,8 +405,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4a8e1.dir/']
-        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4a8e1.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\cc22V9We.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5a43d.dir/']
+        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32s3 -iprefix C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5a43d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\chrst\\AppData\\Local\\Temp\\ccButhVx.s]
         ignore line: [GNU C++17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version 6.3.0 20170516  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -429,8 +429,8 @@ events:
         ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 7accc3f4dea0b1ef90bd5b8fb39b4353]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4a8e1.dir/']
-        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\cc22V9We.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5a43d.dir/']
+        ignore line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\chrst\\AppData\\Local\\Temp\\ccButhVx.s]
         ignore line: [COMPILER_PATH=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/]
@@ -439,8 +439,8 @@ events:
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_4a8e1   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_5a43d   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\chrst\\.rustup\\toolchains\\esp\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe]
@@ -457,13 +457,13 @@ events:
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_4a8e1' '-dumpdir' 'cmTC_4a8e1.']
-        link line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccEQBl6t.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_4a8e1 C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_5a43d' '-dumpdir' 'cmTC_5a43d.']
+        link line: [ C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccHp30bW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --dynconfig=xtensa_esp32s3.so -o cmTC_5a43d C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc -LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccEQBl6t.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\chrst\\AppData\\Local\\Temp\\ccHp30bW.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -471,7 +471,7 @@ events:
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_4a8e1] ==> ignore
+          arg [cmTC_5a43d] ==> ignore
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o] ==> obj [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o]
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o] ==> obj [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o]
           arg [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o] ==> obj [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o]
@@ -480,7 +480,7 @@ events:
           arg [-LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0] ==> dir [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0]
           arg [-LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc] ==> dir [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc]
           arg [-LC:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib] ==> dir [C:/Users/chrst/.rustup/toolchains/esp/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib]
-          arg [CMakeFiles/cmTC_4a8e1.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_5a43d.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc] ==> lib [gcc]
