@@ -19,6 +19,12 @@ typedef struct Pixel
 
 
 
+static void fill_array_with_int(int array[NUM_SIM], int num) {
+    for (int i = 0; i < NUM_SIM; i++) {
+        array[i] = num;
+    }
+}
+
 static int index_from_cords(int x, int y) {
     return(x+(y*(Y_SIZE)));
 }
@@ -66,7 +72,8 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 static void run_sim(struct Pixel pixel_array[]) {
     // I dont like counter here but it should work
     int counter = 0;
-    int selected_indexes[NUM_SIM] = {-1};
+    int selected_indexes[NUM_SIM];
+    fill_array_with_int(selected_indexes, -1);
     bool left = false;
     bool right = false;
 
@@ -83,11 +90,13 @@ static void run_sim(struct Pixel pixel_array[]) {
 
         int new_index = -1;
         if (array_contains(i, selected_indexes)) {
+            ESP_LOGI(FN_TAG, "pixel at %d skipped", i);
             continue;
         }
         if (pixel_array[i].value == true) {
             if (pixel_array[i].y != 7) {
                 if (can_move(pixel_array[i].x ,pixel_array[i].y +1, pixel_array)) {
+                    ESP_LOGI(FN_TAG, "pixel at %d passed y check", i);
                     new_index = move_pixel(i, 0, 1, pixel_array);
                 }
 
@@ -96,6 +105,8 @@ static void run_sim(struct Pixel pixel_array[]) {
         if (right) {
             if (pixel_array[i].value == true) {
                 if (pixel_array[i].x != 7) {
+                    ESP_LOGI(FN_TAG, "pixel at %d passed right check", i);
+
                     if (can_move(pixel_array[i].x +1 ,pixel_array[i].y, pixel_array)) {
                         new_index = move_pixel(i, 1, 0, pixel_array);
                     }
