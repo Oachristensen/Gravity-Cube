@@ -17,7 +17,7 @@
 
 #define TAG "main"
 
-#define R 5
+#define R 1
 #define G 0
 #define B 0
 

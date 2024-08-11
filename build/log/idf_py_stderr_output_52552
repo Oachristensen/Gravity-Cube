@@ -1,8 +1,0 @@
-[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
-[0;33m--- Using \\.\COM9 instead...[0m
-[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM9 115200 ---[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
-[0;33m0x4200766b: uart_ll_get_txfifo_len at C:/Users/chrst/esp/v5.2.2/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
- (inlined by) uart_tx_char at C:/Users/chrst/esp/v5.2.2/esp-idf/components/vfs/vfs_uart.c:165
-[0m
-[0m
