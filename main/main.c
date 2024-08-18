@@ -59,11 +59,11 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
 // No gyro library right now, hardcoding this for now
 static int get_angle(int cur_angle) {
     int new_angle;
-    if (cur_angle <= 331) {
+    if (cur_angle <= 330) {
     new_angle = cur_angle + 15;
     }
     else {
-        new_angle = 1;
+        new_angle = 0;
     }
     return new_angle;
 }
@@ -91,13 +91,15 @@ void app_main(void) {
     populate_matrix(pixel_array);
 
     while (true) {
-
-        cur_angle = get_angle(cur_angle);
-
+        for (int i = 0; i < 10; i++) {
         run_sim(pixel_array, cur_angle);
         led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        }
+        cur_angle = get_angle(cur_angle);
+
+        
     }
 }
