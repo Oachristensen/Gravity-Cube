@@ -39,9 +39,9 @@ static int index_from_cords(int x, int y) {
 // TODO: THIS TAKES IN TOO MANY INPUTS IT SEEMS JANK
 static float can_move(int x, int y, struct Pixel pixel_array[], int velocity) {
 
-    for (float cur_vel = 1; cur_vel < velocity; cur_vel++) {
-        int new_x = round(x / cur_vel);
-        int new_y = round(y / cur_vel);
+    for (float cur_vel = velocity; cur_vel > 0; cur_vel--) {
+        float new_x = round(x * cur_vel);
+        float new_y = round(y * cur_vel);
 
         // checking if new values are in the bounds of the pixel_array
         if (new_x >= 7 || new_x <= 0 || new_y >= 7 || new_y <= 0) {
@@ -60,7 +60,7 @@ static int move_pixel(int old_index, int new_x, int new_y, struct Pixel pixel_ar
     int new_index = index_from_cords(new_x, new_y);
     pixel_array[new_index].value = true;
     pixel_array[old_index].value = false;
-    ESP_LOGI(FN_TAG, "moved pixel %d to %d", old_index, new_index);
+    ESP_LOGI(FN_TAG, "moved pixel %d to %d, using values X: %d Y: %d", old_index, new_index, new_x, new_y);
     return new_index;
 }
 
@@ -83,24 +83,24 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 }
 
 // sets all of move_params to proper values
-static struct MoveParams set_move_params(int angle) {
-    // effectively a 5x5 unit square where each value is rounded, will have bugs because of moving 2x need to be fixed
+static struct MoveParams set_move_params(int angle, float velocity) {
+        // effectively a 5x5 unit square where each value is rounded, will have bugs because of moving 2x need to be fixed
     struct MoveParams move_params = {
-        .x_down = round(2 * sin(angle + -90)),
-        .x_left = round(2 * sin(angle + 180)),
-        .x_right = round(2 * sin(angle)),
-        .y_down = round(2 * cos(angle - 90)),
-        .y_left = round(2 * cos(angle + 180)),
-        .y_right = round(2 * cos(angle)),
+        .x_down = round(velocity * sin((angle - 90) * (M_PI/180))),
+        .x_left = round(velocity * sin((angle + 180) * (M_PI/180))),
+        .x_right = round(velocity * sin(angle * (M_PI/180))),
+        .y_down = round(velocity * cos((angle - 90) * (M_PI/180))),
+        .y_left = round(velocity * cos((angle + 180) * (M_PI/180))),
+        .y_right = round(velocity * cos(angle * (M_PI/180))),
     };
     return move_params;
-}
+    }
 
-// A lot of the logic here is jank but I am leaving it so it can be changed easier later
+// runs a bunch of logic on the pixel_array
 static void run_sim(struct Pixel pixel_array[], int angle) {
 
     // eventually I will change this based on a real value
-    int velocity = 2;
+    float velocity = 2;
 
     // I dont like counter here but it should work
     int counter = 0;
@@ -108,31 +108,41 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
 
     fill_array_with_int(selected_indexes, -1);
 
-    bool left = false;
-    bool right = false;
+    struct MoveParams move_params = set_move_params(angle, velocity);
 
-    struct MoveParams move_params = set_move_params(angle);
+    ESP_LOGI(FN_TAG, "x_left: %f", move_params.x_left);
+    ESP_LOGI(FN_TAG, "x_right: %f", move_params.x_right);
+    ESP_LOGI(FN_TAG, "x_down: %f", move_params.x_down);
+    ESP_LOGI(FN_TAG, "y_left: %f", move_params.y_left);
+    ESP_LOGI(FN_TAG, "y_right: %f", move_params.y_right);
+    ESP_LOGI(FN_TAG, "y_down: %f", move_params.y_down);
 
     for (int i = 0; i < MAX_LEDS; i++) {
-        // decides whether to move left or right if both are availible
-        switch (esp_random() % 2) {
-        case 0:
-            left = true;
-            ESP_LOGI(FN_TAG, "selected left");
-            break;
-        case 1:
-            right = true;
-            ESP_LOGI(FN_TAG, "selected right");
-            break;
-        }
 
+        bool left = false;
+        bool right = false;
         int new_index = -1;
+
         if (array_contains(i, selected_indexes)) {
             ESP_LOGI(FN_TAG, "pixel at %d skipped", i);
             continue;
         }
         if (pixel_array[i].value == true) {
+
             ESP_LOGI(FN_TAG, "pixel at %d selectd", i);
+
+            // decides whether to move left or right if both are availible
+            switch (esp_random() % 2) {
+            case 0:
+                left = true;
+                ESP_LOGI(FN_TAG, "selected left");
+                break;
+            case 1:
+                right = true;
+                ESP_LOGI(FN_TAG, "selected right");
+                break;
+            }
+
             // down
             float set_velocity_down = can_move(pixel_array[i].x + move_params.x_down, pixel_array[i].y + move_params.y_down, pixel_array, velocity);
             ESP_LOGI(FN_TAG, "down_velocity = %f", set_velocity_down);
