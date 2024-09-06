@@ -84,7 +84,7 @@ static void configure_led_strip(void) {
 }
 
 void app_main(void) {
-    int cur_angle = 90;
+    int cur_angle = 180;
     struct Pixel pixel_array[MAX_LEDS];
     configure_led_strip();
     configure_pixels(pixel_array);

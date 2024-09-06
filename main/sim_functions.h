@@ -7,7 +7,7 @@
 
 #define MAX_LEDS X_SIZE *Y_SIZE
 
-#define NUM_SIM 5
+#define NUM_SIM 32
 
 typedef struct Pixel {
     int x;
@@ -46,8 +46,7 @@ static float can_move(int x, int y, struct Pixel pixel_array[], int velocity, in
     ESP_LOGI(FN_TAG, "static_y = %f", static_y);
 
     for (float cur_vel = velocity; cur_vel > 0; cur_vel--) {
-        // float new_x = round(static_x * cur_vel);
-        // float new_y = round(static_y * cur_vel);
+
         float new_x = static_x + round(x * (cur_vel / velocity));
         float new_y = static_y + round(y * (cur_vel / velocity));
 
@@ -161,7 +160,9 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                 int new_y = round(pixel_array[i].y + move_params.y_down * (set_velocity_down / velocity));
 
                 new_index = move_pixel(i, new_x, new_y, pixel_array);
-                continue;
+                selected_indexes[counter] = new_index;
+                    counter++;
+                    continue;
             }
             // right first then left
             if (right) {
@@ -172,6 +173,9 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                     int new_y = round(pixel_array[i].y + move_params.y_right * (set_velocity_right / velocity));
 
                     new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    selected_indexes[counter] = new_index;
+                    counter++;
+                    continue;
                 }
             } else {
                 float set_velocity_left = can_move(move_params.x_left, move_params.y_left, pixel_array, velocity, i);
@@ -181,6 +185,9 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                     int new_y = round(pixel_array[i].y + move_params.y_left * (set_velocity_left / velocity));
 
                     new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    selected_indexes[counter] = new_index;
+                    counter++;
+                    continue;
                 }
             }
             // left first then right
@@ -193,6 +200,10 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                     int new_y = round(pixel_array[i].y + move_params.y_left * (set_velocity_left / velocity));
 
                     new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    selected_indexes[counter] = new_index;
+                    counter++;
+                    continue;
+
                 }
             } else {
                 float set_velocity_right = can_move(move_params.x_right, move_params.y_right, pixel_array, velocity, i);
@@ -203,14 +214,14 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                     int new_y = round(pixel_array[i].y + move_params.y_right * (set_velocity_right / velocity));
 
                     new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    selected_indexes[counter] = new_index;
+                    counter++;
+                    continue;
+
                 }
             }
         }
 
-        if (new_index != -1) {
-            selected_indexes[counter] = new_index;
-            counter++;
-        }
         ESP_LOGI(FN_TAG, "new_op");
     }
 }
