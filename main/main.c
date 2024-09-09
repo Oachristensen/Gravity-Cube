@@ -84,7 +84,7 @@ static void configure_led_strip(void) {
 }
 
 void app_main(void) {
-    int cur_angle = 180;
+    int cur_angle = 90;
     struct Pixel pixel_array[MAX_LEDS];
     configure_led_strip();
     configure_pixels(pixel_array);
@@ -96,9 +96,10 @@ void app_main(void) {
         led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
+        ESP_LOGI(TAG, "Angle changed to: %d", cur_angle);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
         }
-        // cur_angle = get_angle(cur_angle);
+        cur_angle = get_angle(cur_angle);
 
         
     }
