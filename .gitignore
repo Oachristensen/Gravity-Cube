@@ -1,0 +1,9 @@
+build/
+.vscode/
+.vscode/settings.json
+.devcontainer
+CMakeLists.txt
+sdkconfig
+sdkconfig.old
+managed_components/
+espressif_led_strip/

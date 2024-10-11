@@ -36,7 +36,6 @@ static int index_from_cords(int x, int y) {
 
 // Takes in a pair of x_y values and a velocity, recursively checks down the velocity list to see if any spaces are free to move
 // if a velocity is found it is returned, else returns -1 for a failure
-// TODO: THIS TAKES IN TOO MANY INPUTS IT SEEMS JANK
 static float can_move(float x, float y, struct Pixel pixel_array[], int velocity, int index) {
 
     float static_x = pixel_array[index].x;
@@ -64,7 +63,6 @@ static float can_move(float x, float y, struct Pixel pixel_array[], int velocity
 }
 
 // Takes a pair of x_y values and an index, sets the old indexes value to false, changes the new index to true, and returns it
-// HEAVY SUSPECT
 static int move_pixel(int old_index, int new_x, int new_y, struct Pixel pixel_array[]) {
     int new_index = index_from_cords(new_x, new_y);
     pixel_array[new_index].value = true;

@@ -12,6 +12,8 @@
 #include <rom/ets_sys.h>
 #include <stdint.h>
 #include <stdio.h>
+#include "driver/i2c_master.h"
+#include "icm20948-i2c-lib.h"
 
 
 #define DATA_GPIO 38
@@ -86,6 +88,11 @@ static void configure_led_strip(void) {
 void app_main(void) {
     int cur_angle = 90;
     struct Pixel pixel_array[MAX_LEDS];
+
+    //initiate device handlers
+    i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
+    i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
+
     configure_led_strip();
     configure_pixels(pixel_array);
     populate_matrix(pixel_array);
