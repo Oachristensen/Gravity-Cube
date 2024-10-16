@@ -1,24 +1,21 @@
 #include "driver/gpio.h"
-#include "esp_mac.h"
+#include "driver/i2c_master.h"
 #include "driver/rmt_tx.h"
 #include "driver/rmt_types.h"
 #include "esp_log.h"
+#include "esp_mac.h"
 #include "esp_random.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "led_strip.h"
 #include <math.h>
-#include "sim_functions.h"
 #include <rom/ets_sys.h>
 #include <stdint.h>
 #include <stdio.h>
-#include "driver/i2c_master.h"
+#include "sim_functions.h"
 #include "icm20948-i2c-lib.h"
 
-
 #define DATA_GPIO 38
-
-
 
 #define TAG "main"
 
@@ -59,14 +56,15 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
 }
 
 // No gyro library right now, hardcoding this for now
-static int get_angle(int cur_angle) {
+static int get_angle(i2c_master_dev_handle_t mag_handle) {
+    struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
+
     int new_angle;
-    if (cur_angle <= 330) {
-    new_angle = cur_angle + 15;
-    }
-    else {
-        new_angle = 0;
-    }
+    // if (cur_angle <= 330) {
+    //     new_angle = cur_angle + 15;
+    // } else {
+    new_angle = 0;
+    // }
     return new_angle;
 }
 
@@ -89,9 +87,10 @@ void app_main(void) {
     int cur_angle = 90;
     struct Pixel pixel_array[MAX_LEDS];
 
-    //initiate device handlers
+    // initiate device handlers
     i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
     i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
+    get_angle(mag_handle);
 
     configure_led_strip();
     configure_pixels(pixel_array);
@@ -99,15 +98,13 @@ void app_main(void) {
 
     while (true) {
         for (int i = 0; i < 10; i++) {
-        run_sim(pixel_array, cur_angle);
-        led_strip_clear(led_strip);
-        update_pixel_data(pixel_array, led_strip);
-        led_strip_refresh(led_strip);
-        ESP_LOGI(TAG, "Angle changed to: %d", cur_angle);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+            run_sim(pixel_array, cur_angle);
+            led_strip_clear(led_strip);
+            update_pixel_data(pixel_array, led_strip);
+            led_strip_refresh(led_strip);
+            ESP_LOGI(TAG, "Angle changed to: %d", cur_angle);
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
         }
         cur_angle = get_angle(cur_angle);
-
-        
     }
 }
