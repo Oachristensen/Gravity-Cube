@@ -26,7 +26,7 @@
 
 static led_strip_handle_t led_strip;
 
-typedef struct vector {
+typedef struct my_vector {
     float x;
     float y;
     float z;
@@ -62,38 +62,35 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
     }
 }
 
-static struct vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
-    struct vector unit_vector;
+static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
+    struct my_vector unit_vector;
     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
-    float magnitude = sqrt(sensor_data.x * sensor_data.x + sensor_data.y * sensor_data.y);
+
+    ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
+    float magnitude = sqrt((sensor_data.x * sensor_data.x) + (sensor_data.y * sensor_data.y) + (sensor_data.z * sensor_data.z));
 
     unit_vector.x = sensor_data.x / magnitude;
     unit_vector.y = sensor_data.y / magnitude;
-
+    ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
     return unit_vector;
 }
 
-static int angle_from_dot_product(struct vector base_vector, struct vector new_vector) {
-    int angle = acos(base_vector.x * new_vector.x + base_vector.y * new_vector.y);
-    return angle;
+// static float angle_from_unit_vector(struct my_vector base_vector, struct my_vector new_vector) {
+//     float angle = acos(base_vector.x * new_vector.x + base_vector.y * new_vector.y + new_vector.z*base_vector.z);
+    // float angle_degrees = angle * (180.0 / M_PI);
+//     return angle_degrees;
+
+
+
+// }
+static float angle_from_unit_vector( struct my_vector new_vector) {
+    float angle = atan2(new_vector.y, new_vector.x);
+    float angle_degrees = angle * (180.0 / M_PI);
+    return angle_degrees;
+
+
+
 }
-
-// No gyro library right now, hardcoding this for now
-// static int get_angle(i2c_master_dev_handle_t mag_handle) {
-//     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
-
-//     // return new_angle;
-// }
-// static int get_angle(int angle) {
-
-//     int new_angle;
-//     if (angle <= 330) {
-//         new_angle = angle + 15;
-//     } else {
-//         new_angle = 0;
-//     }
-//     return new_angle;
-// }
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
@@ -115,7 +112,7 @@ void app_main(void) {
     // 1 sec startup time to let sensor start (idk if this does anything :)
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 
-    int cur_angle;
+    float cur_angle;
     struct Pixel pixel_array[MAX_LEDS];
 
     configure_led_strip();
@@ -127,21 +124,33 @@ void app_main(void) {
     i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
     check_sensor(dev_handle);
     // get_angle(mag_handle);
-    struct vector base_unit_vector = get_unit_vector(mag_handle);
-    ESP_LOGI(TAG, "Base vector cordinates are X: %f, Y: %f", base_unit_vector.x, base_unit_vector.y);
+
+    // I hope this doesnt work because it is jank as hell
+    read_magnetometer(mag_handle);
+
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+
+    // struct my_vector base_unit_vector = get_unit_vector(mag_handle);
+    // struct my_vector base_unit_vector = {
+    //     .x = 1,
+    //     .y = .000000001,
+    //     .z = 0
+    // };
 
     while (true) {
         // for (int i = 0; i < 10; i++) {
-        struct vector cur_unit_vector = get_unit_vector(mag_handle);
-        ESP_LOGI(TAG, "new vector cordinates are X: %f, Y: %f", cur_unit_vector.x, cur_unit_vector.y);
-        cur_angle = angle_from_dot_product(base_unit_vector, cur_unit_vector) + 90;
+        struct my_vector cur_unit_vector = get_unit_vector(mag_handle);
+        // cur_angle = angle_from_unit_vector(base_unit_vector, cur_unit_vector);
+        //adding 360 to convert from -180 - 180 to 0-360
+        cur_angle = angle_from_unit_vector(cur_unit_vector)+360;
+
 
         run_sim(pixel_array, cur_angle);
 
         led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        ESP_LOGI(TAG, "Angle changed to: %d", cur_angle);
+        ESP_LOGI(TAG, "Angle changed to: %f", cur_angle);
         vTaskDelay(100 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);

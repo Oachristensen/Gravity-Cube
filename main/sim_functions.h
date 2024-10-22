@@ -95,7 +95,7 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 
 // sets all of move_params to proper values
 static struct MoveParams set_move_params(int angle, float velocity) {
-    // effectively a 5x5 unit square where each value is rounded, will have bugs because of moving 2x need to be fixed
+    // effectively a 5x5 unit square where each value is rounded
     struct MoveParams move_params = {
         .x_down = velocity * sin((angle - 90) * (M_PI / 180)),
         .x_left = velocity * sin((angle + 180) * (M_PI / 180)),
