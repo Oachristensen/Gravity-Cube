@@ -12,18 +12,25 @@
 #include <rom/ets_sys.h>
 #include <stdint.h>
 #include <stdio.h>
-#include "sim_functions.h"
-#include "icm20948-i2c-lib.h"
 
 #define DATA_GPIO 38
 
 #define TAG "main"
 
-#define R 1
-#define G 0
-#define B 0
+#define R 200
+#define G 200
+#define B 200
+
+#include "icm20948-i2c-lib.h"
+#include "sim_functions.h"
 
 static led_strip_handle_t led_strip;
+
+typedef struct vector {
+    float x;
+    float y;
+    float z;
+};
 
 static void populate_matrix(struct Pixel pixel_array[]) {
     // Knuth algorithm
@@ -55,18 +62,38 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
     }
 }
 
-// No gyro library right now, hardcoding this for now
-static int get_angle(i2c_master_dev_handle_t mag_handle) {
+static struct vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
+    struct vector unit_vector;
     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
+    float magnitude = sqrt(sensor_data.x * sensor_data.x + sensor_data.y * sensor_data.y);
 
-    int new_angle;
-    // if (cur_angle <= 330) {
-    //     new_angle = cur_angle + 15;
-    // } else {
-    new_angle = 0;
-    // }
-    return new_angle;
+    unit_vector.x = sensor_data.x / magnitude;
+    unit_vector.y = sensor_data.y / magnitude;
+
+    return unit_vector;
 }
+
+static int angle_from_dot_product(struct vector base_vector, struct vector new_vector) {
+    int angle = acos(base_vector.x * new_vector.x + base_vector.y * new_vector.y);
+    return angle;
+}
+
+// No gyro library right now, hardcoding this for now
+// static int get_angle(i2c_master_dev_handle_t mag_handle) {
+//     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
+
+//     // return new_angle;
+// }
+// static int get_angle(int angle) {
+
+//     int new_angle;
+//     if (angle <= 330) {
+//         new_angle = angle + 15;
+//     } else {
+//         new_angle = 0;
+//     }
+//     return new_angle;
+// }
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
@@ -84,27 +111,39 @@ static void configure_led_strip(void) {
 }
 
 void app_main(void) {
-    int cur_angle = 90;
-    struct Pixel pixel_array[MAX_LEDS];
 
-    // initiate device handlers
-    i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
-    i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
-    get_angle(mag_handle);
+    // 1 sec startup time to let sensor start (idk if this does anything :)
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+
+    int cur_angle;
+    struct Pixel pixel_array[MAX_LEDS];
 
     configure_led_strip();
     configure_pixels(pixel_array);
     populate_matrix(pixel_array);
 
+    // initiate device handlers
+    i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
+    i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
+    check_sensor(dev_handle);
+    // get_angle(mag_handle);
+    struct vector base_unit_vector = get_unit_vector(mag_handle);
+    ESP_LOGI(TAG, "Base vector cordinates are X: %f, Y: %f", base_unit_vector.x, base_unit_vector.y);
+
     while (true) {
-        for (int i = 0; i < 10; i++) {
-            run_sim(pixel_array, cur_angle);
-            led_strip_clear(led_strip);
-            update_pixel_data(pixel_array, led_strip);
-            led_strip_refresh(led_strip);
-            ESP_LOGI(TAG, "Angle changed to: %d", cur_angle);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-        }
-        cur_angle = get_angle(cur_angle);
+        // for (int i = 0; i < 10; i++) {
+        struct vector cur_unit_vector = get_unit_vector(mag_handle);
+        ESP_LOGI(TAG, "new vector cordinates are X: %f, Y: %f", cur_unit_vector.x, cur_unit_vector.y);
+        cur_angle = angle_from_dot_product(base_unit_vector, cur_unit_vector) + 90;
+
+        run_sim(pixel_array, cur_angle);
+
+        led_strip_clear(led_strip);
+        update_pixel_data(pixel_array, led_strip);
+        led_strip_refresh(led_strip);
+        ESP_LOGI(TAG, "Angle changed to: %d", cur_angle);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+        // }
+        // cur_angle = get_angle(cur_angle);
     }
 }
