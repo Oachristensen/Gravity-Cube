@@ -142,7 +142,7 @@ void app_main(void) {
         struct my_vector cur_unit_vector = get_unit_vector(mag_handle);
         // cur_angle = angle_from_unit_vector(base_unit_vector, cur_unit_vector);
         //adding 360 to convert from -180 - 180 to 0-360
-        cur_angle = angle_from_unit_vector(cur_unit_vector)+360;
+        cur_angle = angle_from_unit_vector(cur_unit_vector)+440;
 
 
         run_sim(pixel_array, cur_angle);
@@ -151,7 +151,7 @@ void app_main(void) {
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
         ESP_LOGI(TAG, "Angle changed to: %f", cur_angle);
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);
     }
