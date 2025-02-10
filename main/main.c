@@ -43,7 +43,7 @@ static void populate_matrix(struct Pixel pixel_array[]) {
 
         if (esp_random() % remainingNumbers < remainingSelections) {
             // Select the current number
-            ESP_LOGI(TAG, "selected %d", rangeIndex);
+            // ESP_LOGI(TAG, "selected %d", rangeIndex);
             numbersSelected++;
             pixel_array[rangeIndex].value = true;
         }
@@ -66,30 +66,24 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
     struct my_vector unit_vector;
     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
 
-    ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
+    // ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
     float magnitude = sqrt((sensor_data.x * sensor_data.x) + (sensor_data.y * sensor_data.y) + (sensor_data.z * sensor_data.z));
 
     unit_vector.x = sensor_data.x / magnitude;
     unit_vector.y = sensor_data.y / magnitude;
-    ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
+    // ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
     return unit_vector;
 }
 
 // static float angle_from_unit_vector(struct my_vector base_vector, struct my_vector new_vector) {
 //     float angle = acos(base_vector.x * new_vector.x + base_vector.y * new_vector.y + new_vector.z*base_vector.z);
-    // float angle_degrees = angle * (180.0 / M_PI);
+// float angle_degrees = angle * (180.0 / M_PI);
 //     return angle_degrees;
 
-
-
 // }
-static float angle_from_unit_vector( struct my_vector new_vector) {
-    float angle = atan2(new_vector.y, new_vector.x);
-    float angle_degrees = angle * (180.0 / M_PI);
-    return angle_degrees;
-
-
-
+static float angle_from_unit_vector(struct my_vector new_vector) {
+    float angle_rad = atan2(new_vector.y, new_vector.x);
+    return angle_rad;
 }
 
 static void configure_led_strip(void) {
@@ -123,27 +117,15 @@ void app_main(void) {
     i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
     i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
     check_sensor(dev_handle);
-    // get_angle(mag_handle);
 
-    // I hope this doesnt work because it is jank as hell
     read_magnetometer(mag_handle);
 
     vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-    // struct my_vector base_unit_vector = get_unit_vector(mag_handle);
-    // struct my_vector base_unit_vector = {
-    //     .x = 1,
-    //     .y = .000000001,
-    //     .z = 0
-    // };
-
     while (true) {
-        // for (int i = 0; i < 10; i++) {
         struct my_vector cur_unit_vector = get_unit_vector(mag_handle);
-        // cur_angle = angle_from_unit_vector(base_unit_vector, cur_unit_vector);
-        //adding 360 to convert from -180 - 180 to 0-360
-        cur_angle = angle_from_unit_vector(cur_unit_vector)+440;
-
+        // adding 360 to convert from -180 - 180 to 0-360
+        //^ this saved me trying to debug this later :) (my goat)
+        cur_angle = angle_from_unit_vector(cur_unit_vector) + 360;
 
         run_sim(pixel_array, cur_angle);
 
@@ -151,7 +133,7 @@ void app_main(void) {
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
         ESP_LOGI(TAG, "Angle changed to: %f", cur_angle);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);
     }
