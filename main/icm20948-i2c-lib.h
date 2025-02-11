@@ -14,8 +14,8 @@
 #define CNTL2 0x31
 #define CNTL3 0x32
 
-#define SDA 3
-#define SCL 46
+#define SDA 8
+#define SCL 9
 
 #define ASDA 10
 #define ASCL 11

@@ -35,33 +35,38 @@ typedef struct my_vector {
 };
 
 static void populate_matrix(struct Pixel pixel_array[]) {
-    // Knuth algorithm
-    int numbersSelected = 0;
-    int rangeIndex;
-
-    for (rangeIndex = 0; rangeIndex < MAX_LEDS && numbersSelected < NUM_SIM; ++rangeIndex) {
-        int remainingNumbers = MAX_LEDS - rangeIndex;
-        int remainingSelections = NUM_SIM - numbersSelected;
-
-        if (esp_random() % remainingNumbers < remainingSelections) {
-            // Select the current number
-            // ESP_LOGI(TAG, "selected %d", rangeIndex);
-            numbersSelected++;
-            pixel_array[rangeIndex].value = true;
-        }
+    for (int i = 0; i <= NUM_SIM; i++) {
+        pixel_array[i].value = true;
     }
-    assert(numbersSelected == NUM_SIM);
+    // // Knuth algorithm
+    // int numbersSelected = 0;
+    // int rangeIndex;
+
+    // for (rangeIndex = 0; rangeIndex < MAX_LEDS && numbersSelected < NUM_SIM; ++rangeIndex) {
+    //     int remainingNumbers = MAX_LEDS - rangeIndex;
+    //     int remainingSelections = NUM_SIM - numbersSelected;
+
+    //     if (esp_random() % remainingNumbers < remainingSelections) {
+    //         // Select the current number
+    //         // ESP_LOGI(TAG, "selected %d", rangeIndex);
+    //         numbersSelected++;
+    //         pixel_array[rangeIndex].value = true;
+    //     }
+    // }
+    // assert(numbersSelected == NUM_SIM);
 }
 
 static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led_strip) {
+    int counter = 0;
     for (int i = 0; i < MAX_LEDS; i++) {
         if (pixel_array[i].value == true) {
             led_strip_set_pixel(led_strip, i, R, G, B);
-            // pixel_array[i].value = 0;
+            counter++;
         } else {
             led_strip_set_pixel(led_strip, i, 0, 0, 0);
         }
     }
+    ESP_LOGI(TAG, "Total Pixels active: %d", counter);
 }
 
 static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
@@ -79,12 +84,6 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
     return unit_vector;
 }
 
-// static float angle_from_unit_vector(struct my_vector base_vector, struct my_vector new_vector) {
-//     float angle = acos(base_vector.x * new_vector.x + base_vector.y * new_vector.y + new_vector.z*base_vector.z);
-// float angle_degrees = angle * (180.0 / M_PI);
-//     return angle_degrees;
-
-// }
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
@@ -108,7 +107,11 @@ void app_main(void) {
 
     float theta;
     float phi;
-    struct Pixel pixel_array[MAX_LEDS];
+    struct Pixel *pixel_array = malloc(MAX_LEDS * sizeof(struct Pixel));
+    if (!pixel_array) {
+        ESP_LOGE(FN_TAG, "Memory allocation failed!");
+        return;
+    }
 
     configure_led_strip();
     configure_pixels(pixel_array);
@@ -126,18 +129,18 @@ void app_main(void) {
         struct my_vector unit_vector = get_unit_vector(mag_handle);
         // adding 360 to convert from -180 - 180 to 0-360
         //^ this saved me trying to debug this later :) (my goat)
-        theta = atan2(unit_vector.y, unit_vector.x) + 360;
-        phi = atan2(unit_vector.z, sqrt(unit_vector.x*unit_vector.x + unit_vector.y*unit_vector.y)) + 360;
+        theta = atan2(unit_vector.y, unit_vector.x);
+        phi = atan2(unit_vector.z, sqrt(unit_vector.x * unit_vector.x + unit_vector.y * unit_vector.y));
 
         run_sim(pixel_array, theta, phi);
-         ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta-360, phi-360);
-
+        ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
 
         led_strip_clear(led_strip);
-        // update_pixel_data(pixel_array, led_strip);
+        update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);
     }
+    free(pixel_array);
 }

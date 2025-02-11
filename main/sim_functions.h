@@ -6,21 +6,15 @@
 #define Y_SIZE 8
 #define Z_SIZE 8
 
-#define MAX_LEDS X_SIZE *Y_SIZE
+#define MAX_LEDS X_SIZE *Y_SIZE *Z_SIZE
 
-#define NUM_SIM 32
+#define NUM_SIM 46
 
 typedef struct Pixel {
     int x;
     int y;
     int z;
     bool value;
-    bool up_panel;
-    bool down_panel;
-    bool north_panel;
-    bool east_panel;
-    bool south_panel;
-    bool west_panel;
 };
 
 typedef struct MoveParams {
@@ -42,11 +36,9 @@ static void fill_array_with_int(int array[NUM_SIM], int num) {
 }
 
 // This doesnt work anymore
-static int index_from_cords(int x, int y, int z;) {
-    int x = x;
-    int y = y;
-    int z = z;
-    return (x + (y * (Y_SIZE) + (z* Z_SIZE^2)));
+static int index_from_cords(int x, int y, int z) {
+    int index = (x + (y * (Y_SIZE) + (z * X_SIZE * Y_SIZE)));
+    return index;
 }
 
 // Takes in a pair of x_y values and a velocity, recursively checks down the velocity list to see if any spaces are free to move
@@ -74,7 +66,7 @@ static float can_move(float x, float y, float z, struct Pixel pixel_array[], int
 
         else if (pixel_array[index_from_cords(new_x, new_y, new_z)].value == false) {
             if (SIM_DEBUG) {
-                ESP_LOGI(FN_TAG, "Pixel at %d passed check", index_from_cords(new_x, new_y));
+                ESP_LOGI(FN_TAG, "Pixel at %d passed check", index_from_cords(new_x, new_y, new_z));
             }
             return cur_vel;
         }
@@ -83,8 +75,8 @@ static float can_move(float x, float y, float z, struct Pixel pixel_array[], int
 }
 
 // Takes a pair of x_y values and an index, sets the old indexes value to false, changes the new index to true, and returns it
-static int move_pixel(int old_index, int new_x, int new_y, struct Pixel pixel_array[]) {
-    int new_index = index_from_cords(new_x, new_y);
+static int move_pixel(int old_index, int new_x, int new_y, int new_z, struct Pixel pixel_array[]) {
+    int new_index = index_from_cords(new_x, new_y, new_z);
     pixel_array[new_index].value = true;
     pixel_array[old_index].value = false;
     if (SIM_DEBUG) {
@@ -101,6 +93,9 @@ static void configure_pixels(struct Pixel pixel_array[]) {
                 pixel_array[index_from_cords(x, y, z)].y = y;
                 pixel_array[index_from_cords(x, y, z)].z = z;
                 pixel_array[index_from_cords(x, y, z)].value = false;
+                if (SIM_DEBUG) {
+                    ESP_LOGI(FN_TAG, "%d", index_from_cords(x, y, z));
+                }
             }
         }
     }
@@ -135,7 +130,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
     // eventually I will change this based on a real value
     float velocity = 2;
 
-    // I dont like counter here but it should work
+    // keeps track of pixels already moved so that things cant move twice in a cycle
     int counter = 0;
     int selected_indexes[NUM_SIM];
 
@@ -191,8 +186,9 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
             if (set_velocity_down != -1) {
                 int new_x = pixel_array[i].x + round(move_params.x_down * (set_velocity_down / velocity));
                 int new_y = pixel_array[i].y + round(move_params.y_down * (set_velocity_down / velocity));
+                int new_z = pixel_array[i].z + round(move_params.z_down * (set_velocity_down / velocity));
 
-                new_index = move_pixel(i, new_x, new_y, pixel_array);
+                new_index = move_pixel(i, new_x, new_y, new_z, pixel_array);
                 selected_indexes[counter] = new_index;
                 counter++;
                 continue;
@@ -206,8 +202,9 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
                 if (set_velocity_right != -1) {
                     int new_x = pixel_array[i].x + round(move_params.x_right * (set_velocity_right / velocity));
                     int new_y = pixel_array[i].y + round(move_params.y_right * (set_velocity_right / velocity));
+                    int new_z = pixel_array[i].z + round(move_params.z_right * (set_velocity_right / velocity));
 
-                    new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    new_index = move_pixel(i, new_x, new_y, new_z, pixel_array);
                     selected_indexes[counter] = new_index;
                     counter++;
                     continue;
@@ -220,8 +217,9 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
                 if (set_velocity_left != -1) {
                     int new_x = pixel_array[i].x + round(move_params.x_left * (set_velocity_left / velocity));
                     int new_y = pixel_array[i].y + round(move_params.y_left * (set_velocity_left / velocity));
+                    int new_z = pixel_array[i].z + round(move_params.z_left * (set_velocity_left / velocity));
 
-                    new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    new_index = move_pixel(i, new_x, new_y, new_z, pixel_array);
                     selected_indexes[counter] = new_index;
                     counter++;
                     continue;
@@ -237,8 +235,9 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
                 if (set_velocity_left != -1) {
                     int new_x = pixel_array[i].x + round(move_params.x_left * (set_velocity_left / velocity));
                     int new_y = pixel_array[i].y + round(move_params.y_left * (set_velocity_left / velocity));
+                    int new_z = pixel_array[i].z + round(move_params.z_left * (set_velocity_left / velocity));
 
-                    new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    new_index = move_pixel(i, new_x, new_y, new_z, pixel_array);
                     selected_indexes[counter] = new_index;
                     counter++;
                     continue;
@@ -252,8 +251,9 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
                 if (set_velocity_right != -1) {
                     int new_x = pixel_array[i].x + round(move_params.x_right * (set_velocity_right / velocity));
                     int new_y = pixel_array[i].y + round(move_params.y_right * (set_velocity_right / velocity));
+                    int new_z = pixel_array[i].z + round(move_params.z_right * (set_velocity_right / velocity));
 
-                    new_index = move_pixel(i, new_x, new_y, pixel_array);
+                    new_index = move_pixel(i, new_x, new_y, new_z, pixel_array);
                     selected_indexes[counter] = new_index;
                     counter++;
                     continue;
