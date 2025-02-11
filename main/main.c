@@ -22,6 +22,7 @@
 #define B 200
 
 #include "icm20948-i2c-lib.h"
+#include "panel_data.h"
 #include "sim_functions.h"
 
 static led_strip_handle_t led_strip;
@@ -30,6 +31,7 @@ typedef struct my_vector {
     float x;
     float y;
     float z;
+    float magnitude;
 };
 
 static void populate_matrix(struct Pixel pixel_array[]) {
@@ -66,11 +68,13 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
     struct my_vector unit_vector;
     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
 
-    // ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
+    ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
     float magnitude = sqrt((sensor_data.x * sensor_data.x) + (sensor_data.y * sensor_data.y) + (sensor_data.z * sensor_data.z));
 
+    unit_vector.magnitude = magnitude;
     unit_vector.x = sensor_data.x / magnitude;
     unit_vector.y = sensor_data.y / magnitude;
+    unit_vector.z = sensor_data.z / magnitude;
     // ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
     return unit_vector;
 }
@@ -81,10 +85,6 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
 //     return angle_degrees;
 
 // }
-static float angle_from_unit_vector(struct my_vector new_vector) {
-    float angle_rad = atan2(new_vector.y, new_vector.x);
-    return angle_rad;
-}
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
@@ -106,7 +106,8 @@ void app_main(void) {
     // 1 sec startup time to let sensor start (idk if this does anything :)
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 
-    float cur_angle;
+    float theta;
+    float phi;
     struct Pixel pixel_array[MAX_LEDS];
 
     configure_led_strip();
@@ -122,17 +123,19 @@ void app_main(void) {
 
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (true) {
-        struct my_vector cur_unit_vector = get_unit_vector(mag_handle);
+        struct my_vector unit_vector = get_unit_vector(mag_handle);
         // adding 360 to convert from -180 - 180 to 0-360
         //^ this saved me trying to debug this later :) (my goat)
-        cur_angle = angle_from_unit_vector(cur_unit_vector) + 360;
+        theta = atan2(unit_vector.y, unit_vector.x) + 360;
+        phi = atan2(unit_vector.z, sqrt(unit_vector.x*unit_vector.x + unit_vector.y*unit_vector.y)) + 360;
 
-        run_sim(pixel_array, cur_angle);
+        run_sim(pixel_array, theta, phi);
+         ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta-360, phi-360);
+
 
         led_strip_clear(led_strip);
-        update_pixel_data(pixel_array, led_strip);
+        // update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        ESP_LOGI(TAG, "Angle changed to: %f", cur_angle);
         vTaskDelay(100 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);

@@ -4,6 +4,7 @@
 #define SIM_DEBUG false
 #define X_SIZE 8
 #define Y_SIZE 8
+#define Z_SIZE 8
 
 #define MAX_LEDS X_SIZE *Y_SIZE
 
@@ -12,7 +13,14 @@
 typedef struct Pixel {
     int x;
     int y;
+    int z;
     bool value;
+    bool up_panel;
+    bool down_panel;
+    bool north_panel;
+    bool east_panel;
+    bool south_panel;
+    bool west_panel;
 };
 
 typedef struct MoveParams {
@@ -22,6 +30,9 @@ typedef struct MoveParams {
     float y_down;
     float y_right;
     float y_left;
+    float z_down;
+    float z_left;
+    float z_right;
 };
 
 static void fill_array_with_int(int array[NUM_SIM], int num) {
@@ -30,31 +41,38 @@ static void fill_array_with_int(int array[NUM_SIM], int num) {
     }
 }
 
-static int index_from_cords(int x, int y) {
-    return (x + (y * (Y_SIZE)));
+// This doesnt work anymore
+static int index_from_cords(int x, int y, int z;) {
+    int x = x;
+    int y = y;
+    int z = z;
+    return (x + (y * (Y_SIZE) + (z* Z_SIZE^2)));
 }
 
 // Takes in a pair of x_y values and a velocity, recursively checks down the velocity list to see if any spaces are free to move
 // if a velocity is found it is returned, else returns -1 for a failure
-static float can_move(float x, float y, struct Pixel pixel_array[], int velocity, int index) {
+static float can_move(float x, float y, float z, struct Pixel pixel_array[], int velocity, int index) {
 
     float static_x = pixel_array[index].x;
     float static_y = pixel_array[index].y;
+    float static_z = pixel_array[index].z;
     if (SIM_DEBUG) {
         ESP_LOGI(FN_TAG, "static_x = %f", static_x);
         ESP_LOGI(FN_TAG, "static_y = %f", static_y);
+        ESP_LOGI(FN_TAG, "static_z = %f", static_z);
     }
     for (float cur_vel = velocity; cur_vel > 0; cur_vel--) {
 
         float new_x = static_x + round(x * (cur_vel / velocity));
         float new_y = static_y + round(y * (cur_vel / velocity));
+        float new_z = static_z + round(z * (cur_vel / velocity));
 
         // checking if new values are in the bounds of the pixel_array
-        if (new_x > 7 || new_x < 0 || new_y > 7 || new_y < 0) {
+        if (new_x > 7 || new_x < 0 || new_y > 7 || new_y < 0 || new_z < 0 || new_z > 7) {
             continue;
         }
 
-        else if (pixel_array[index_from_cords(new_x, new_y)].value == false) {
+        else if (pixel_array[index_from_cords(new_x, new_y, new_z)].value == false) {
             if (SIM_DEBUG) {
                 ESP_LOGI(FN_TAG, "Pixel at %d passed check", index_from_cords(new_x, new_y));
             }
@@ -76,11 +94,14 @@ static int move_pixel(int old_index, int new_x, int new_y, struct Pixel pixel_ar
 }
 
 static void configure_pixels(struct Pixel pixel_array[]) {
-    for (int y = 0; y < Y_SIZE; y++) {
-        for (int x = 0; x < X_SIZE; x++) {
-            pixel_array[index_from_cords(x, y)].x = x;
-            pixel_array[index_from_cords(x, y)].y = y;
-            pixel_array[index_from_cords(x, y)].value = false;
+    for (int z = 0; z < Z_SIZE; z++) {
+        for (int y = 0; y < Y_SIZE; y++) {
+            for (int x = 0; x < X_SIZE; x++) {
+                pixel_array[index_from_cords(x, y, z)].x = x;
+                pixel_array[index_from_cords(x, y, z)].y = y;
+                pixel_array[index_from_cords(x, y, z)].z = z;
+                pixel_array[index_from_cords(x, y, z)].value = false;
+            }
         }
     }
 }
@@ -94,21 +115,22 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 }
 
 // sets all of move_params to proper values
-static struct MoveParams set_move_params(int angle, float velocity) {
+static struct MoveParams set_move_params(float theta, float phi, float velocity) {
     // effectively a 5x5 unit square where each value is rounded
     struct MoveParams move_params = {
-        .x_down = velocity * sin((angle - M_PI/2)),
-        .x_left = velocity * sin((angle + M_PI)),
-        .x_right = velocity * sin(angle),
-        .y_down = velocity * cos((angle - M_PI/2)),
-        .y_left = velocity * cos((angle + M_PI)),
-        .y_right = velocity * cos(angle),
+        .x_down = velocity * cos(theta) * cos(phi),
+        .x_right = velocity * sin(theta) * cos(phi),
+        .y_down = velocity * cos(theta) * sin(phi),
+        .y_right = velocity * sin(theta) * sin(phi),
+        .z_down = velocity * sin(phi),
+        .z_left = velocity * cos(theta + M_PI_2) * cos(phi),
+        .z_right = velocity * cos(theta - M_PI_2) * cos(phi),
     };
     return move_params;
 }
 
 // runs a bunch of logic on the pixel_array
-static void run_sim(struct Pixel pixel_array[], int angle) {
+static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
 
     // eventually I will change this based on a real value
     float velocity = 2;
@@ -119,7 +141,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
 
     fill_array_with_int(selected_indexes, -1);
 
-    struct MoveParams move_params = set_move_params(angle, velocity);
+    struct MoveParams move_params = set_move_params(theta, phi, velocity);
     if (SIM_DEBUG) {
         ESP_LOGI(FN_TAG, "x_left: %f", move_params.x_left);
         ESP_LOGI(FN_TAG, "x_right: %f", move_params.x_right);
@@ -140,6 +162,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
             }
             continue;
         }
+        // Checks for active pixel, moves on if not
         if (pixel_array[i].value == true) {
             if (SIM_DEBUG) {
                 ESP_LOGI(FN_TAG, "pixel at %d selectd", i);
@@ -161,7 +184,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
             }
 
             // down
-            float set_velocity_down = can_move(move_params.x_down, move_params.y_down, pixel_array, velocity, i);
+            float set_velocity_down = can_move(move_params.x_down, move_params.y_down, move_params.z_down, pixel_array, velocity, i);
             if (SIM_DEBUG) {
                 ESP_LOGI(FN_TAG, "down_velocity = %f", set_velocity_down);
             }
@@ -176,7 +199,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
             }
             // right first then left
             if (right) {
-                float set_velocity_right = can_move(move_params.x_right, move_params.y_right, pixel_array, velocity, i);
+                float set_velocity_right = can_move(move_params.x_right, move_params.y_right, move_params.z_right, pixel_array, velocity, i);
                 if (SIM_DEBUG) {
                     ESP_LOGI(FN_TAG, "right_velocity = %f", set_velocity_right);
                 }
@@ -190,7 +213,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                     continue;
                 }
             } else {
-                float set_velocity_left = can_move(move_params.x_left, move_params.y_left, pixel_array, velocity, i);
+                float set_velocity_left = can_move(move_params.x_left, move_params.y_left, move_params.z_left, pixel_array, velocity, i);
                 if (SIM_DEBUG) {
                     ESP_LOGI(FN_TAG, "left_velocity = %f", set_velocity_left);
                 }
@@ -206,7 +229,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
             }
             // left first then right
             if (left) {
-                float set_velocity_left = can_move(move_params.x_left, move_params.y_left, pixel_array, velocity, i);
+                float set_velocity_left = can_move(move_params.x_left, move_params.y_left, move_params.z_left, pixel_array, velocity, i);
                 if (SIM_DEBUG) {
                     ESP_LOGI(FN_TAG, "left_velocity = %f", set_velocity_left);
                 }
@@ -221,7 +244,7 @@ static void run_sim(struct Pixel pixel_array[], int angle) {
                     continue;
                 }
             } else {
-                float set_velocity_right = can_move(move_params.x_right, move_params.y_right, pixel_array, velocity, i);
+                float set_velocity_right = can_move(move_params.x_right, move_params.y_right, move_params.z_right, pixel_array, velocity, i);
                 if (SIM_DEBUG) {
                     ESP_LOGI(FN_TAG, "right_velocity = %f", set_velocity_right);
                 }
