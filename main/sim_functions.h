@@ -37,7 +37,7 @@ static void fill_array_with_int(int array[NUM_SIM], int num) {
 
 // This doesnt work anymore
 static int index_from_cords(int x, int y, int z) {
-    int index = (x + (y * (Y_SIZE) + (z * X_SIZE * Y_SIZE)));
+    int index = (x + (y * (Y_SIZE) + (z * Z_SIZE * Z_SIZE)));
     return index;
 }
 

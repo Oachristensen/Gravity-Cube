@@ -22,10 +22,11 @@
 #define B 200
 
 #include "icm20948-i2c-lib.h"
-#include "panel_data.h"
 #include "sim_functions.h"
 
 static led_strip_handle_t led_strip;
+
+#include "panel_data.h"
 
 typedef struct my_vector {
     float x;
@@ -38,29 +39,16 @@ static void populate_matrix(struct Pixel pixel_array[]) {
     for (int i = 0; i <= NUM_SIM; i++) {
         pixel_array[i].value = true;
     }
-    // // Knuth algorithm
-    // int numbersSelected = 0;
-    // int rangeIndex;
-
-    // for (rangeIndex = 0; rangeIndex < MAX_LEDS && numbersSelected < NUM_SIM; ++rangeIndex) {
-    //     int remainingNumbers = MAX_LEDS - rangeIndex;
-    //     int remainingSelections = NUM_SIM - numbersSelected;
-
-    //     if (esp_random() % remainingNumbers < remainingSelections) {
-    //         // Select the current number
-    //         // ESP_LOGI(TAG, "selected %d", rangeIndex);
-    //         numbersSelected++;
-    //         pixel_array[rangeIndex].value = true;
-    //     }
-    // }
-    // assert(numbersSelected == NUM_SIM);
 }
-
+// TODO: NEEDS 3D IMPLEMENTATION
 static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led_strip) {
     int counter = 0;
     for (int i = 0; i < MAX_LEDS; i++) {
         if (pixel_array[i].value == true) {
-            led_strip_set_pixel(led_strip, i, R, G, B);
+            int x = pixel_array[i].x;
+            int y = pixel_array[i].y;
+            int z = pixel_array[i].z;
+            draw_panels(x, y, z);
             counter++;
         } else {
             led_strip_set_pixel(led_strip, i, 0, 0, 0);
@@ -83,7 +71,6 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
     // ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
     return unit_vector;
 }
-
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
@@ -113,9 +100,12 @@ void app_main(void) {
         return;
     }
 
+    init_panel_lookup();
+
     configure_led_strip();
     configure_pixels(pixel_array);
-    populate_matrix(pixel_array);
+    populate_matrix(pixel_array); 
+
 
     // initiate device handlers
     i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
@@ -128,7 +118,6 @@ void app_main(void) {
     while (true) {
         struct my_vector unit_vector = get_unit_vector(mag_handle);
         // adding 360 to convert from -180 - 180 to 0-360
-        //^ this saved me trying to debug this later :) (my goat)
         theta = atan2(unit_vector.y, unit_vector.x);
         phi = atan2(unit_vector.z, sqrt(unit_vector.x * unit_vector.x + unit_vector.y * unit_vector.y));
 

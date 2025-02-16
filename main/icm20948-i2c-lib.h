@@ -27,7 +27,7 @@
 
 #define FNTAG "icm20948-lib"
 
-
+// TODO: MAKE PROPER ERROR HANDLING 
 
 typedef struct magnetometer_result {
     esp_err_t status;
