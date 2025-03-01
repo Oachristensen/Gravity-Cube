@@ -6,9 +6,9 @@
 #define Y_SIZE 8
 #define Z_SIZE 8
 
-#define MAX_LEDS X_SIZE *Y_SIZE *Z_SIZE
+#define MAX_PIXELS X_SIZE *Y_SIZE *Z_SIZE
 
-#define NUM_SIM 46
+#define NUM_SIM 10
 
 typedef struct Pixel {
     int x;
@@ -145,7 +145,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
         ESP_LOGI(FN_TAG, "y_right: %f", move_params.y_right);
         ESP_LOGI(FN_TAG, "y_down: %f", move_params.y_down);
     }
-    for (int i = 0; i < MAX_LEDS; i++) {
+    for (int i = 0; i < MAX_PIXELS; i++) {
 
         bool left = false;
         bool right = false;

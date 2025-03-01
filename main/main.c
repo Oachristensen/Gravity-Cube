@@ -21,6 +21,8 @@
 #define G 200
 #define B 200
 
+#define MAX_LEDS 384
+
 #include "icm20948-i2c-lib.h"
 #include "sim_functions.h"
 
@@ -43,16 +45,17 @@ static void populate_matrix(struct Pixel pixel_array[]) {
 // TODO: NEEDS 3D IMPLEMENTATION
 static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led_strip) {
     int counter = 0;
-    for (int i = 0; i < MAX_LEDS; i++) {
+    for (int i = 0; i < MAX_PIXELS; i++) {
         if (pixel_array[i].value == true) {
             int x = pixel_array[i].x;
             int y = pixel_array[i].y;
             int z = pixel_array[i].z;
-            draw_panels(x, y, z);
+            draw_panels(x, y, z, led_strip);
             counter++;
-        } else {
-            led_strip_set_pixel(led_strip, i, 0, 0, 0);
         }
+        // } else {
+        //     led_strip_set_pixel(led_strip, i, 0, 0, 0);
+        // }
     }
     ESP_LOGI(TAG, "Total Pixels active: %d", counter);
 }
@@ -74,6 +77,7 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
+    ESP_LOGI(TAG, "Max leds: %d", MAX_LEDS);
     led_strip_config_t strip_config = {
         .led_model = LED_MODEL_WS2812,
         .strip_gpio_num = DATA_GPIO,
@@ -94,7 +98,7 @@ void app_main(void) {
 
     float theta;
     float phi;
-    struct Pixel *pixel_array = malloc(MAX_LEDS * sizeof(struct Pixel));
+    struct Pixel *pixel_array = malloc(MAX_PIXELS * sizeof(struct Pixel));
     if (!pixel_array) {
         ESP_LOGE(FN_TAG, "Memory allocation failed!");
         return;
@@ -104,8 +108,7 @@ void app_main(void) {
 
     configure_led_strip();
     configure_pixels(pixel_array);
-    populate_matrix(pixel_array); 
-
+    populate_matrix(pixel_array);
 
     // initiate device handlers
     i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
@@ -123,11 +126,10 @@ void app_main(void) {
 
         run_sim(pixel_array, theta, phi);
         ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
-
         led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);
     }
