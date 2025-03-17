@@ -17,9 +17,9 @@
 
 #define TAG "main"
 
-#define R 200
-#define G 200
-#define B 200
+#define R 100
+#define G 100
+#define B 100
 
 #define MAX_LEDS 384
 
@@ -42,7 +42,6 @@ static void populate_matrix(struct Pixel pixel_array[]) {
         pixel_array[i].value = true;
     }
 }
-// TODO: NEEDS 3D IMPLEMENTATION
 static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led_strip) {
     int counter = 0;
     for (int i = 0; i < MAX_PIXELS; i++) {
@@ -90,6 +89,11 @@ static void configure_led_strip(void) {
     ESP_ERROR_CHECK(led_strip_new_rmt_device(&strip_config, &rmt_config, &led_strip));
     led_strip_clear(led_strip);
 }
+static void clear_led_strip(led_strip_handle_t led_strip) {
+    for (int i = 0; i < MAX_LEDS; i++) {
+        led_strip_set_pixel(led_strip, i, 0, 0, 0);
+    }
+}
 
 void app_main(void) {
 
@@ -121,15 +125,16 @@ void app_main(void) {
     while (true) {
         struct my_vector unit_vector = get_unit_vector(mag_handle);
         // adding 360 to convert from -180 - 180 to 0-360
-        theta = atan2(unit_vector.y, unit_vector.x);
+        theta = atan2(unit_vector.y, unit_vector.x)+1.39626;
         phi = atan2(unit_vector.z, sqrt(unit_vector.x * unit_vector.x + unit_vector.y * unit_vector.y));
 
         run_sim(pixel_array, theta, phi);
         ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
-        led_strip_clear(led_strip);
+        clear_led_strip(led_strip);
+        // led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);
     }

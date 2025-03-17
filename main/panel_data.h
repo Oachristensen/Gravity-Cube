@@ -17,12 +17,12 @@ typedef struct led_panel {
 
 // EDIT THIS ONCE THE CUBE IS BUILT
 struct led_panel panel_array[6] = {
-    {0, 0, N},
-    {1, 0, E},
-    {2, 0, S},
-    {3, 0, W},
-    {4, 0, UP},
-    {5, 0, DOWN}};
+    {0, 180, W},
+    {1, 90, S},
+    {2, 90, N},
+    {3, 270, E},
+    {4, 270, UP},
+    {5, 90, DOWN}};
 
 // lookup table for matrix position to panel direction
 uint8_t cord_to_panel_lookup[8][8][8];
@@ -40,13 +40,13 @@ void init_panel_lookup() {
                 if (x == 0)
                     mask |= 0b000010; // WEST panel
                 if (y == 0)           // TODO: MIGHT HAVE TO INVERT Y
-                    mask |= 0b000100; // DOWN panel
+                    mask |= 0b000100; // SOUTH panel
                 if (y == 7)
-                    mask |= 0b001000; // UP panel
+                    mask |= 0b001000; // NORTH panel
                 if (z == 7)
-                    mask |= 0b010000; // S panel
+                    mask |= 0b010000; // UP panel
                 if (z == 0)
-                    mask |= 0b100000; // N panel
+                    mask |= 0b100000; // DOWN panel
 
                 cord_to_panel_lookup[x][y][z] = mask;
             }
@@ -60,8 +60,8 @@ uint8_t get_panels(int x, int y, int z) {
 void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
     int selected_panel = -1;
 
-    int new_x;
-    int new_y;
+    int new_x = x;
+    int new_y = y;
     for (int i = 0; i < 6; i++) {
         if (panel_array[i].panel_direction == direction) {
             selected_panel = i;
@@ -96,9 +96,10 @@ void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
         new_y = y;
         break;
     }
-    ESP_LOGI("paneldata", "X: %d, Y: %d, Panel_num: %d", x, y, panel_array[selected_panel].panel_num);
+    ESP_LOGI("paneldata", "old x: %d, old y: %d, Direction: %d", x, y, direction);
+    ESP_LOGI("paneldata", "X: %d, Y: %d, Panel_num: %d", new_x, new_y, panel_array[selected_panel].panel_num);
     int panel_num = panel_array[selected_panel].panel_num;
-    int led_index = (0 + 64 * panel_num) + (x + y * Y_SIZE);
+    int led_index = (0 + (64 * panel_num)) + (new_x + new_y * Y_SIZE);
     ESP_LOGI("paneldata", "led_index %d", led_index);
     led_strip_set_pixel(led_strip, led_index, R, G, B);
 }
@@ -110,12 +111,12 @@ void draw_panels(int x, int y, int z, led_strip_handle_t led_strip) {
     if (panels & 0b000010)
         draw_on_panels(W, y, z, led_strip);
     if (panels & 0b000100)
-        draw_on_panels(DOWN, x, y, led_strip); // TODO: MAY HAVE TO INVERT THESE ALSO
+        draw_on_panels(S, x, z, led_strip); // TODO: MAY HAVE TO INVERT THESE ALSO
     if (panels & 0b001000)
-        draw_on_panels(UP, x, y, led_strip);
-    if (panels & 0b010000)
-        draw_on_panels(S, x, z, led_strip);
-    if (panels & 0b100000)
         draw_on_panels(N, x, z, led_strip);
+    if (panels & 0b010000)
+        draw_on_panels(UP, x, y, led_strip);
+    if (panels & 0b100000)
+        draw_on_panels(DOWN, x, y, led_strip);
 }
 //

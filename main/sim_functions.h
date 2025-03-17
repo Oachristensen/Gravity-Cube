@@ -8,7 +8,7 @@
 
 #define MAX_PIXELS X_SIZE *Y_SIZE *Z_SIZE
 
-#define NUM_SIM 10
+#define NUM_SIM 200
 
 typedef struct Pixel {
     int x;
@@ -35,7 +35,6 @@ static void fill_array_with_int(int array[NUM_SIM], int num) {
     }
 }
 
-// This doesnt work anymore
 static int index_from_cords(int x, int y, int z) {
     int index = (x + (y * (Y_SIZE) + (z * Z_SIZE * Z_SIZE)));
     return index;
@@ -80,7 +79,7 @@ static int move_pixel(int old_index, int new_x, int new_y, int new_z, struct Pix
     pixel_array[new_index].value = true;
     pixel_array[old_index].value = false;
     if (SIM_DEBUG) {
-        ESP_LOGI(FN_TAG, "moved pixel %d to %d, using values X: %d Y: %d", old_index, new_index, new_x, new_y);
+        ESP_LOGI(FN_TAG, "moved pixel %d to %d, using values X: %d Y: %d Z: %d", old_index, new_index, new_x, new_y, new_z);
     }
     return new_index;
 }
@@ -115,7 +114,7 @@ static struct MoveParams set_move_params(float theta, float phi, float velocity)
     struct MoveParams move_params = {
         .x_down = velocity * cos(theta) * cos(phi),
         .x_right = velocity * sin(theta) * cos(phi),
-        .y_down = velocity * cos(theta) * sin(phi),
+        .y_down = velocity * sin(theta) * cos(phi),
         .y_right = velocity * sin(theta) * sin(phi),
         .z_down = velocity * sin(phi),
         .z_left = velocity * cos(theta + M_PI_2) * cos(phi),
@@ -261,7 +260,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
             }
         }
         if (SIM_DEBUG) {
-            ESP_LOGI(FN_TAG, "new_op");
+            // ESP_LOGI(FN_TAG, "new_op");
         }
     }
 }
