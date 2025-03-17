@@ -113,43 +113,41 @@ void check_sensor(i2c_master_dev_handle_t dev_handle) {
 struct magnetometer_result read_magnetometer(i2c_master_dev_handle_t dev_handle) {
     // This is an absurd amount of declarations, I should change it to read sequential addresses but nothing worked so I couldnt fix it
 
+
     struct magnetometer_result data;
     data.status = ESP_OK;
 
-    uint8_t x_high_write[1] = {X_H};
-    uint8_t x_low_write[1] = {X_L};
-    uint8_t y_high_write[1] = {Y_H};
-    uint8_t y_low_write[1] = {Y_L};
-    uint8_t z_high_write[1] = {Z_H};
-    uint8_t z_low_write[1] = {Z_L};
-    uint8_t x_high_read[DATA_LENGTH];
-    uint8_t x_low_read[DATA_LENGTH];
-    uint8_t y_high_read[DATA_LENGTH];
-    uint8_t y_low_read[DATA_LENGTH];
-    uint8_t z_high_read[DATA_LENGTH];
-    uint8_t z_low_read[DATA_LENGTH];
+    // uint8_t x_high_write[1] = {X_H};
+    // uint8_t x_low_write[1] = {X_L};
+    // uint8_t y_high_write[1] = {Y_H};
+    // uint8_t y_low_write[1] = {Y_L};
+    // uint8_t z_high_write[1] = {Z_H};
+    // uint8_t z_low_write[1] = {Z_L};
+    // uint8_t x_high_read[DATA_LENGTH];
+    // uint8_t x_low_read[DATA_LENGTH];
+    // uint8_t y_high_read[DATA_LENGTH];
+    // uint8_t y_low_read[DATA_LENGTH];
+    // uint8_t z_high_read[DATA_LENGTH];
+    // uint8_t z_low_read[DATA_LENGTH];
 
-    esp_err_t ret_x_h = i2c_master_transmit_receive(dev_handle, x_high_write, sizeof(x_high_write), x_high_read, DATA_LENGTH, -1);
-    // ESP_LOGI(TAG, "X_H: %u", x_high_read[0]);
-    esp_err_t ret_x_l = i2c_master_transmit_receive(dev_handle, x_low_write, sizeof(x_low_write), x_low_read, DATA_LENGTH, -1);
-    // ESP_LOGI(TAG, "X_L: %u", x_low_read[0]);
-    esp_err_t ret_y_h = i2c_master_transmit_receive(dev_handle, y_high_write, sizeof(y_high_write), y_high_read, DATA_LENGTH, -1);
-    // ESP_LOGI(TAG, "Y_H: %u", y_high_read[0]);
-    esp_err_t ret_y_l = i2c_master_transmit_receive(dev_handle, y_low_write, sizeof(y_low_write), y_low_read, DATA_LENGTH, -1);
-    // ESP_LOGI(TAG, "Y_L: %u", y_low_read[0]);
-    esp_err_t ret_z_h = i2c_master_transmit_receive(dev_handle, z_high_write, sizeof(z_high_write), z_high_read, DATA_LENGTH, -1);
-    // ESP_LOGI(TAG, "Z_H: %u", z_high_read[0]);
-    esp_err_t ret_z_l = i2c_master_transmit_receive(dev_handle, z_low_write, sizeof(z_low_write), z_low_read, DATA_LENGTH, -1);
-    // ESP_LOGI(TAG, "Z_L: %u", z_low_read[0]);
+    
+    uint8_t read[100];
 
-    // if (ret_x_h == ESP_OK && ret_x_l == ESP_OK) {
-    data.x = (int16_t)(x_low_read[0] | (x_high_read[0] << 8));
-    // }
-    // if (ret_y_h == ESP_OK && ret_y_l == ESP_OK) {
-    data.y = (int16_t)(y_low_read[0] | (y_high_read[0] << 8));
-    // }
-    // if (ret_z_h == ESP_OK && ret_z_l == ESP_OK) {
-    data.z = (int16_t)(z_low_read[0] | (z_high_read[0] << 8));
+    uint8_t starting_address[1] = {X_L}; //Will be read seqentially X_L, X_H, Y_L, Y_H, Z_L, Z_H (0x11-16)
+    esp_err_t ret = i2c_master_transmit_receive(dev_handle, starting_address, sizeof(starting_address), read, DATA_LENGTH, -1);
+
+    if (ret == ESP_OK) {
+        data.x = (int16_t)(read[0] | (read[1] << 8));
+        data.y = (int16_t)(read[2] | (read[3] << 8));
+        data.z = (int16_t)(read[4] | (read[5] << 8));
+    }
+    else {
+        data.status = ret;
+        data.x = 0;
+        data.y = 0;
+        data.z = 0;
+        ESP_LOGI(TAG, "magnometer read failed");
+    }
 
     return data;
 }
