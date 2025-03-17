@@ -109,31 +109,14 @@ void check_sensor(i2c_master_dev_handle_t dev_handle) {
         ESP_LOGI(FNTAG, "Sensor not working, check your wiring and pins ERROR: %s", esp_err_to_name(ret));
     }
 }
-
+//Reads magnetometer from i2c and returns raw x, y, z values
 struct magnetometer_result read_magnetometer(i2c_master_dev_handle_t dev_handle) {
-    // This is an absurd amount of declarations, I should change it to read sequential addresses but nothing worked so I couldnt fix it
-
-
     struct magnetometer_result data;
     data.status = ESP_OK;
 
-    // uint8_t x_high_write[1] = {X_H};
-    // uint8_t x_low_write[1] = {X_L};
-    // uint8_t y_high_write[1] = {Y_H};
-    // uint8_t y_low_write[1] = {Y_L};
-    // uint8_t z_high_write[1] = {Z_H};
-    // uint8_t z_low_write[1] = {Z_L};
-    // uint8_t x_high_read[DATA_LENGTH];
-    // uint8_t x_low_read[DATA_LENGTH];
-    // uint8_t y_high_read[DATA_LENGTH];
-    // uint8_t y_low_read[DATA_LENGTH];
-    // uint8_t z_high_read[DATA_LENGTH];
-    // uint8_t z_low_read[DATA_LENGTH];
-
-    
     uint8_t read[100];
 
-    uint8_t starting_address[1] = {X_L}; //Will be read seqentially X_L, X_H, Y_L, Y_H, Z_L, Z_H (0x11-16)
+    uint8_t starting_address[1] = {X_L}; //Will be read seqentially X_L, X_H, Y_L, Y_H, Z_L, Z_H (0x11-0x16)
     esp_err_t ret = i2c_master_transmit_receive(dev_handle, starting_address, sizeof(starting_address), read, DATA_LENGTH, -1);
 
     if (ret == ESP_OK) {

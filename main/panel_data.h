@@ -7,6 +7,8 @@
 
 #define PANEL_TAG "panel_data"
 
+#define PANEL_DEBUG false
+
 // Cube has z direction with South being +, y direction with Up being +, and x with East being +
 
 typedef struct led_panel {
@@ -96,11 +98,15 @@ void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
         new_y = y;
         break;
     }
-    ESP_LOGI("paneldata", "old x: %d, old y: %d, Direction: %d", x, y, direction);
-    ESP_LOGI("paneldata", "X: %d, Y: %d, Panel_num: %d", new_x, new_y, panel_array[selected_panel].panel_num);
+    if (PANEL_DEBUG) {
+        ESP_LOGI("paneldata", "old x: %d, old y: %d, Direction: %d", x, y, direction);
+        ESP_LOGI("paneldata", "X: %d, Y: %d, Panel_num: %d", new_x, new_y, panel_array[selected_panel].panel_num);
+    }
     int panel_num = panel_array[selected_panel].panel_num;
     int led_index = (0 + (64 * panel_num)) + (new_x + new_y * Y_SIZE);
-    ESP_LOGI("paneldata", "led_index %d", led_index);
+    if (PANEL_DEBUG) {
+        ESP_LOGI("paneldata", "led_index %d", led_index);
+    }
     led_strip_set_pixel(led_strip, led_index, R, G, B);
 }
 

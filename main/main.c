@@ -23,6 +23,8 @@
 
 #define MAX_LEDS 384
 
+#define MAIN_DEBUG false
+
 #include "icm20948-i2c-lib.h"
 #include "sim_functions.h"
 
@@ -56,14 +58,18 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
         //     led_strip_set_pixel(led_strip, i, 0, 0, 0);
         // }
     }
-    ESP_LOGI(TAG, "Total Pixels active: %d", counter);
+    if (MAIN_DEBUG) {
+        ESP_LOGI(TAG, "Total Pixels active: %d", counter);
+    }
 }
 
 static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
     struct my_vector unit_vector;
     struct magnetometer_result sensor_data = read_magnetometer(mag_handle);
+    if (MAIN_DEBUG) {
 
-    ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
+        ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
+    }
     float magnitude = sqrt((sensor_data.x * sensor_data.x) + (sensor_data.y * sensor_data.y) + (sensor_data.z * sensor_data.z));
 
     unit_vector.magnitude = magnitude;
@@ -76,7 +82,10 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t mag_handle) {
 
 static void configure_led_strip(void) {
     /* LED strip initialization with the GPIO and pixels number*/
-    ESP_LOGI(TAG, "Max leds: %d", MAX_LEDS);
+    if (MAIN_DEBUG) {
+
+        ESP_LOGI(TAG, "Max leds: %d", MAX_LEDS);
+    }
     led_strip_config_t strip_config = {
         .led_model = LED_MODEL_WS2812,
         .strip_gpio_num = DATA_GPIO,
@@ -125,11 +134,13 @@ void app_main(void) {
     while (true) {
         struct my_vector unit_vector = get_unit_vector(mag_handle);
         // adding 360 to convert from -180 - 180 to 0-360
-        theta = atan2(unit_vector.y, unit_vector.x)+1.39626;
+        theta = atan2(unit_vector.y, unit_vector.x) + 1.39626;
         phi = atan2(unit_vector.z, sqrt(unit_vector.x * unit_vector.x + unit_vector.y * unit_vector.y));
 
         run_sim(pixel_array, theta, phi);
-        ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
+        if (MAIN_DEBUG) {
+            ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
+        }
         clear_led_strip(led_strip);
         // led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
