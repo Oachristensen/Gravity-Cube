@@ -2,6 +2,8 @@
 
 #define FN_TAG "sim_functions"
 #define SIM_DEBUG false
+//way too much info when at full speed
+#define SIM_DEBUG_DETAILED false
 #define X_SIZE 8
 #define Y_SIZE 8
 #define Z_SIZE 8
@@ -47,7 +49,7 @@ static float can_move(float x, float y, float z, struct Pixel pixel_array[], int
     float static_x = pixel_array[index].x;
     float static_y = pixel_array[index].y;
     float static_z = pixel_array[index].z;
-    if (SIM_DEBUG) {
+    if (SIM_DEBUG_DETAILED) {
         ESP_LOGI(FN_TAG, "static_x = %f", static_x);
         ESP_LOGI(FN_TAG, "static_y = %f", static_y);
         ESP_LOGI(FN_TAG, "static_z = %f", static_z);
@@ -64,7 +66,7 @@ static float can_move(float x, float y, float z, struct Pixel pixel_array[], int
         }
 
         else if (pixel_array[index_from_cords(new_x, new_y, new_z)].value == false) {
-            if (SIM_DEBUG) {
+            if (SIM_DEBUG_DETAILED) {
                 ESP_LOGI(FN_TAG, "Pixel at %d passed check", index_from_cords(new_x, new_y, new_z));
             }
             return cur_vel;
@@ -78,7 +80,7 @@ static int move_pixel(int old_index, int new_x, int new_y, int new_z, struct Pix
     int new_index = index_from_cords(new_x, new_y, new_z);
     pixel_array[new_index].value = true;
     pixel_array[old_index].value = false;
-    if (SIM_DEBUG) {
+    if (SIM_DEBUG_DETAILED) {
         ESP_LOGI(FN_TAG, "moved pixel %d to %d, using values X: %d Y: %d Z: %d", old_index, new_index, new_x, new_y, new_z);
     }
     return new_index;
@@ -109,22 +111,57 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 }
 
 // sets all of move_params to proper values
-static struct MoveParams set_move_params(float theta, float phi, float velocity) {
+static struct MoveParams set_move_params(struct my_vector unit_vector, float velocity) {
     // effectively a 5x5 unit square where each value is rounded
-    struct MoveParams move_params = {
-        .x_down = velocity * cos(theta) * cos(phi),
-        .x_right = velocity * sin(theta) * cos(phi),
-        .y_down = velocity * sin(theta) * cos(phi),
-        .y_right = velocity * sin(theta) * sin(phi),
-        .z_down = velocity * sin(phi),
-        .z_left = velocity * cos(theta + M_PI_2) * cos(phi),
-        .z_right = velocity * cos(theta - M_PI_2) * cos(phi),
-    };
+    struct MoveParams move_params;
+
+    move_params.x_down = velocity * unit_vector.x;
+    move_params.y_down = velocity * unit_vector.y;
+    move_params.z_down = velocity * unit_vector.z;
+
+    float ref_x = 0, ref_y = 0, ref_z = 1;
+    if (fabs(unit_vector.z) > 0.99) { // If gravity is nearly vertical, use Y-axis instead
+        ref_x = 0; ref_y = 1; ref_z = 0;
+    }
+
+    // Cross product: gravity x reference = right direction
+    float right_x = unit_vector.y * ref_z - unit_vector.z * ref_y;
+    float right_y = unit_vector.z * ref_x - unit_vector.x * ref_z;
+    float right_z = unit_vector.x * ref_y - unit_vector.y * ref_x;
+    float mag = sqrt(right_x * right_x + right_y * right_y + right_z * right_z);
+    if (mag > 0.01) { // Avoid division by near-zero
+        right_x /= mag;
+        right_y /= mag;
+        right_z /= mag;
+    } else {
+        right_x = 1; right_y = 0; right_z = 0; // Fallback
+    }
+
+    // Left is opposite of right
+    float left_x = -right_x;
+    float left_y = -right_y;
+    float left_z = -right_z;
+
+    // Assign to MoveParams
+    float lateral_scale = 0.5;
+    move_params.x_right = velocity * right_x * lateral_scale;
+    move_params.y_right = velocity * right_y * lateral_scale;
+    move_params.z_right = velocity * right_z * lateral_scale;
+    move_params.x_left = velocity * left_x * lateral_scale;
+    move_params.y_left = velocity * left_y * lateral_scale;
+    move_params.z_left = velocity * left_z * lateral_scale;
+
+    if (SIM_DEBUG_DETAILED) {
+        // ESP_LOGI(FN_TAG, "Gravity: x=%f, y=%f, z=%f", grav_x, grav_y, grav_z);
+        // ESP_LOGI(FN_TAG, "Right: x=%f, y=%f, z=%f", right_x, right_y, right_z);
+        // ESP_LOGI(FN_TAG, "Left: x=%f, y=%f, z=%f", left_x, left_y, left_z);
+    }
+
     return move_params;
 }
 
 // runs a bunch of logic on the pixel_array
-static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
+static void run_sim(struct Pixel pixel_array[], struct my_vector unit_vector) {
 
     // eventually I will change this based on a real value
     float velocity = 2;
@@ -135,7 +172,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
 
     fill_array_with_int(selected_indexes, -1);
 
-    struct MoveParams move_params = set_move_params(theta, phi, velocity);
+    struct MoveParams move_params = set_move_params(unit_vector, velocity);
     if (SIM_DEBUG) {
         ESP_LOGI(FN_TAG, "x_left: %f", move_params.x_left);
         ESP_LOGI(FN_TAG, "x_right: %f", move_params.x_right);
@@ -143,6 +180,9 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
         ESP_LOGI(FN_TAG, "y_left: %f", move_params.y_left);
         ESP_LOGI(FN_TAG, "y_right: %f", move_params.y_right);
         ESP_LOGI(FN_TAG, "y_down: %f", move_params.y_down);
+        ESP_LOGI(FN_TAG, "z_left: %f", move_params.z_left);
+        ESP_LOGI(FN_TAG, "z_right: %f", move_params.z_right);
+        ESP_LOGI(FN_TAG, "z_down: %f", move_params.z_down);
     }
     for (int i = 0; i < MAX_PIXELS; i++) {
 
@@ -151,27 +191,27 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
         int new_index = -1;
 
         if (array_contains(i, selected_indexes)) {
-            if (SIM_DEBUG) {
+            if (SIM_DEBUG_DETAILED) {
                 ESP_LOGI(FN_TAG, "pixel at %d skipped", i);
             }
             continue;
         }
         // Checks for active pixel, moves on if not
         if (pixel_array[i].value == true) {
-            if (SIM_DEBUG) {
+            if (SIM_DEBUG_DETAILED) {
                 ESP_LOGI(FN_TAG, "pixel at %d selectd", i);
             }
             // decides whether to move left or right if both are availible
             switch (esp_random() % 2) {
             case 0:
                 left = true;
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "selected left");
                 }
                 break;
             case 1:
                 right = true;
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "selected right");
                 }
                 break;
@@ -179,7 +219,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
 
             // down
             float set_velocity_down = can_move(move_params.x_down, move_params.y_down, move_params.z_down, pixel_array, velocity, i);
-            if (SIM_DEBUG) {
+            if (SIM_DEBUG_DETAILED) {
                 ESP_LOGI(FN_TAG, "down_velocity = %f", set_velocity_down);
             }
             if (set_velocity_down != -1) {
@@ -195,7 +235,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
             // right first then left
             if (right) {
                 float set_velocity_right = can_move(move_params.x_right, move_params.y_right, move_params.z_right, pixel_array, velocity, i);
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "right_velocity = %f", set_velocity_right);
                 }
                 if (set_velocity_right != -1) {
@@ -210,7 +250,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
                 }
             } else {
                 float set_velocity_left = can_move(move_params.x_left, move_params.y_left, move_params.z_left, pixel_array, velocity, i);
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "left_velocity = %f", set_velocity_left);
                 }
                 if (set_velocity_left != -1) {
@@ -227,7 +267,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
             // left first then right
             if (left) {
                 float set_velocity_left = can_move(move_params.x_left, move_params.y_left, move_params.z_left, pixel_array, velocity, i);
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "left_velocity = %f", set_velocity_left);
                 }
 
@@ -243,7 +283,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
                 }
             } else {
                 float set_velocity_right = can_move(move_params.x_right, move_params.y_right, move_params.z_right, pixel_array, velocity, i);
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "right_velocity = %f", set_velocity_right);
                 }
 
@@ -260,7 +300,7 @@ static void run_sim(struct Pixel pixel_array[], float theta, float phi) {
             }
         }
         if (SIM_DEBUG) {
-            // ESP_LOGI(FN_TAG, "new_op");
+            ESP_LOGI(FN_TAG, "run_sim completed, moved %d pixels", counter);
         }
     }
 }
