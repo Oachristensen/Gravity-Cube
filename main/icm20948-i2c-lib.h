@@ -25,10 +25,11 @@
 #define CNTL2 0x31
 #define CNTL3 0x32
 
-// I2c
+// I2C
 #define SDA 8
 #define SCL 9
 
+// Mag I2C
 #define ASDA 10
 #define ASCL 11
 // needs A0 connected to vcc
@@ -84,6 +85,7 @@ i2c_master_dev_handle_t configure_dev_i2c() {
 
     return dev_handle;
 }
+//! NO LONGER USED
 // Startup the magnetometer device bus and run some configuration steps
 i2c_master_dev_handle_t configure_mag_i2c() {
     i2c_master_bus_config_t mag_bus_config = {
@@ -128,6 +130,8 @@ void check_sensor(i2c_master_dev_handle_t dev_handle) {
         ESP_LOGI(FNTAG, "Sensor not working, check your wiring and pins ERROR: %s", esp_err_to_name(ret));
     }
 }
+
+//! NO LONGER USED
 // Reads magnetometer from i2c and returns raw x, y, z values
 struct sensor_result read_magnetometer(i2c_master_dev_handle_t dev_handle) {
     struct sensor_result data;
@@ -152,6 +156,7 @@ struct sensor_result read_magnetometer(i2c_master_dev_handle_t dev_handle) {
     return data;
 }
 
+// Reads accelerometer from i2c and returns raw x, y, z values
 struct sensor_result read_accelerometer(i2c_master_dev_handle_t dev_handle) {
     struct sensor_result data;
     data.status = ESP_OK;
@@ -169,7 +174,7 @@ struct sensor_result read_accelerometer(i2c_master_dev_handle_t dev_handle) {
     }
     //accel often fails due to voltage drops, this is a 'temporary fix' :)
     if (ret != ESP_OK) {
-        ESP_LOGE("accel", "I2C failed: %s, resetting", esp_err_to_name(ret));
+        ESP_LOGE(FNTAG, "I2C failed: %s, resetting", esp_err_to_name(ret));
         i2c_master_bus_reset(dev_handle);
         vTaskDelay(50 / portTICK_PERIOD_MS);
         return last_good;

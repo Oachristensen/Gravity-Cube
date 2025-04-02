@@ -10,7 +10,7 @@
 
 #define PANEL_DEBUG false
 
-// Cube has z direction with South being +, y direction with Up being +, and x with East being +
+// Cube has z direction with up being +, y direction with North being +, and x with East being +
 
 typedef struct led_panel {
     int panel_num;         // 0-5
@@ -22,14 +22,13 @@ typedef struct led_panel {
 };
 
 // EDIT THIS ONCE THE CUBE IS BUILT
-//TODO add iverse 
 struct led_panel panel_array[6] = {
-    {0, 0, W, false, false},
-    {1, 0, S, true, false},
-    {2, 0, N, false, false},
-    {3, 90, E, false, true},
-    {4, 270, UP, false, true},
-    {5, 270, DOWN, false, false}};
+    {0, 0, W, false, false}, //good
+    {1, 0, S, true, false}, //good
+    {2, 0, N, false, false}, //good
+    {3, 90, E, true, false}, //good
+    {4, 90, UP, false, true}, //good
+    {5, 270, DOWN, false, false}}; //good
 
 // lookup table for matrix position to panel direction
 uint8_t cord_to_panel_lookup[8][8][8];
@@ -46,7 +45,7 @@ void init_panel_lookup() {
                     mask |= 0b000001; // EAST panel
                 if (x == 7)
                     mask |= 0b000010; // WEST panel
-                if (y == 7)           // TODO: MIGHT HAVE TO INVERT Y
+                if (y == 7)        
                     mask |= 0b000100; // SOUTH panel
                 if (y == 0)
                     mask |= 0b001000; // NORTH panel
@@ -64,6 +63,9 @@ void init_panel_lookup() {
 uint8_t get_panels(int x, int y, int z) {
     return cord_to_panel_lookup[x][y][z];
 }
+
+//TODO clean up logic
+// Takes a set of cordinates and a direction for a pixel and converts it to a panel index
 void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
     int selected_panel = -1;
 
@@ -120,7 +122,7 @@ void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
     }
     led_strip_set_pixel(led_strip, led_index, R, G, B);
 }
-
+//Reads lookup table for directions before drawing on respective panel
 void draw_panels(int x, int y, int z, led_strip_handle_t led_strip) {
     uint8_t panels = get_panels(x, y, z);
     if (panels & 0b000001)
@@ -128,7 +130,7 @@ void draw_panels(int x, int y, int z, led_strip_handle_t led_strip) {
     if (panels & 0b000010)
         draw_on_panels(W, y, z, led_strip);
     if (panels & 0b000100)
-        draw_on_panels(S, x, z, led_strip); // TODO: MAY HAVE TO INVERT THESE ALSO
+        draw_on_panels(S, x, z, led_strip);
     if (panels & 0b001000)
         draw_on_panels(N, x, z, led_strip);
     if (panels & 0b010000)

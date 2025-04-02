@@ -108,7 +108,7 @@ static bool array_contains(int num, int array[NUM_SIM]) {
     return false;
 }
 
-// sets all of move_params to proper values
+// sets all of move_params to proper values based on unit vector
 static struct MoveParams set_move_params(struct my_vector unit_vector, float velocity) {
     struct MoveParams move_params;
 
@@ -127,6 +127,7 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
     float right_x = unit_vector.y * ref_z - unit_vector.z * ref_y;
     float right_y = unit_vector.z * ref_x - unit_vector.x * ref_z;
     float right_z = unit_vector.x * ref_y - unit_vector.y * ref_x;
+    //TODO I think this is unnecessary
     float mag = sqrt(right_x * right_x + right_y * right_y + right_z * right_z);
     if (mag > 0.01) { // Avoid division by near-zero
         right_x /= mag;
@@ -152,9 +153,7 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
     move_params.z_left = velocity * left_z;
 
     if (SIM_DEBUG_DETAILED) {
-        // ESP_LOGI(FN_TAG, "Gravity: x=%f, y=%f, z=%f", grav_x, grav_y, grav_z);
-        // ESP_LOGI(FN_TAG, "Right: x=%f, y=%f, z=%f", right_x, right_y, right_z);
-        // ESP_LOGI(FN_TAG, "Left: x=%f, y=%f, z=%f", left_x, left_y, left_z);
+        //TODO add logging here
     }
 
     return move_params;

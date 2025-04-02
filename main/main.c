@@ -23,7 +23,7 @@
 
 #define MAX_LEDS 384
 
-#define MAIN_DEBUG true
+#define MAIN_DEBUG false
 
 typedef struct my_vector {
     float x;
@@ -54,18 +54,15 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
             draw_panels(x, y, z, led_strip);
             counter++;
         }
-        // } else {
-        //     led_strip_set_pixel(led_strip, i, 0, 0, 0);
-        // }
     }
     if (MAIN_DEBUG) {
         ESP_LOGI(TAG, "Total Pixels active: %d", counter);
     }
 }
-
+//TODO Calibrate sensor data, (needs angle modification)
+//Reads accelerometer and normalizes data into a 3d unit vector
 static struct my_vector get_unit_vector(i2c_master_dev_handle_t dev_handle) {
     struct my_vector unit_vector;
-    // struct sensor_result sensor_data = read_magnetometer(mag_handle);
     struct sensor_result sensor_data = read_accelerometer(dev_handle);
 
     if (MAIN_DEBUG) {
@@ -80,9 +77,9 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t dev_handle) {
         unit_vector.y = sensor_data.y / magnitude;
         unit_vector.z = sensor_data.z / magnitude;
     } else {
+        // TODO proper error handling here, good monitoring sign though
         ESP_LOGI(TAG, "SOMETHING WENT WRONG");
     }
-    // ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
     return unit_vector;
 }
 
@@ -104,6 +101,7 @@ static void configure_led_strip(void) {
     ESP_ERROR_CHECK(led_strip_new_rmt_device(&strip_config, &rmt_config, &led_strip));
     led_strip_clear(led_strip);
 }
+// Clears all data on strip
 static void clear_led_strip(led_strip_handle_t led_strip) {
     for (int i = 0; i < MAX_LEDS; i++) {
         led_strip_set_pixel(led_strip, i, 0, 0, 0);
@@ -115,8 +113,6 @@ void app_main(void) {
     // 1 sec startup time to let sensor start (idk if this does anything :)
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 
-    float theta;
-    float phi;
     struct Pixel *pixel_array = malloc(MAX_PIXELS * sizeof(struct Pixel));
     if (!pixel_array) {
         ESP_LOGE(FN_TAG, "Memory allocation failed!");
@@ -131,35 +127,21 @@ void app_main(void) {
 
     // initiate device handlers
     i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
-    // i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
-    // check_sensor(dev_handle);
-
-    // read_magnetometer(mag_handle);
-    // read_accelerometer(dev_handle);
+    check_sensor(dev_handle);
 
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (true) {
 
         struct my_vector unit_vector = get_unit_vector(dev_handle);
 
-        // adding 360 to convert from -180 - 180 to 0-360
-        // + 1.39626
-        // theta = atan2(unit_vector.y, unit_vector.x) + 1.39626;
-        // phi = atan2(unit_vector.z, sqrt(unit_vector.x * unit_vector.x + unit_vector.y * unit_vector.y)) + 1.39626;
-
         run_sim(pixel_array, unit_vector);
         if (MAIN_DEBUG) {
             ESP_LOGI(TAG, "x: %f, y: %f z: %f", unit_vector.x, unit_vector.y, unit_vector.z);
-
-            // ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
         }
         clear_led_strip(led_strip);
-        // led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
         vTaskDelay(100 / portTICK_PERIOD_MS);
-        // }
-        // cur_angle = get_angle(cur_angle);
     }
     free(pixel_array);
 }
