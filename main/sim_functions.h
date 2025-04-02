@@ -2,7 +2,7 @@
 
 #define FN_TAG "sim_functions"
 #define SIM_DEBUG false
-//way too much info when at full speed
+// way too much info when at full speed
 #define SIM_DEBUG_DETAILED false
 #define X_SIZE 8
 #define Y_SIZE 8
@@ -50,9 +50,7 @@ static float can_move(float x, float y, float z, struct Pixel pixel_array[], int
     float static_y = pixel_array[index].y;
     float static_z = pixel_array[index].z;
     if (SIM_DEBUG_DETAILED) {
-        ESP_LOGI(FN_TAG, "static_x = %f", static_x);
-        ESP_LOGI(FN_TAG, "static_y = %f", static_y);
-        ESP_LOGI(FN_TAG, "static_z = %f", static_z);
+        ESP_LOGI(FN_TAG, "static_x = %f static_y = %f static_z = %f" , static_x, static_y, static_z);
     }
     for (float cur_vel = velocity; cur_vel > 0; cur_vel--) {
 
@@ -94,7 +92,7 @@ static void configure_pixels(struct Pixel pixel_array[]) {
                 pixel_array[index_from_cords(x, y, z)].y = y;
                 pixel_array[index_from_cords(x, y, z)].z = z;
                 pixel_array[index_from_cords(x, y, z)].value = false;
-                if (SIM_DEBUG) {
+                if (SIM_DEBUG_DETAILED) {
                     ESP_LOGI(FN_TAG, "%d", index_from_cords(x, y, z));
                 }
             }
@@ -112,7 +110,6 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 
 // sets all of move_params to proper values
 static struct MoveParams set_move_params(struct my_vector unit_vector, float velocity) {
-    // effectively a 5x5 unit square where each value is rounded
     struct MoveParams move_params;
 
     move_params.x_down = velocity * unit_vector.x;
@@ -121,7 +118,9 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
 
     float ref_x = 0, ref_y = 0, ref_z = 1;
     if (fabs(unit_vector.z) > 0.99) { // If gravity is nearly vertical, use Y-axis instead
-        ref_x = 0; ref_y = 1; ref_z = 0;
+        ref_x = 0;
+        ref_y = 1;
+        ref_z = 0;
     }
 
     // Cross product: gravity x reference = right direction
@@ -134,7 +133,9 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
         right_y /= mag;
         right_z /= mag;
     } else {
-        right_x = 1; right_y = 0; right_z = 0; // Fallback
+        right_x = 1;
+        right_y = 0;
+        right_z = 0; // Fallback
     }
 
     // Left is opposite of right
@@ -143,13 +144,12 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
     float left_z = -right_z;
 
     // Assign to MoveParams
-    float lateral_scale = 0.5;
-    move_params.x_right = velocity * right_x * lateral_scale;
-    move_params.y_right = velocity * right_y * lateral_scale;
-    move_params.z_right = velocity * right_z * lateral_scale;
-    move_params.x_left = velocity * left_x * lateral_scale;
-    move_params.y_left = velocity * left_y * lateral_scale;
-    move_params.z_left = velocity * left_z * lateral_scale;
+    move_params.x_right = velocity * right_x;
+    move_params.y_right = velocity * right_y;
+    move_params.z_right = velocity * right_z;
+    move_params.x_left = velocity * left_x;
+    move_params.y_left = velocity * left_y;
+    move_params.z_left = velocity * left_z;
 
     if (SIM_DEBUG_DETAILED) {
         // ESP_LOGI(FN_TAG, "Gravity: x=%f, y=%f, z=%f", grav_x, grav_y, grav_z);
@@ -299,8 +299,9 @@ static void run_sim(struct Pixel pixel_array[], struct my_vector unit_vector) {
                 }
             }
         }
-        if (SIM_DEBUG) {
-            ESP_LOGI(FN_TAG, "run_sim completed, moved %d pixels", counter);
-        }
+        
+    }
+    if (SIM_DEBUG) {
+        ESP_LOGI(FN_TAG, "run_sim completed, moved %d pixels", counter);
     }
 }

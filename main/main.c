@@ -23,7 +23,7 @@
 
 #define MAX_LEDS 384
 
-#define MAIN_DEBUG false
+#define MAIN_DEBUG true
 
 typedef struct my_vector {
     float x;
@@ -38,8 +38,6 @@ typedef struct my_vector {
 static led_strip_handle_t led_strip;
 
 #include "panel_data.h"
-
-
 
 static void populate_matrix(struct Pixel pixel_array[]) {
     for (int i = 0; i <= NUM_SIM; i++) {
@@ -77,9 +75,13 @@ static struct my_vector get_unit_vector(i2c_master_dev_handle_t dev_handle) {
     float magnitude = sqrt((sensor_data.x * sensor_data.x) + (sensor_data.y * sensor_data.y) + (sensor_data.z * sensor_data.z));
 
     unit_vector.magnitude = magnitude;
-    unit_vector.x = sensor_data.x / magnitude;
-    unit_vector.y = sensor_data.y / magnitude;
-    unit_vector.z = sensor_data.z / magnitude;
+    if (magnitude != 0) {
+        unit_vector.x = sensor_data.x / magnitude;
+        unit_vector.y = sensor_data.y / magnitude;
+        unit_vector.z = sensor_data.z / magnitude;
+    } else {
+        ESP_LOGI(TAG, "SOMETHING WENT WRONG");
+    }
     // ESP_LOGI(TAG, "unit vector cordinates are X: %f, Y: %f", unit_vector.x, unit_vector.y);
     return unit_vector;
 }
@@ -129,7 +131,7 @@ void app_main(void) {
 
     // initiate device handlers
     i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
-    i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
+    // i2c_master_dev_handle_t mag_handle = configure_mag_i2c();
     // check_sensor(dev_handle);
 
     // read_magnetometer(mag_handle);
@@ -139,6 +141,7 @@ void app_main(void) {
     while (true) {
 
         struct my_vector unit_vector = get_unit_vector(dev_handle);
+
         // adding 360 to convert from -180 - 180 to 0-360
         // + 1.39626
         // theta = atan2(unit_vector.y, unit_vector.x) + 1.39626;
@@ -146,13 +149,15 @@ void app_main(void) {
 
         run_sim(pixel_array, unit_vector);
         if (MAIN_DEBUG) {
+            ESP_LOGI(TAG, "x: %f, y: %f z: %f", unit_vector.x, unit_vector.y, unit_vector.z);
+
             // ESP_LOGI(TAG, "Theta: %f, Phi: %f", theta, phi);
         }
         clear_led_strip(led_strip);
         // led_strip_clear(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
         // }
         // cur_angle = get_angle(cur_angle);
     }

@@ -5,6 +5,7 @@
 #define UP 5
 #define DOWN 6
 
+
 #define PANEL_TAG "panel_data"
 
 #define PANEL_DEBUG false
@@ -15,16 +16,20 @@ typedef struct led_panel {
     int panel_num;         // 0-5
     int panel_orientation; // 0 90, 180, 270
     int panel_direction;   // N E S W UP DOWN
+    bool inverted_x; // true false
+    bool inverted_y; // true false
+
 };
 
 // EDIT THIS ONCE THE CUBE IS BUILT
+//TODO add iverse 
 struct led_panel panel_array[6] = {
-    {0, 180, W},
-    {1, 90, S},
-    {2, 90, N},
-    {3, 270, E},
-    {4, 270, UP},
-    {5, 90, DOWN}};
+    {0, 0, W, false, false},
+    {1, 0, S, true, false},
+    {2, 0, N, false, false},
+    {3, 90, E, false, true},
+    {4, 270, UP, false, true},
+    {5, 270, DOWN, false, false}};
 
 // lookup table for matrix position to panel direction
 uint8_t cord_to_panel_lookup[8][8][8];
@@ -37,17 +42,17 @@ void init_panel_lookup() {
                 uint8_t mask = 0; // Start with no panels
 
                 // Set bit flags for the panels this pixel touches
-                if (x == 7)
-                    mask |= 0b000001; // EAST panel
                 if (x == 0)
+                    mask |= 0b000001; // EAST panel
+                if (x == 7)
                     mask |= 0b000010; // WEST panel
-                if (y == 0)           // TODO: MIGHT HAVE TO INVERT Y
+                if (y == 7)           // TODO: MIGHT HAVE TO INVERT Y
                     mask |= 0b000100; // SOUTH panel
-                if (y == 7)
+                if (y == 0)
                     mask |= 0b001000; // NORTH panel
-                if (z == 7)
-                    mask |= 0b010000; // UP panel
                 if (z == 0)
+                    mask |= 0b010000; // UP panel
+                if (z == 7)
                     mask |= 0b100000; // DOWN panel
 
                 cord_to_panel_lookup[x][y][z] = mask;
@@ -101,6 +106,12 @@ void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
     if (PANEL_DEBUG) {
         ESP_LOGI("paneldata", "old x: %d, old y: %d, Direction: %d", x, y, direction);
         ESP_LOGI("paneldata", "X: %d, Y: %d, Panel_num: %d", new_x, new_y, panel_array[selected_panel].panel_num);
+    }
+    if (panel_array[selected_panel].inverted_x) {
+        new_x = 7-new_x;
+    }
+    if (panel_array[selected_panel].inverted_y) {
+        new_y = 7-new_y;
     }
     int panel_num = panel_array[selected_panel].panel_num;
     int led_index = (0 + (64 * panel_num)) + (new_x + new_y * Y_SIZE);
