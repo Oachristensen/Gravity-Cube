@@ -13,7 +13,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define DATA_GPIO 38
+#define DATA_GPIO 37
 
 #define TAG "main"
 
@@ -30,9 +30,9 @@ typedef struct my_vector {
     float y;
     float z;
     float magnitude;
-};
+}; 
 
-#include "icm20948-i2c-lib.h"
+#include "icm20948-spi-lib.h"
 #include "sim_functions.h"
 
 static led_strip_handle_t led_strip;
@@ -59,11 +59,11 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
         ESP_LOGI(TAG, "Total Pixels active: %d", counter);
     }
 }
-//TODO Calibrate sensor data, (needs angle modification)
-//Reads accelerometer and normalizes data into a 3d unit vector
-static struct my_vector get_unit_vector(i2c_master_dev_handle_t dev_handle) {
+// TODO Calibrate sensor data, (needs angle modification)
+// Reads accelerometer and normalizes data into a 3d unit vector
+static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
     struct my_vector unit_vector;
-    struct sensor_result sensor_data = read_accelerometer(dev_handle);
+    struct sensor_result sensor_data = read_accelerometer_spi(icm_handle);
 
     if (MAIN_DEBUG) {
 
@@ -126,15 +126,24 @@ void app_main(void) {
     populate_matrix(pixel_array);
 
     // initiate device handlers
-    i2c_master_dev_handle_t dev_handle = configure_dev_i2c();
-    check_sensor(dev_handle);
+    // i2c_master_dev_handle_t icm_handle = configure_dev_i2c();
+    spi_device_handle_t icm_handle = configure_icm20948_spi();
+    
+    // check_sensor(icm_handle);
+
+    int counter = 0;
+    struct my_vector last_vector;
+    struct my_vector unit_vector = get_unit_vector(icm_handle);
 
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (true) {
+        counter++;
+        // if (counter % 2 == 0) {
+            struct my_vector unit_vector = get_unit_vector(icm_handle);
+        // }
 
-        struct my_vector unit_vector = get_unit_vector(dev_handle);
-
-        run_sim(pixel_array, unit_vector);
+        last_vector = unit_vector;
+        run_sim(pixel_array, last_vector);
         if (MAIN_DEBUG) {
             ESP_LOGI(TAG, "x: %f, y: %f z: %f", unit_vector.x, unit_vector.y, unit_vector.z);
         }
@@ -145,3 +154,4 @@ void app_main(void) {
     }
     free(pixel_array);
 }
+ 

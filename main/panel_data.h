@@ -10,7 +10,7 @@
 
 #define PANEL_DEBUG false
 
-// Cube has z direction with up being +, y direction with North being +, and x with East being +
+// Cube has z direction with up being +, y direction with North being +, and x with East being + 
 
 typedef struct led_panel {
     int panel_num;         // 0-5
