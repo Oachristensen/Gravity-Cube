@@ -17,8 +17,8 @@
 
 #define TAG "main"
 
-#define R 100
-#define G 100
+#define R 25
+#define G 25
 #define B 100
 
 #define MAX_LEDS 384
@@ -73,9 +73,11 @@ static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
 
     unit_vector.magnitude = magnitude;
     if (magnitude != 0) {
-        unit_vector.x = sensor_data.x / magnitude;
+        //Changing some things because of sensor orientation
+        unit_vector.x = sensor_data.z / magnitude;
         unit_vector.y = sensor_data.y / magnitude;
-        unit_vector.z = sensor_data.z / magnitude;
+        unit_vector.z = sensor_data.x / magnitude;
+
     } else {
         // TODO proper error handling here, good monitoring sign though
         ESP_LOGI(TAG, "SOMETHING WENT WRONG");
@@ -138,8 +140,8 @@ void app_main(void) {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (true) {
         counter++;
-        // if (counter % 2 == 0) {
-            struct my_vector unit_vector = get_unit_vector(icm_handle);
+        // if (counter % 4 == 0) {
+            unit_vector = get_unit_vector(icm_handle);
         // }
 
         last_vector = unit_vector;
@@ -150,7 +152,7 @@ void app_main(void) {
         clear_led_strip(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(50 / portTICK_PERIOD_MS);
     }
     free(pixel_array);
 }

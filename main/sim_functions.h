@@ -10,7 +10,7 @@
 
 #define MAX_PIXELS X_SIZE *Y_SIZE *Z_SIZE
 
-#define NUM_SIM 100
+#define NUM_SIM 200
 
 typedef struct Pixel {
     int x;
