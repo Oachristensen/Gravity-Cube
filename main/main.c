@@ -13,24 +13,30 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define DATA_GPIO 37
 
 #define TAG "main"
 
-#define R 25
-#define G 25
+//CONFIG (Magic numbers)
+// Set to your LED panel GPIO
+#define DATA_GPIO 37
+// RGB for the LEDS
+#define R 10
+#define G 10
 #define B 100
+// Delay between sim cycles (gets flickery below 25)
+#define DELAY 35
+//
+#define MAIN_DEBUG false
+
 
 #define MAX_LEDS 384
-
-#define MAIN_DEBUG false
 
 typedef struct my_vector {
     float x;
     float y;
     float z;
     float magnitude;
-}; 
+};
 
 #include "icm20948-spi-lib.h"
 #include "sim_functions.h"
@@ -59,7 +65,7 @@ static void update_pixel_data(struct Pixel pixel_array[], led_strip_handle_t led
         ESP_LOGI(TAG, "Total Pixels active: %d", counter);
     }
 }
-// TODO Calibrate sensor data, (needs angle modification)
+// TODO Calibrate sensor data, (needs angle modification depending on esp orientation)
 // Reads accelerometer and normalizes data into a 3d unit vector
 static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
     struct my_vector unit_vector;
@@ -73,7 +79,7 @@ static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
 
     unit_vector.magnitude = magnitude;
     if (magnitude != 0) {
-        //Changing some things because of sensor orientation
+        // Changing some things because of sensor orientation
         unit_vector.x = sensor_data.z / magnitude;
         unit_vector.y = sensor_data.y / magnitude;
         unit_vector.z = sensor_data.x / magnitude;
@@ -103,7 +109,7 @@ static void configure_led_strip(void) {
     ESP_ERROR_CHECK(led_strip_new_rmt_device(&strip_config, &rmt_config, &led_strip));
     led_strip_clear(led_strip);
 }
-// Clears all data on strip
+
 static void clear_led_strip(led_strip_handle_t led_strip) {
     for (int i = 0; i < MAX_LEDS; i++) {
         led_strip_set_pixel(led_strip, i, 0, 0, 0);
@@ -112,7 +118,7 @@ static void clear_led_strip(led_strip_handle_t led_strip) {
 
 void app_main(void) {
 
-    // 1 sec startup time to let sensor start (idk if this does anything :)
+    // 1 sec startup time to let sensor start (I think this does something :)
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 
     struct Pixel *pixel_array = malloc(MAX_PIXELS * sizeof(struct Pixel));
@@ -128,21 +134,16 @@ void app_main(void) {
     populate_matrix(pixel_array);
 
     // initiate device handlers
-    // i2c_master_dev_handle_t icm_handle = configure_dev_i2c();
     spi_device_handle_t icm_handle = configure_icm20948_spi();
-    
+
     // check_sensor(icm_handle);
 
-    int counter = 0;
     struct my_vector last_vector;
     struct my_vector unit_vector = get_unit_vector(icm_handle);
 
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (true) {
-        counter++;
-        // if (counter % 4 == 0) {
-            unit_vector = get_unit_vector(icm_handle);
-        // }
+        unit_vector = get_unit_vector(icm_handle);
 
         last_vector = unit_vector;
         run_sim(pixel_array, last_vector);
@@ -152,8 +153,7 @@ void app_main(void) {
         clear_led_strip(led_strip);
         update_pixel_data(pixel_array, led_strip);
         led_strip_refresh(led_strip);
-        vTaskDelay(50 / portTICK_PERIOD_MS);
+        vTaskDelay(DELAY / portTICK_PERIOD_MS);
     }
     free(pixel_array);
 }
- 

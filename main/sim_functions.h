@@ -2,7 +2,7 @@
 
 #define FN_TAG "sim_functions"
 #define SIM_DEBUG false
-// way too much info when at full speed
+// way too much info when at full speed, slow down DELAY if you want to test
 #define SIM_DEBUG_DETAILED false
 #define X_SIZE 8
 #define Y_SIZE 8
@@ -127,7 +127,6 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
     float right_x = unit_vector.y * ref_z - unit_vector.z * ref_y;
     float right_y = unit_vector.z * ref_x - unit_vector.x * ref_z;
     float right_z = unit_vector.x * ref_y - unit_vector.y * ref_x;
-    //TODO I think this is unnecessary
     float mag = sqrt(right_x * right_x + right_y * right_y + right_z * right_z);
     if (mag > 0.01) { // Avoid division by near-zero
         right_x /= mag;

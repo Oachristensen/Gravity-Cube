@@ -23,10 +23,10 @@ typedef struct led_panel {
 struct led_panel panel_array[6] = {
     {0, 0, W, true, false},      // good
     {1, 0, N, true, false},      // good
-    {2, 270, UP, false, false},  // good?
+    {2, 270, UP, false, false},  // good
     {3, 270, S, false, false},   //good
     {4, 270, E, false, false},      //good
-    {5, 90, DOWN, false, true}}; //
+    {5, 90, DOWN, false, true}}; //good
 
 // lookup table for matrix position to panel direction
 uint8_t cord_to_panel_lookup[8][8][8];
@@ -77,7 +77,7 @@ void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
     }
     switch (panel_array[selected_panel].panel_orientation) {
     case -1:
-        ESP_LOGI(PANEL_TAG, "panel not correctly selected");
+        ESP_LOGI(PANEL_TAG, "panel not correctly selected (check your panel array)");
         break;
     // inverts or switches cordinates based on panel orientation ex: x= 7-x flips x horizontally
     case 0:
@@ -98,7 +98,7 @@ void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip) {
         break;
     default:
         //! This should never happen
-        ESP_LOGI(PANEL_TAG, "Invalid orientation entered, running as 0");
+        ESP_LOGI(PANEL_TAG, "Invalid orientation entered, running as 0 (check your panel array)");
         new_x = x;
         new_y = y;
         break;
@@ -136,4 +136,3 @@ void draw_panels(int x, int y, int z, led_strip_handle_t led_strip) {
     if (panels & 0b100000)
         draw_on_panels(DOWN, x, y, led_strip);
 }
-//
