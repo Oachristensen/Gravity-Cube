@@ -10,7 +10,7 @@ The simulation runs on an Esp32s3 that gets data from an ICM-20948 IMU and sends
 [PCB schematic]
 
 ### Software
-The program is written in C and compiled using the Espressif build system and the Espressif led_strip library
+The program is written in C and compiled and flashed using the Espressif build system
 
 [Buildguide]
 
