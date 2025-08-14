@@ -1,7 +1,7 @@
 # Gravity Cube
 ### A Physics simulation running on an esp32 that displays on a cube of led panels
 
-[example video]
+![alt text](https://github.com/Oachristensen/Gravity-Cube/blob/master/Showcase.gif)
 
 ### Hardware
 The simulation runs on an Esp32s3 that gets data from an ICM-20948 IMU and sends it through a level shifter to 8 ws2812b led panels in series
