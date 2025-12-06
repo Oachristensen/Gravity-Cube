@@ -1,56 +1,33 @@
 #include "esp_log.h"
 
 #define FN_TAG "sim_functions"
-#define SIM_DEBUG false
-// way too much info when at full speed, slow down DELAY if you want to test
-#define SIM_DEBUG_DETAILED false
-#define X_SIZE 8
-#define Y_SIZE 8
-#define Z_SIZE 8
+#include "sim_functions.h"
+#include <math.h>
 
-#define MAX_PIXELS X_SIZE *Y_SIZE *Z_SIZE
+#include "config.h"
 
-#define NUM_SIM 200
+#define MAX_PIXELS X_SIZE * Y_SIZE * Z_SIZE
 
-typedef struct Pixel {
-    int x;
-    int y;
-    int z;
-    bool value;
-};
-
-typedef struct MoveParams {
-    float x_down;
-    float x_right;
-    float x_left;
-    float y_down;
-    float y_right;
-    float y_left;
-    float z_down;
-    float z_left;
-    float z_right;
-};
-
-static void fill_array_with_int(int array[NUM_SIM], int num) {
+void fill_array_with_int(int array[NUM_SIM], int num) {
     for (int i = 0; i < NUM_SIM; i++) {
         array[i] = num;
     }
 }
 
-static int index_from_cords(int x, int y, int z) {
+int index_from_cords(int x, int y, int z) {
     int index = (x + (y * (Y_SIZE) + (z * Z_SIZE * Z_SIZE)));
     return index;
 }
 
 // Takes in a pair of x_y values and a velocity, recursively checks down the velocity list to see if any spaces are free to move
 // if a velocity is found it is returned, else returns -1 for a failure
-static float can_move(float x, float y, float z, struct Pixel pixel_array[], int velocity, int index) {
+float can_move(float x, float y, float z, struct Pixel pixel_array[], int velocity, int index) {
 
     float static_x = pixel_array[index].x;
     float static_y = pixel_array[index].y;
     float static_z = pixel_array[index].z;
     if (SIM_DEBUG_DETAILED) {
-        ESP_LOGI(FN_TAG, "static_x = %f static_y = %f static_z = %f" , static_x, static_y, static_z);
+        ESP_LOGI(FN_TAG, "static_x = %f static_y = %f static_z = %f", static_x, static_y, static_z);
     }
     for (float cur_vel = velocity; cur_vel > 0; cur_vel--) {
 
@@ -74,7 +51,7 @@ static float can_move(float x, float y, float z, struct Pixel pixel_array[], int
 }
 
 // Takes a pair of x_y values and an index, sets the old indexes value to false, changes the new index to true, and returns it
-static int move_pixel(int old_index, int new_x, int new_y, int new_z, struct Pixel pixel_array[]) {
+int move_pixel(int old_index, int new_x, int new_y, int new_z, struct Pixel pixel_array[]) {
     int new_index = index_from_cords(new_x, new_y, new_z);
     pixel_array[new_index].value = true;
     pixel_array[old_index].value = false;
@@ -84,7 +61,7 @@ static int move_pixel(int old_index, int new_x, int new_y, int new_z, struct Pix
     return new_index;
 }
 
-static void configure_pixels(struct Pixel pixel_array[]) {
+void configure_pixels(struct Pixel pixel_array[]) {
     for (int z = 0; z < Z_SIZE; z++) {
         for (int y = 0; y < Y_SIZE; y++) {
             for (int x = 0; x < X_SIZE; x++) {
@@ -99,7 +76,7 @@ static void configure_pixels(struct Pixel pixel_array[]) {
         }
     }
 }
-static bool array_contains(int num, int array[NUM_SIM]) {
+bool array_contains(int num, int array[NUM_SIM]) {
     for (int i = 0; i < NUM_SIM; i++) {
         if (array[i] == num) {
             return true;
@@ -109,7 +86,7 @@ static bool array_contains(int num, int array[NUM_SIM]) {
 }
 
 // sets all of move_params to proper values based on unit vector
-static struct MoveParams set_move_params(struct my_vector unit_vector, float velocity) {
+struct MoveParams set_move_params(struct my_vector unit_vector, float velocity) {
     struct MoveParams move_params;
 
     move_params.x_down = velocity * unit_vector.x;
@@ -152,14 +129,14 @@ static struct MoveParams set_move_params(struct my_vector unit_vector, float vel
     move_params.z_left = velocity * left_z;
 
     if (SIM_DEBUG_DETAILED) {
-        //TODO add logging here
+        // TODO add logging here
     }
 
     return move_params;
 }
 
 // runs a bunch of logic on the pixel_array
-static void run_sim(struct Pixel pixel_array[], struct my_vector unit_vector) {
+void run_sim(struct Pixel pixel_array[], struct my_vector unit_vector) {
 
     // eventually I will change this based on a real value
     float velocity = 2;
@@ -200,7 +177,7 @@ static void run_sim(struct Pixel pixel_array[], struct my_vector unit_vector) {
                 ESP_LOGI(FN_TAG, "pixel at %d selectd", i);
             }
             // decides whether to move left or right if both are availible
-            switch (esp_random() % 2) {
+            switch (rand() % 2) {
             case 0:
                 left = true;
                 if (SIM_DEBUG_DETAILED) {
@@ -297,7 +274,6 @@ static void run_sim(struct Pixel pixel_array[], struct my_vector unit_vector) {
                 }
             }
         }
-        
     }
     if (SIM_DEBUG) {
         ESP_LOGI(FN_TAG, "run_sim completed, moved %d pixels", counter);

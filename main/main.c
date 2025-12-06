@@ -12,38 +12,19 @@
 #include <rom/ets_sys.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdbool.h>
+
+#include "config.h"
 
 
 #define TAG "main"
 
-//CONFIG (Magic numbers)
-// Set to your LED panel GPIO
-#define DATA_GPIO 37
-// RGB for the LEDS
-#define R 10
-#define G 10
-#define B 100
-// Delay between sim cycles (gets flickery below 25)
-#define DELAY 35
-//
-#define MAIN_DEBUG false
-
-
-#define MAX_LEDS 384
-
-typedef struct my_vector {
-    float x;
-    float y;
-    float z;
-    float magnitude;
-};
-
-#include "icm20948-spi-lib.h"
-#include "sim_functions.h"
+#include "sim_logic/sim_functions.h"
+#include "IMU_lib/icm20948_spi_lib.h"
+#include "hardware_logic/panel_data.h"
 
 static led_strip_handle_t led_strip;
 
-#include "panel_data.h"
 
 static void populate_matrix(struct Pixel pixel_array[]) {
     for (int i = 0; i <= NUM_SIM; i++) {
@@ -80,9 +61,9 @@ static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
     unit_vector.magnitude = magnitude;
     if (magnitude != 0) {
         // Changing some things because of sensor orientation
-        unit_vector.x = sensor_data.z / magnitude;
-        unit_vector.y = sensor_data.y / magnitude;
-        unit_vector.z = sensor_data.x / magnitude;
+        unit_vector.x = sensor_data.y / magnitude;
+        unit_vector.y = sensor_data.x / magnitude;
+        unit_vector.z = sensor_data.z / magnitude;
 
     } else {
         // TODO proper error handling here, good monitoring sign though

@@ -2,7 +2,12 @@
 #include "driver/spi_master.h"
 #include "esp_log.h"
 
+#include "icm20948_spi_lib.h"
+
 #include "string.h"
+
+#include "config.h"
+
 
 #define PIN_NUM_MISO 13
 #define PIN_NUM_MOSI 11
@@ -30,22 +35,14 @@
 
 #define WHO_AM_I_REG 0x00
 
-typedef struct sensor_result {
-    esp_err_t status;
-    int x;
-    int y;
-    int z;
-};
 static struct sensor_result last_good;
 
-//TODO RE COMMENT AND DOCUMENT THIS, STILL A WARZONE FROM TRYING TO FIX A HORRIBLE BUG
-
-
+// TODO RE COMMENT AND DOCUMENT THIS, STILL A WARZONE FROM TRYING TO FIX A HORRIBLE BUG
 
 // Write one register (2 bytes out, no bytes in)
-static esp_err_t icm20948_write_reg(spi_device_handle_t dev,
-                           uint8_t reg,
-                           uint8_t val) {
+esp_err_t icm20948_write_reg(spi_device_handle_t dev,
+                             uint8_t reg,
+                             uint8_t val) {
     // Address byte must have MSB=0 for writes
     uint8_t addr = reg & 0x7F;
 
@@ -57,9 +54,9 @@ static esp_err_t icm20948_write_reg(spi_device_handle_t dev,
     return spi_device_polling_transmit(dev, &t);
 }
 
-static esp_err_t icm20948_read_reg(spi_device_handle_t dev,
-                          uint8_t reg,
-                          uint8_t *out) {
+esp_err_t icm20948_read_reg(spi_device_handle_t dev,
+                            uint8_t reg,
+                            uint8_t *out) {
     // MSB=1 for read
     uint8_t addr = reg | 0x80;
 
@@ -98,7 +95,7 @@ spi_device_handle_t configure_icm20948_spi() {
     ESP_ERROR_CHECK(spi_bus_add_device(SPI2_HOST, &devcfg, &icm_handle));
 
     // ==== BANK 0: reset & wake ====
-    icm20948_write_reg(icm_handle, REG_BANK_SEL, 0<<4);
+    icm20948_write_reg(icm_handle, REG_BANK_SEL, 0 << 4);
 
     icm20948_write_reg(icm_handle, PWR_MGMT_1, 0x80);
     icm20948_write_reg(icm_handle, PWR_MGMT_1, 0x01);
@@ -152,7 +149,6 @@ esp_err_t icm20948_spi_read_burst(spi_device_handle_t icm_handle, uint8_t start_
     memcpy(data, &rx[1], len); // skip the first dummy byte
     return ESP_OK;
 }
-
 
 struct sensor_result read_accelerometer_spi(spi_device_handle_t icm_handle) {
     struct sensor_result data = {.status = ESP_OK};

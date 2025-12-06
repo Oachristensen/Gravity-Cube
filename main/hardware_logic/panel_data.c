@@ -6,27 +6,23 @@
 #define DOWN 6
 
 #define PANEL_TAG "panel_data"
+#include "panel_data.h"
+#include <stdint.h>
+#include "esp_log.h"
+#include "led_strip.h"
 
-#define PANEL_DEBUG false
+#include "config.h"
 
-// Cube has z direction with up being +, y direction with North being +, and x with East being +
 
-typedef struct led_panel {
-    int panel_num;         // 0-5
-    int panel_orientation; // 0 90, 180, 270
-    int panel_direction;   // N E S W UP DOWN
-    bool inverted_x;       // true false
-    bool inverted_y;       // true false
-};
 
 // EDIT THIS ONCE THE CUBE IS BUILT
 struct led_panel panel_array[6] = {
-    {0, 0, W, true, false},      // good
-    {1, 0, N, true, false},      // good
-    {2, 270, UP, false, false},  // good
-    {3, 270, S, false, false},   //good
-    {4, 270, E, false, false},      //good
-    {5, 90, DOWN, false, true}}; //good
+    {0, 0, DOWN, true, false},    //good
+    {1, 90, E, false, false},    //good  
+    {2, 270, N, false, true},  //good
+    {3, 270, W, false, true},   //good
+    {4, 90, S, false, false},    //good
+    {5, 0, UP, false, false}}; 
 
 // lookup table for matrix position to panel direction
 uint8_t cord_to_panel_lookup[8][8][8];
