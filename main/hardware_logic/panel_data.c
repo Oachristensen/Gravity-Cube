@@ -15,7 +15,7 @@
 
 
 
-// EDIT THIS ONCE THE CUBE IS BUILT
+// EDIT THIS ONCE THE CUBE IS BUILT (I should find a way to move this to config)
 struct led_panel panel_array[6] = {
     {0, 0, DOWN, true, false},    //good
     {1, 90, E, false, false},    //good  
@@ -132,3 +132,4 @@ void draw_panels(int x, int y, int z, led_strip_handle_t led_strip) {
     if (panels & 0b100000)
         draw_on_panels(DOWN, x, y, led_strip);
 }
+

@@ -1,5 +1,5 @@
 
-//header def
+// header def
 #ifndef PANEL_DATA_H
 #define PANEL_DATA_H
 
@@ -11,11 +11,9 @@
 #define DOWN 6
 
 #define PANEL_TAG "panel_data"
-#include <stdint.h>
-#include "led_strip.h"
 #include "config.h"
-
-
+#include "led_strip.h"
+#include <stdint.h>
 
 #define PANEL_DEBUG false
 
@@ -29,22 +27,20 @@ typedef struct led_panel {
     bool inverted_y;       // true false
 };
 
-
-
 // lookup table for matrix position to panel direction
 extern uint8_t cord_to_panel_lookup[8][8][8];
 
 // builds panel lookup data
-extern void init_panel_lookup();
+void init_panel_lookup();
 
 // Takes an x y z value and returns the panel data from cord_to_panel_lookup
-extern uint8_t get_panels(int x, int y, int z);
+uint8_t get_panels(int x, int y, int z);
 
 // TODO clean up logic
 //  Takes a set of cordinates and a direction for a pixel and converts it to a panel index
-extern void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip);
+void draw_on_panels(int direction, int x, int y, led_strip_handle_t led_strip);
 
 // Reads lookup table for directions before drawing on respective panel
-extern void draw_panels(int x, int y, int z, led_strip_handle_t led_strip);
+void draw_panels(int x, int y, int z, led_strip_handle_t led_strip);
 
 #endif

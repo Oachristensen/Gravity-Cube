@@ -44,18 +44,18 @@ typedef struct sensor_result {
 // TODO RE COMMENT AND DOCUMENT THIS, STILL A WARZONE FROM TRYING TO FIX A HORRIBLE BUG
 
 // Write one register (2 bytes out, no bytes in)
-extern esp_err_t icm20948_write_reg(spi_device_handle_t dev,
-                                    uint8_t reg,
-                                    uint8_t val);
+esp_err_t icm20948_write_reg(spi_device_handle_t dev,
+                             uint8_t reg,
+                             uint8_t val);
 
-extern esp_err_t icm20948_read_reg(spi_device_handle_t dev,
-                                   uint8_t reg,
-                                   uint8_t *out);
+esp_err_t icm20948_read_reg(spi_device_handle_t dev,
+                            uint8_t reg,
+                            uint8_t *out);
 
-extern spi_device_handle_t configure_icm20948_spi();
+spi_device_handle_t configure_icm20948_spi();
 
-extern esp_err_t icm20948_spi_read_burst(spi_device_handle_t icm_handle, uint8_t start_reg, uint8_t *data, size_t len);
+esp_err_t icm20948_spi_read_burst(spi_device_handle_t icm_handle, uint8_t start_reg, uint8_t *data, size_t len);
 
-extern struct sensor_result read_accelerometer_spi(spi_device_handle_t icm_handle);
+struct sensor_result read_accelerometer_spi(spi_device_handle_t icm_handle);
 
 #endif

@@ -13,10 +13,11 @@
 
 //Pin config def
 #define DATA_GPIO 37
-#define MAX_LEDS Y_SIZE*X_SIZE*6
+#define MAX_LEDS (Y_SIZE*X_SIZE*6)
 
 // Delay between sim cycles (gets flickery below 25)
-#define DELAY 35
+#define DELAY 20
+#define SHAKE_FLASH_DELAY 100
 
 //Debug settings (output debug data to serial monitor)
 #define MAIN_DEBUG false
@@ -27,5 +28,8 @@
 
 //Amount of simulated pixels
 #define NUM_SIM 200
+
+//Toggles flashing on shake
+#define SHAKE_ENABLE true
 
 #endif  

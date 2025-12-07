@@ -10,24 +10,22 @@
 #include "led_strip.h"
 #include <math.h>
 #include <rom/ets_sys.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <stdbool.h>
 
 #include "config.h"
 
-
 #define TAG "main"
 
-#include "sim_logic/sim_functions.h"
 #include "IMU_lib/icm20948_spi_lib.h"
 #include "hardware_logic/panel_data.h"
+#include "sim_logic/sim_functions.h"
 
 static led_strip_handle_t led_strip;
 
-
 static void populate_matrix(struct Pixel pixel_array[]) {
-    for (int i = 0; i <= NUM_SIM; i++) {
+    for (int i = 0; i < NUM_SIM; i++) {
         pixel_array[i].value = true;
     }
 }
@@ -57,7 +55,7 @@ static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
         ESP_LOGI(TAG, "Raw sensor data X: %d, Y: %d, Z: %d Status: %s", sensor_data.x, sensor_data.y, sensor_data.z, esp_err_to_name(sensor_data.status));
     }
     float magnitude = sqrt((sensor_data.x * sensor_data.x) + (sensor_data.y * sensor_data.y) + (sensor_data.z * sensor_data.z));
-
+    // mag ranges ~16000 = 1g
     unit_vector.magnitude = magnitude;
     if (magnitude != 0) {
         // Changing some things because of sensor orientation
@@ -67,7 +65,7 @@ static struct my_vector get_unit_vector(spi_device_handle_t icm_handle) {
 
     } else {
         // TODO proper error handling here, good monitoring sign though
-        ESP_LOGI(TAG, "SOMETHING WENT WRONG");
+        ESP_LOGI(TAG, "SOMETHING WENT WRONG, CHECK YOUR IMU");
     }
     return unit_vector;
 }
@@ -96,15 +94,19 @@ static void clear_led_strip(led_strip_handle_t led_strip) {
         led_strip_set_pixel(led_strip, i, 0, 0, 0);
     }
 }
+static void set_all_leds(int r, int g, int b, led_strip_handle_t led_strip) {
+    for (int i = 0; i < MAX_LEDS; i++) {
+        led_strip_set_pixel(led_strip, i, r, g, b);
+    }
+}
 
 void app_main(void) {
-
-    // 1 sec startup time to let sensor start (I think this does something :)
+    // 1 sec startup time to let sensor start properly
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 
     struct Pixel *pixel_array = malloc(MAX_PIXELS * sizeof(struct Pixel));
     if (!pixel_array) {
-        ESP_LOGE(FN_TAG, "Memory allocation failed!");
+        ESP_LOGE(TAG, "Memory allocation failed!");
         return;
     }
 
@@ -117,7 +119,6 @@ void app_main(void) {
     // initiate device handlers
     spi_device_handle_t icm_handle = configure_icm20948_spi();
 
-    // check_sensor(icm_handle);
 
     struct my_vector last_vector;
     struct my_vector unit_vector = get_unit_vector(icm_handle);
@@ -125,16 +126,32 @@ void app_main(void) {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (true) {
         unit_vector = get_unit_vector(icm_handle);
-
         last_vector = unit_vector;
-        run_sim(pixel_array, last_vector);
-        if (MAIN_DEBUG) {
-            ESP_LOGI(TAG, "x: %f, y: %f z: %f", unit_vector.x, unit_vector.y, unit_vector.z);
+        //Shake function
+        // 30000 = ~2g (can be raised higher if you want it less sensitive)
+        if (unit_vector.magnitude > 30000 && SHAKE_ENABLE == true) {
+            for (int i = 0; i < 5; i++) {
+                //+1 so its never fully off, change % value for different color variety
+                int red = (rand() % 10) + 1;
+                int green = (rand() % 10) + 1;
+                int blue = (rand() % 10) + 1;
+
+                clear_led_strip(led_strip);
+                set_all_leds(red, green, blue, led_strip);
+                led_strip_refresh(led_strip);
+                vTaskDelay(SHAKE_FLASH_DELAY / portTICK_PERIOD_MS);
+            }
+        //Sim function
+        } else {
+            run_sim(pixel_array, last_vector);
+            if (MAIN_DEBUG) {
+                ESP_LOGI(TAG, "x: %f, y: %f z: %f, mag: %f", unit_vector.x, unit_vector.y, unit_vector.z, unit_vector.magnitude);
+            }
+            clear_led_strip(led_strip);
+            update_pixel_data(pixel_array, led_strip);
+            led_strip_refresh(led_strip);
+            vTaskDelay(DELAY / portTICK_PERIOD_MS);
         }
-        clear_led_strip(led_strip);
-        update_pixel_data(pixel_array, led_strip);
-        led_strip_refresh(led_strip);
-        vTaskDelay(DELAY / portTICK_PERIOD_MS);
     }
     free(pixel_array);
 }
