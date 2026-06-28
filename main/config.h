@@ -31,5 +31,6 @@
 
 //Toggles flashing on shake
 #define SHAKE_ENABLE true
-
+// The range for when shake flashing starts, 32767 = 2g, around 35000 is a good range that allows tilting and movement without triggering shake
+#define SHAKE_CUTOFF 35000
 #endif  

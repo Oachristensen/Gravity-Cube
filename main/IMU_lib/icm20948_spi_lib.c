@@ -103,7 +103,7 @@ spi_device_handle_t configure_icm20948_spi() {
 
     // ==== BANK 2: accel config ====
     icm20948_write_reg(icm_handle, REG_BANK_SEL, 2 << 4);
-    icm20948_write_reg(icm_handle, ACCEL_CONFIG, 0x00); // ±2g
+    icm20948_write_reg(icm_handle, ACCEL_CONFIG, 0x01); // ±4g (for shake sensitivity)
 
     // ==== back to BANK 0 for WHO_AM_I ====
     vTaskDelay(10 / portTICK_PERIOD_MS);

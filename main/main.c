@@ -129,7 +129,7 @@ void app_main(void) {
         last_vector = unit_vector;
         //Shake function
         // 30000 = ~2g (can be raised higher if you want it less sensitive)
-        if (unit_vector.magnitude > 30000 && SHAKE_ENABLE == true) {
+        if (unit_vector.magnitude > SHAKE_CUTOFF && SHAKE_ENABLE == true) {
             for (int i = 0; i < 5; i++) {
                 //+1 so its never fully off, change % value for different color variety
                 int red = (rand() % 10) + 1;
