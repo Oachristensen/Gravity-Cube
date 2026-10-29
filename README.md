@@ -4,13 +4,7 @@
 ![alt text](https://github.com/Oachristensen/Gravity-Cube/blob/master/Showcase.gif)
 
 ### Hardware
-The simulation runs on an Esp32s3 that gets data from an ICM-20948 IMU and sends it through a level shifter to 8 ws2812b led panels in series
-![alt text](https://github.com/Oachristensen/Gravity-Cube/blob/master/Led_Cube_block_diagram.png)
+The simulation runs on an Esp32s3 that gets data from an ICM-20948 IMU and sends it through a level shifter to 6 ws2812b led panels in series.  Powered by a LiPo battery through a BMS breakout.
+![alt text](https://github.com/Oachristensen/Gravity-Cube/blob/master/Gravity_cube_diagram.png)
 #### More detail here
-[PCB schematic]
-
-### Software
-The program is written in C and compiled and flashed using the Espressif build system
-
-[Buildguide]
-
+![Writeup](https://www.oachristensen.dev/projects/gravity-cube.html)
